@@ -181,7 +181,9 @@ function calculate() {
         if (crit_r>100){
             crit_r = 100
         }
-        
+        if (1 - harrier_debuff/100 + harrier_resist/100<0){
+            final_dmg = 0
+        }
         //Note to self: add a check for specif enemy + harrier debuff and add "there is no harrier debuff for that enemy"
         //Presentation of results
 
