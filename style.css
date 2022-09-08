@@ -195,9 +195,9 @@ div#flags{
   span#br{
     font-size:14pt;
   }
-  span#kr{
+  /*span#kr{
     font-size:14pt;
-  }
+  }*/
 a.two:link{
     color:white;
     text-decoration:none;
