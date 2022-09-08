@@ -1,11 +1,6 @@
-@font-face {
-    font-family: Montserrat-regular;
-    src: url(../fonts/Montserrat-Regular.ttf);
-}
-@font-face {
-    font-family: Montserrat-bold;
-    src: url(../fonts/Montserrat-Bold.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+ 
+
 /*Up/down arrow removing*/
 input::webkit-outer-spin-button,
 input::webkit-inner-spin-button {
@@ -19,13 +14,14 @@ input[type=number] {
 }
 
 h1 {
-    font-family: 'Montserrat-bold';
-    font: 20pt;
+    font-family: 'Montserrat', sans-serif;
+    font-size:26pt;
     text-align: center;
 }
 body {
+    font-family: 'Montserrat', sans-serif;
+    font-size:14pt;
     background: rgb(22, 22, 22);
-    font: normal 14pt Montserrat;
     color: white;    
 }
 
@@ -146,7 +142,8 @@ div#button{
 }
 
 div#end {
-    font: normal 11pt Montserrat;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11pt;
     max-width: 500px;
     position:absolute;
     top:44rem;
@@ -181,14 +178,18 @@ a.one:active{
     color:#00ffd9;
   }
 div#update{
-    font: normal 8pt Montserrat;
-    position:absolute;
-    top:56.5rem;
-  }
-div#flags{
+    font-family: 'Montserrat', sans-serif;
     font-size:10pt;
     position:absolute;
-    top:56.6rem;
+    top:56rem;
+    left:10px;
+    text-align:left;
+  }
+div#flags{
+    font-family: 'Montserrat', sans-serif;
+    font-size:10pt;
+    position:absolute;
+    top:56.4rem;
     right:10px;
     text-align:right;
   }
