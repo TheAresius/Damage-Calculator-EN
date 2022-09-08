@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Chase - Damage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <h1>Grand Chase <br>Damage Calculator</h1>
+    <div id="data_enter">
+    <p id="level">
+        Character level (1~85):
+        <input type="number" name="yourLV_string" id="yourLV_string" min="1" max="85">
+
+        <br>Monster level (1~149):
+        <input type="number" name="monsterLV_string" id="monsterLV_string" min="1" max="149">
+    </p>
+    <p id="main_stats">
+        Attack:
+        <input type="number" name="ATK_string" id="ATK_string" min="0">
+
+        <br>Special attack:
+        <input type="number" name="sATK_string" id="sATK_string" min="0">
+
+        <br>Critical Rate (%):
+        <input type="string" name="crit_r_string" id="crit_r_string" min="0" max="115.4258">
+
+        <br>Critical Damage (%):
+        <input type="string" name="crit_d_string" id="crit_d_string" min="0">
+    </p>
+    <p id="harrier">
+        Harrier Debuff (%):
+        <input type="string" name="harrier_debuff" id="harrier_d_string" min="0">
+
+        <br>Harrier Resistance (%):
+        <input type="string" name="harrier_resist" id="harrier_r_string" min="0">
+    </p>
+    <p id="Damage">
+        Buffs (%):
+        <input type="string" name="buffs" id="buffs_string" min="0">
+        <br>Damage value:
+        <input type="string" name="skill_multi_string" id="skill_multi_string" min="0">
+    </p>
+    </div>
+    
+    <form id="form">
+        <label>
+            <input type="radio" id="Normal" name="damage_type" value="Normal">Combo damage<br>
+        </label>
+        <label>
+            <input type="radio" id="Special" name="damage_type" value="Special" checked>Skill damage<br>
+        </label>
+        <label>
+            <input type="radio" id="Pet" name="damage_type" value="Pet">Pet damage
+        </label>
+
+    </form>
+        <div id="list">
+            <label for="EnemyCharacter">Specific monster:</label>
+            <select id="Enemy_list">
+                <option value="0">Normal monster</option>
+                <option value="1">Gorgos (ToD 1F)</option>
+                <option value="2">Gadosen (ToD 2F)</option>
+                <option value="3">Kamiki (ToD 3F)</option>
+                <option value="4">Gaikoz (ToD 4F)</option>
+                <option value="5">Kaze'aze (ToD 5F)</option>
+                <option value="6">Gorgos (ToD 6F)</option>
+                <option value="7">Gaikoz (ToD 7F)</option>
+                <option value="8">Kamiki (ToD 8F)</option>
+                <option value="9">Gadosen (ToD 9F)</option>
+                <option value="10">Kaze'aze (ToD 10F)</option>
+                <option value="11">Berkas (body)</option>
+                <option value="12">Berkas (legs)</option>
+                <option value="13">Harkyon (body)</option>
+                <option value="14">Harkyon (legs)</option>
+            </select>
+        </div>
+    <div id="button">
+        <input type="button" id= "skill" value="Calculate" onclick="calculate()">
+    </div>
+
+    <div id="damage">
+        <!--Results will show up here-->
+    </div>
+
+    <div id="end">
+        <p id="comment1">
+            Calculator by Aresius. For feedback, bug reports, suggestions, data discussion etc you can find me on Discord: <span id="me">Aresius#4407</span>.
+        </p>
+        <p id="comment2">
+            This calculator wouldn't be possible without DsinC and 이빛나. They started this <a class="one" href="https://docs.google.com/spreadsheets/d/1FGxKHQuwz_Jx-GdYd6647FiAE9UbS6mZgufXor9_DZk/edit#gid=722314000" target="_blank" rel="noopener noreferrer">sheet</a>
+        containing multiple values for skill, combo and pet damages, which you should use when entering the 'Damage value'.
+        </p>
+        <p id="comment3">
+            Check this video for a detalied explanation on the calculator.
+        </p>
+    </div>
+    
+</section> 
+</body>
+<div id="update">
+    <br>Last update: September 7th, 2022.
+</div>
+<div id="flags">Translations:
+    <span id="br"><a class="two" href="https://www.google.com/" rel="noopener noreferrer">🇧🇷</a></span>
+    <span id="kr"><a class="two" href="https://www.google.com/" rel="noopener noreferrer">🇰🇷</a></span>
+</div>
+</html>
