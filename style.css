@@ -198,12 +198,12 @@ div#flags{
     font-family: 'Montserrat', sans-serif;
     font-size:10pt;
     position:absolute;
-    top:56.4rem;
+    top:57rem;
     right:10px;
     text-align:right;
   }
-  span#br{
-    font-size:14pt;
+  img#br{
+    height:12px;
   }
   /*span#kr{
     font-size:14pt;
