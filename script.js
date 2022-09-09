@@ -1,3 +1,9 @@
+//I don't know why, but Harkyon's feet ignore the damage buffs from titles. Why do you do this KoG?
+function title_warn(value){
+    if(value=="14"){
+    window.alert("Note: Harkyon legs ignore damage buffs from titles\nIf you're using a title with damage buffs remember to changeo lembre-se de remover 5% ou 10% na opção 'buffs'.")
+    }
+}
 //Default values
 var ATK_factor = 0.0168
 var sATK_factor = 0.007
