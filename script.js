@@ -79,13 +79,13 @@ function calculate() {
 
 
     //Check for user input errors
-    if (yourLV < 1 || yourLV >85 ||monsterLV < 1 || monsterLV > 150 || ATK < 0 || sATK < 0 || crit_r < 0 || crit_r > 115.4258 || crit_d < 0 || skill_multi <= 0 || harrier_debuff < 0 || buffs < 0) {
-        window.alert('Something went wrong, re-check the entered values.')
-        if (yourLV <1 || yourLV >85 || typeof yourLV === 'string') {
+    if (yourLV < 1 || yourLV >85 ||Number.isInteger(yourLV)==false ||monsterLV < 1 || monsterLV > 150 ||Number.isInteger(monsterLV)==false|| ATK < 0 || sATK < 0 || Number.isInteger(ATK)==false||Number.isInteger(sATK)==false||crit_r < 0 || crit_r > 117.1316 || crit_d < 0 || skill_multi <= 0 || harrier_debuff < 0 || buffs < 0) {
+        window.alert('Algo de errado não está certo. Reveja os valores inseridos.')
+        if (yourLV <1 || yourLV >85 || typeof yourLV === 'string'||Number.isInteger(yourLV)==false) {
             document.getElementById("yourLV_string").style.borderColor = "red"
             document.getElementById("yourLV_string").style.borderWidth ="2px"
         }
-        if (monsterLV< 1 || monsterLV > 150 || typeof monsterLV === 'string') {
+        if (monsterLV< 1 || monsterLV > 150 || typeof monsterLV === 'string'||Number.isInteger(monsterLV)==false) {
             document.getElementById("monsterLV_string").style.borderColor= "red"
             document.getElementById("monsterLV_string").style.borderWidth ="2px"
         }
@@ -97,7 +97,7 @@ function calculate() {
             document.getElementById("sATK_string").style.borderColor= "red"
             document.getElementById("sATK_string").style.borderWidth ="2px"
         }
-        if (crit_r<0 || crit_r > 115.4258 || typeof crit_r === 'string') {
+        if (crit_r<0 || crit_r > 117.1316 || typeof crit_r === 'string') {
             document.getElementById("crit_r_string").style.borderColor= "red"
             document.getElementById("crit_r_string").style.borderWidth ="2px"
         }
