@@ -1,6 +1,6 @@
 //I don't know why, but Harkyon's feet ignore the damage buffs from titles. Why do you do this KoG?
 function title_warn(value){
-    if(value=="14"){
+    if (value=="14"){
     window.alert("Note: Harkyon legs ignore damage buffs from titles\nIf you're using a title with damage buffs remember to remove 5% or 10% from 'Buffs'.")
     }
 }
@@ -14,7 +14,7 @@ function calculate() {
     var DEF = 0
     var sDEF = 0.21875
     
-    //Stores the user input values and fixes decimal separator
+    //Stores the user input values and fixes the decimal separator
     var yourLV = Number(window.document.querySelector('input#yourLV_string').value)
     var monsterLV = Number(window.document.querySelector('input#monsterLV_string').value)
     var ATK = Number(window.document.querySelector('input#ATK_string').value)
@@ -72,6 +72,9 @@ function calculate() {
     } else if (enemy==='12'){
         DEF = 0.4
         sDEF = 0.53124
+    } else if (enemy==='14'){
+        DEF = 0.86
+        sDEF = 0.88
     }
 
 
@@ -174,7 +177,11 @@ function calculate() {
         }
         //Harrier World debuff and adjustments
         if (harrier_debuff>0){  
-            final_dmg = final_dmg*(1 - harrier_debuff/100 + harrier_resist/100)
+            var harrier_final = (harrier_debuff-harrier_resist)/100
+            if (harrier_final<0){
+                harrier_final = 0                
+            }
+            final_dmg = final_dmg*(1 - harrier_final)
             crit_d -= 250
             crit_r -= 20
             if (crit_d < -50) {
@@ -183,16 +190,15 @@ function calculate() {
             if (crit_r < 0) {
                 crit_r = 0
             }
+            if (1 - harrier_debuff/100 + harrier_resist/100<0){
+                final_dmg = 0
+            }
         }
         if (crit_r>100){
             crit_r = 100
         }
-        if (1 - harrier_debuff/100 + harrier_resist/100<0){
-            final_dmg = 0
-        }
-        //Note to self: add a check for specif enemy + harrier debuff and add "there is no harrier debuff for that enemy"
+        
         //Presentation of results
-
         var avgCritDmg = Math.round((final_dmg * (crit_r / 100) * (1.5 + (crit_d / 100)) + final_dmg * (1 - (crit_r / 100))))
         damage.innerHTML = `<br>Non critical hit Damage: ${Math.round(final_dmg)}`
         damage.innerHTML += `<br>Critical hit damage: ${Math.round(final_dmg*(1.50+crit_d/100))}`
