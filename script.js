@@ -7,7 +7,7 @@ function title_warn(value){
 //Default values
 var ATK_factor = 0.0168
 var sATK_factor = 0.007
-var Pet_factor = 0.00437
+var Pet_factor = 0.00477148
 
 function calculate() {
     //Deufalt values
