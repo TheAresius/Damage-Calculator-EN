@@ -269,10 +269,12 @@ function calculate() {
       final_dmg * (crit_r / 100) * (1.5 + crit_d / 100) +
         final_dmg * (1 - crit_r / 100)
     );
-    damage.innerHTML = `<br>Non critical hit Damage: ${Math.round(final_dmg)}`;
-    damage.innerHTML += `<br>Critical hit damage: ${Math.round(
+    damage.innerHTML = `<br>Non-critical-hit Damage: <font color='yellow'>${Math.round(
+      final_dmg
+    )}</font>`;
+    damage.innerHTML += `<br>Critical-hit damage: <font color='yellow'>${Math.round(
       final_dmg * (1.5 + crit_d / 100)
-    )}`;
-    damage.innerHTML += `<br>Average damage: ${avgCritDmg}`;
+    )}</font>`;
+    damage.innerHTML += `<br>Average damage: <font color = 'yellow'>${avgCritDmg}</font>`;
   }
 }

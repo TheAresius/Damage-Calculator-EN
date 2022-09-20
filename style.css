@@ -154,7 +154,7 @@ div#end {
   font-size: 11pt;
   max-width: 500px;
   position: absolute;
-  top: 44rem;
+  top: 46rem;
   text-align: justify;
 }
 #comment1 {
@@ -166,8 +166,12 @@ span#me {
 }
 #comment2 {
   margin-top: 5pt;
+}
+#comment3 {
+  font-size: 10pt;
+  margin-top: 15pt;
   margin-bottom: 5pt;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 a.one:link {
   color: #12d3b6;
