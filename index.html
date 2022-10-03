@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Damage Calculator - Grand Chase</title>
     <link rel="stylesheet" href="style.css" />
+
+    <script src="strings.js"></script>
+    <script src="ui.js"></script>
+    <script src="historyList.js"></script>
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
 
   <body>
     <section>
-      <h1>Grand Chase <br />Damage Calculator</h1>
+      <h1>Grand Chase <br />Damage calculator</h1>
       <div id="data_enter">
         <p id="level">
           Character level (1~85):
@@ -41,7 +45,7 @@
           <br />Special attack:
           <input type="number" name="sATK_string" id="sATK_string" min="0" />
 
-          <br />Critical Rate (%):
+          <br />Critical rate (%):
           <input
             type="string"
             name="crit_r_string"
@@ -50,7 +54,7 @@
             max="117.1316"
           />
 
-          <br />Critical Damage (%):
+          <br />Critical damage (%):
           <input
             type="string"
             name="crit_d_string"
@@ -59,7 +63,7 @@
           />
         </p>
         <p id="harrier">
-          Harrier Debuff (%):
+          Harrier debuff (%):
           <input
             type="string"
             name="harrier_debuff"
@@ -67,7 +71,7 @@
             min="0"
           />
 
-          <br />Harrier Resistance (%):
+          <br />Harrier resistance (%):
           <input
             type="string"
             name="harrier_resist"
@@ -113,7 +117,7 @@
       </form>
       <div id="list">
         <label for="EnemyCharacter">Specific monster:</label>
-        <select id="Enemy_list" onchange="title_warn(this.value)" ;>
+        <select id="Enemy_list" onchange="title_warn(this.value);">
           <option value="0">Normal monster</option>
           <option value="1">Gorgos (ToD 1F)</option>
           <option value="2">Gadosen (ToD 2F)</option>
@@ -145,55 +149,64 @@
         <!--Results will show up here-->
       </div>
 
-      <div id="end">
-        <p id="comment1">
-          Calculator by Aresius. For feedback, bug reports, suggestions, data
-          discussion etc you can find me on Discord:
-          <span id="me">Aresius#4407</span>.
-        </p>
-        <p id="comment2">
-          Thanks to DsinC and 이빛나 who helped create the PvE Damage Sheets.
-        </p>
-        <p id="comment3">
-          Check this
-          <a
-            class="one"
-            href="https://docs.google.com/spreadsheets/d/1FGxKHQuwz_Jx-GdYd6647FiAE9UbS6mZgufXor9_DZk/edit#gid=722314000"
-            target="_blank"
-            rel="noopener noreferrer"
-            >sheet</a
-          >
-          for all the Damage Values of skills, combo and pets.<br />Check this
-          <a
-            class="one"
-            href="https://docs.google.com/spreadsheets/d/1NtqqP0HSxeaOF2NAO9tQfFL8sahFGNmxK4HACT19eqA/edit?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            >sheet</a
-          >
-          for all the Damage Buffs and other informations.<br />Check this
-          <a
-            class="one"
-            href="https://youtu.be/X0lOQGllrN4?t=61"
-            target="_blank"
-            rel="noopener noreferrer"
-            >video</a
-          >
-          for a detailed explanation on the calculator.
-        </p>
+      <div id="divider"></div>
+
+      <div id="resultList">
+        <!--Results will show up here-->
       </div>
     </section>
+    <div id="end">
+      <p id="comment1">
+        Calculator by Aresius. For feedback, bug reports, suggestions, data
+        discussion etc you can find me on Discord:
+        <span id="me">Aresius#4407</span>.
+      </p>
+      <p id="comment2">
+        Thanks to DsinC and 이빛나 who helped create the PvE Damage Sheets and
+        to Esawa for the Calculation History.
+      </p>
+      <p id="comment3">
+        Check this
+        <a
+          class="one"
+          href="https://docs.google.com/spreadsheets/d/1FGxKHQuwz_Jx-GdYd6647FiAE9UbS6mZgufXor9_DZk/edit#gid=722314000"
+          target="_blank"
+          rel="noopener noreferrer"
+          >sheet</a
+        >
+        for all the Damage Values of skills, combo and pets.<br />Check this
+        <a
+          class="one"
+          href="https://docs.google.com/spreadsheets/d/1NtqqP0HSxeaOF2NAO9tQfFL8sahFGNmxK4HACT19eqA/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          >sheet</a
+        >
+        for all the Damage Buffs and other informations.<br />Check this
+        <a
+          class="one"
+          href="https://youtu.be/8o76AcSpQPI?t=61"
+          target="_blank"
+          rel="noopener noreferrer"
+          >video</a
+        >
+        for a detailed explanation on the calculator.
+      </p>
+    </div>
   </body>
-  <div id="update"><br />Last update: October 1st, 2022.</div>
-  <div id="flags">
-    Translations:
-    <span id="br"
-      ><a
-        class="two"
-        href="https://thearesius.github.io/Damage-Calculator-BR/"
-        rel="noopener noreferrer"
-      >
-        <img id="br" src="./images/brazil.png" alt="brazil" /> </a
-    ></span>
-  </div>
+  <footer>
+    <div id="update">v.1.1.0 - Last update: October 3rd, 2022.</div>
+    <div id="flags">
+      Translations:
+      <span id="br">
+        <a
+          class="two"
+          href="https://thearesius.github.io/Damage-Calculator-EN/"
+          rel="noopener noreferrer"
+        >
+          <img id="br" src="./images/usa.png" alt="brazil" />
+        </a>
+      </span>
+    </div>
+  </footer>
 </html>
