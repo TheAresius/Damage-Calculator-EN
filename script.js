@@ -159,7 +159,7 @@ function calculate() {
     if (skill_multi < 0 || isNaN(skill_multi) == true) {
       setErrorOnInputById("skill_multi_string");
     }
-  } else if (harrier_debuff > 0 && enemy != "0") {
+  } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15") {
     window.alert(stringsErrorHarrier);
 
     setErrorOnInputById("harrier_d_string");
