@@ -104,7 +104,7 @@ function calculate() {
     Number.isInteger(sATK) == false ||
     isNaN(sATK) == true ||
     +crit_r < 0 ||
-    crit_r > 117.1316 ||
+    crit_r > 125.3716 ||
     isNaN(crit_r) == true ||
     +crit_d < 0 ||
     isNaN(crit_d) == true ||
@@ -141,7 +141,7 @@ function calculate() {
     if (sATK < 0 || Number.isInteger(sATK) == false || isNaN(sATK) == true) {
       setErrorOnInputById("sATK_string");
     }
-    if (crit_r < 0 || crit_r > 117.1316 || isNaN(crit_r) == true) {
+    if (crit_r < 0 || crit_r > 125.3716 || isNaN(crit_r) == true) {
       setErrorOnInputById("crit_r_string");
     }
     if (crit_d < 0 || isNaN(crit_d) == true) {
