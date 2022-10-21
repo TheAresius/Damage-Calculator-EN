@@ -1,212 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Damage Calculator - Grand Chase</title>
-    <link rel="stylesheet" href="style.css" />
 
-    <script src="strings.js"></script>
-    <script src="ui.js"></script>
-    <script src="historyList.js"></script>
-    <script src="script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Damage Calculator - Grand Chase</title>
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <section>
-      <h1>Grand Chase <br />Damage calculator</h1>
-      <div id="data_enter">
-        <p id="level">
-          Character level (1~85):
-          <input
-            type="number"
-            name="yourLV_string"
-            id="yourLV_string"
-            min="1"
-            max="85"
-          />
+  <script src="strings.js"></script>
+  <script src="ui.js"></script>
+  <script src="historyList.js"></script>
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
 
-          <br />Monster level (1~149):
-          <input
-            type="number"
-            name="monsterLV_string"
-            id="monsterLV_string"
-            min="1"
-            max="149"
-          />
-        </p>
-        <p id="main_stats">
-          Attack:
-          <input type="number" name="ATK_string" id="ATK_string" min="0" />
+<body>
+  <section>
+    <h1>Grand Chase <br />Damage calculator</h1>
+    <div id="data_enter">
+      <p id="level">
+        Character level (1~85):
+        <input type="number" name="yourLV_string" id="yourLV_string" min="1" max="85" />
 
-          <br />Special attack:
-          <input type="number" name="sATK_string" id="sATK_string" min="0" />
-
-          <br />Critical rate (%):
-          <input
-            type="string"
-            name="crit_r_string"
-            id="crit_r_string"
-            min="0"
-            max="125.3716"
-          />
-
-          <br />Critical damage (%):
-          <input
-            type="string"
-            name="crit_d_string"
-            id="crit_d_string"
-            min="0"
-          />
-        </p>
-        <p id="harrier">
-          Harrier debuff (%):
-          <input
-            type="string"
-            name="harrier_debuff"
-            id="harrier_d_string"
-            min="0"
-          />
-
-          <br />Harrier resistance (%):
-          <input
-            type="string"
-            name="harrier_resist"
-            id="harrier_r_string"
-            min="0"
-          />
-        </p>
-        <p id="Damage">
-          Buffs (%):
-          <input type="string" name="buffs" id="buffs_string" min="0" />
-          <br />Damage value:
-          <input
-            type="string"
-            name="skill_multi_string"
-            id="skill_multi_string"
-            min="0"
-          />
-        </p>
-      </div>
-
-      <form id="form">
-        <label>
-          <input
-            type="radio"
-            id="Normal"
-            name="damage_type"
-            value="Normal"
-          />Combo damage<br />
-        </label>
-        <label>
-          <input
-            type="radio"
-            id="Special"
-            name="damage_type"
-            value="Special"
-            checked
-          />Skill damage<br />
-        </label>
-        <label>
-          <input type="radio" id="Pet" name="damage_type" value="Pet" />Pet
-          damage
-        </label>
-      </form>
-      <div id="list">
-        <label for="EnemyCharacter">Specific monster:</label>
-        <select id="Enemy_list" onchange="title_warn(this.value);">
-          <option value="0">Normal monster</option>
-          <option value="1">Gorgos (ToD 1F)</option>
-          <option value="2">Gadosen (ToD 2F)</option>
-          <option value="3">Kamiki (ToD 3F)</option>
-          <option value="4">Gaikoz (ToD 4F)</option>
-          <option value="5">Kaze'aze (ToD 5F)</option>
-          <option value="6">Gorgos (ToD 6F)</option>
-          <option value="7">Gaikoz (ToD 7F)</option>
-          <option value="8">Kamiki (ToD 8F)</option>
-          <option value="9">Gadosen (ToD 9F)</option>
-          <option value="10">Kaze'aze (ToD 10F)</option>
-          <option value="11">Berkas (body)</option>
-          <option value="12">Berkas (legs)</option>
-          <option value="13">Harkyon (body)</option>
-          <option value="14">Harkyon (legs)</option>
-          <option value="15">Gorgos Queen</option>
-        </select>
-      </div>
-      <div id="button">
-        <input
-          type="button"
-          id="skill"
-          value="Calculate"
-          onclick="calculate()"
-        />
-      </div>
-
-      <div id="damage">
-        <!--Results will show up here-->
-      </div>
-
-      <div id="divider"></div>
-
-      <div id="resultList">
-        <!--Results will show up here-->
-      </div>
-    </section>
-    <div id="end">
-      <p id="comment1">
-        Calculator by Aresius. For feedback, bug reports, suggestions, data
-        discussion etc you can find me on Discord:
-        <span id="me">Aresius#4407</span>.
+        <br />Monster level (1~149):
+        <input type="number" name="monsterLV_string" id="monsterLV_string" min="1" max="149" />
       </p>
-      <p id="comment2">
-        Thanks to DsinC and 이빛나 who helped create the PvE Damage Sheets and
-        to Esawa for the Calculation History.
+      <p id="main_stats">
+        Attack:
+        <input type="string" name="ATK_string" id="ATK_string" min="0" />
+
+        <br />Special attack:
+        <input type="string" name="sATK_string" id="sATK_string" min="0" />
+
+        <br />Critical rate (%):
+        <input type="string" name="crit_r_string" id="crit_r_string" min="0" />
+
+        <br />Critical damage (%):
+        <input type="string" name="crit_d_string" id="crit_d_string" min="0" />
       </p>
-      <p id="comment3">
-        Check this
-        <a
-          class="one"
-          href="https://docs.google.com/spreadsheets/d/1FGxKHQuwz_Jx-GdYd6647FiAE9UbS6mZgufXor9_DZk/edit#gid=722314000"
-          target="_blank"
-          rel="noopener noreferrer"
-          >sheet</a
-        >
-        for all the Damage Values of skills, combo and pets.<br />Check this
-        <a
-          class="one"
-          href="https://docs.google.com/spreadsheets/d/1NtqqP0HSxeaOF2NAO9tQfFL8sahFGNmxK4HACT19eqA/edit?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          >sheet</a
-        >
-        for all the Damage Buffs and other informations.<br />Check this
-        <a
-          class="one"
-          href="https://youtu.be/X0lOQGllrN4?t=61"
-          target="_blank"
-          rel="noopener noreferrer"
-          >video</a
-        >
-        for a detailed explanation on the calculator.
+      <p id="harrier">
+        Harrier debuff (%):
+        <input type="string" name="harrier_debuff" id="harrier_d_string" min="0" />
+
+        <br />Harrier resistance (%):
+        <input type="string" name="harrier_resist" id="harrier_r_string" min="0" />
+      </p>
+      <p id="Damage">
+        Buffs (%):
+        <input type="string" name="buffs" id="buffs_string" min="0" />
+        <br />Damage value:
+        <input type="string" name="skill_multi_string" id="skill_multi_string" min="0" />
       </p>
     </div>
-  </body>
-  <footer>
-    <div id="update">v.1.1.2 - Last update: October 8th, 2022.</div>
-    <div id="flags">
-      Translations:
-      <span id="br">
-        <a
-          class="two"
-          href="https://thearesius.github.io/Damage-Calculator-BR/"
-          rel="noopener noreferrer"
-        >
-          <img id="br" src="./images/brazil.png" alt="brazil" />
-        </a>
-      </span>
+
+    <form id="form">
+      <label>
+        <input type="radio" id="Normal" name="damage_type" value="Normal" />Combo damage<br />
+      </label>
+      <label>
+        <input type="radio" id="Special" name="damage_type" value="Special" checked />Skill damage<br />
+      </label>
+      <label>
+        <input type="radio" id="Pet" name="damage_type" value="Pet" />Pet
+        damage
+      </label>
+    </form>
+    <div id="list">
+      <label for="EnemyCharacter">Specific monster:</label>
+      <select id="Enemy_list" onchange="title_warn(this.value);">
+        <option value="0">Normal monster</option>
+        <option value="1">Gorgos (ToD 1F)</option>
+        <option value="2">Gadosen (ToD 2F)</option>
+        <option value="3">Kamiki (ToD 3F)</option>
+        <option value="4">Gaikoz (ToD 4F)</option>
+        <option value="5">Kaze'aze (ToD 5F)</option>
+        <option value="6">Gorgos (ToD 6F)</option>
+        <option value="7">Gaikoz (ToD 7F)</option>
+        <option value="8">Kamiki (ToD 8F)</option>
+        <option value="9">Gadosen (ToD 9F)</option>
+        <option value="10">Kaze'aze (ToD 10F)</option>
+        <option value="11">Berkas (body)</option>
+        <option value="12">Berkas (legs)</option>
+        <option value="13">Harkyon (body)</option>
+        <option value="14">Harkyon (legs)</option>
+        <option value="15">Gorgos Queen</option>
+      </select>
     </div>
-  </footer>
+    <div id="button">
+      <input type="button" id="skill" value="Calculate" onclick="calculate()" />
+    </div>
+
+    <div id="damage">
+      <!--Results will show up here-->
+    </div>
+
+    <div id="divider"></div>
+
+    <div id="resultList">
+      <!--Results will show up here-->
+    </div>
+  </section>
+  <div id="end">
+    <p id="comment1">
+      Calculator by Aresius. For feedback, bug reports, suggestions, data
+      discussion etc you can find me on Discord:
+      <span id="me">Aresius#4407</span>.
+    </p>
+    <p id="comment2">
+      Thanks to DsinC and 이빛나 who helped create the PvE Damage Sheets and
+      to Esawa for the Calculation History.
+    </p>
+    <p id="comment3">
+      Check this
+      <a class="one"
+        href="https://docs.google.com/spreadsheets/d/1FGxKHQuwz_Jx-GdYd6647FiAE9UbS6mZgufXor9_DZk/edit#gid=722314000"
+        target="_blank" rel="noopener noreferrer">sheet</a>
+      for all the Damage Values of skills, combo and pets.<br />Check this
+      <a class="one"
+        href="https://docs.google.com/spreadsheets/d/1NtqqP0HSxeaOF2NAO9tQfFL8sahFGNmxK4HACT19eqA/edit?usp=sharing"
+        target="_blank" rel="noopener noreferrer">sheet</a>
+      for all the Damage Buffs and other informations.<br />Check this
+      <a class="one" href="https://youtu.be/X0lOQGllrN4?t=61" target="_blank" rel="noopener noreferrer">video</a>
+      for a detailed explanation on the calculator.
+    </p>
+  </div>
+</body>
+<footer>
+  <div id="update">v.1.1.3 - Last update: October 21st, 2022.</div>
+  <div id="flags">
+    Translations:
+    <span id="br">
+      <a class="two" href="https://thearesius.github.io/Damage-Calculator-BR/" rel="noopener noreferrer">
+        <img id="br" src="./images/brazil.png" alt="brazil" />
+      </a>
+    </span>
+  </div>
+</footer>
+
 </html>

@@ -98,13 +98,12 @@ function calculate() {
     Number.isInteger(monsterLV) == false ||
     isNaN(monsterLV) == true ||
     +ATK < 0 ||
-    Number.isInteger(ATK) == false ||
+    Number.isInteger(Number(ATK)) == false ||
     isNaN(ATK) == true ||
     +sATK < 0 ||
-    Number.isInteger(sATK) == false ||
+    Number.isInteger(Number(sATK)) == false ||
     isNaN(sATK) == true ||
     +crit_r < 0 ||
-    crit_r > 125.3716 ||
     isNaN(crit_r) == true ||
     +crit_d < 0 ||
     isNaN(crit_d) == true ||
@@ -135,13 +134,21 @@ function calculate() {
     ) {
       setErrorOnInputById("monsterLV_string");
     }
-    if (ATK < 0 || Number.isInteger(ATK) == false || isNaN(ATK) == true) {
+    if (
+      ATK < 0 ||
+      Number.isInteger(ATK) == false ||
+      isNaN(Number(ATK)) == true
+    ) {
       setErrorOnInputById("ATK_string");
     }
-    if (sATK < 0 || Number.isInteger(sATK) == false || isNaN(sATK) == true) {
+    if (
+      sATK < 0 ||
+      Number.isInteger(sATK) == false ||
+      isNaN(Number(sATK)) == true
+    ) {
       setErrorOnInputById("sATK_string");
     }
-    if (crit_r < 0 || crit_r > 125.3716 || isNaN(crit_r) == true) {
+    if (crit_r < 0 || isNaN(crit_r) == true) {
       setErrorOnInputById("crit_r_string");
     }
     if (crit_d < 0 || isNaN(crit_d) == true) {

@@ -128,15 +128,15 @@ span#me {
   margin-bottom: 5pt;
   line-height: 1.5;
 }
-a.one:link {
+a.one:link,
+a.one:visited {
   color: #12d3b6;
   font: bold;
 }
-a.one:visited,
 a.one:hover,
 a.one:focus,
 a.one:active {
-  color: #00ffd9;
+  color: #00f7ff;
 }
 img#br {
   height: 12px;
