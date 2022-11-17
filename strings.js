@@ -5,7 +5,7 @@ const stringsAlertHarkyon =
 const stringsErrorInvalidData =
   "Something went wrong, re-check the entered values.";
 const stringsErrorHarrier =
-  "There is no Harrier Debuff for that Specific monster. Review the entered values.";
+  "There is no Taint Debuff for that Specific monster. Review the entered values.";
 
 const stringsComboDamage = "Combo damage";
 const stringsSkillDamage = "Skill damage";
@@ -19,8 +19,8 @@ const stringsHistoryListAttack = "Atttack";
 const stringsHistoryListSpecialAttack = "Special attack";
 const stringHistoryListCriticalRate = "Critical rate";
 const stringHistoryListCriticalDamage = "Critical damage";
-const stringsHistoryListHarrierDebuff = "Harrier debuff";
-const stringsHistoryListHarrierResistance = "Harrier resistance";
+const stringsHistoryListHarrierDebuff = "Taint debuff";
+const stringsHistoryListHarrierResistance = "Taint resistance";
 const stringsHistoryListBuffs = "Buffs";
 const stringsHistoryListDamageValue = "Damage value";
 
