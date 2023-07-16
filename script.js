@@ -57,17 +57,19 @@ function calculate() {
     enemy === "2" ||
     enemy === "3" ||
     enemy === "4" ||
+    enemy === "6" ||
     enemy === "7"
+
   ) {
     DEF = 0.5;
     sDEF = 0.3;
   } else if (enemy === "5") {
     DEF = 0.6;
     sDEF = 0.3;
-  } else if (enemy === "6" || enemy === "9" || enemy === "10") {
+  } else if (enemy === "17" || enemy === "9" || enemy === "10") {
     DEF = 0.6;
     sDEF = 0.4;
-  } else if (enemy === "8") {
+  } else if (enemy === "8" || enemy === "16") {
     DEF = 0.5;
     sDEF = 0.4;
   } else if (enemy === "13") {
