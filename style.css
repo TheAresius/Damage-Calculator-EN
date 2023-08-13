@@ -185,8 +185,7 @@ footer {
   font-family: "Montserrat", sans-serif;
   font-size: 10pt;
   margin-left: 4px;
-  position: absolute;
-  bottom:4px;
+  margin-bottom: 4px;
 }
 
 .response-list-item {
