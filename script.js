@@ -1,6 +1,6 @@
 //I don't know why, but Harkyon's feet ignore the damage buffs from titles. Why do you do this KoG?
 function title_warn(value) {
-  if (value == "14") {
+  if (value == "13" || value == "14") {
     window.alert(stringsAlertHarkyon);
   }
 }
