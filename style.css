@@ -227,7 +227,7 @@ div#update {
 .column-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 0 0 36px;
   max-width: 512px;
   font-size: 12.5pt;
 }
