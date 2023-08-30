@@ -1,9 +1,11 @@
 //I don't know why, but Harkyon's feet ignore the damage buffs from titles. Why do you do this KoG?
-function title_warn(value) {
+function warn(value) {
   if (value == "13" || value == "14") {
     window.alert(stringsAlertHarkyon);
+  } else if(value == "18") {
+    window.alert(stringsAlertRaid)
+    }
   }
-}
 //Default values
 var ATK_factor = 0.0168;
 var sATK_factor = 0.007;
@@ -37,6 +39,8 @@ function calculate() {
   harrier_resist = Number(harrier_resist.replace(/,/, "."));
   var buffs = window.document.querySelector("input#buffs_string").value;
   buffs = Number(buffs.replace(/,/, "."));
+  var b_atk = window.document.querySelector("input#back_attack_string").value;
+  b_atk = Number(b_atk.replace(/,/, "."));
   var skill_multi = window.document.querySelector(
     "input#skill_multi_string"
   ).value;
@@ -87,6 +91,10 @@ function calculate() {
   } else if (enemy === "15") {
     DEF = 0.6;
     sDEF = 0.4;
+  } else if (enemy === "18") {
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 20;
   }
 
   //Check for user input errors
@@ -116,7 +124,9 @@ function calculate() {
     +buffs < 0 ||
     isNaN(buffs) == true ||
     +skill_multi < 0 ||
-    isNaN(skill_multi) == true
+    isNaN(skill_multi) == true ||
+    +b_atk <0 ||
+    isNaN(b_atk) == true
   ) {
     window.alert(stringsErrorInvalidData);
 
@@ -168,7 +178,10 @@ function calculate() {
     if (skill_multi < 0 || isNaN(skill_multi) == true) {
       setErrorOnInputById("skill_multi_string");
     }
-  } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15") {
+    if (b_atk < 0 || isNaN(b_atk) == true) {
+      setErrorOnInputById("back_attack_string")
+    }
+  } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15" && enemy!="18") {
     window.alert(stringsErrorHarrier);
 
     setErrorOnInputById("harrier_d_string");
@@ -237,6 +250,10 @@ function calculate() {
       final_dmg = final_dmg * (1 - harrier_final);
       var new_crit_d = crit_d - 250;
       var new_crit_r = crit_r - 20;
+      var new_b_atk = 130 + b_atk - 50
+      if (new_b_atk < 100) {
+        new_b_atk = 100
+      }
       if (new_crit_d < -50) {
         new_crit_d = -50;
       }
@@ -249,6 +266,7 @@ function calculate() {
     } else {
       new_crit_d = crit_d;
       new_crit_r = crit_r;
+      new_b_atk = 130 + b_atk
     }
     if (new_crit_r > 100) {
       new_crit_r = 100;
@@ -265,7 +283,11 @@ function calculate() {
       final_dmg * (1.5 + new_crit_d / 100)
     );
 
-    showResultOnUi(ui_final_dmg, ui_corrected_final_dmg, avgCritDmg);
+    var ui_back_normal = Math.round(ui_final_dmg * new_b_atk/100)
+    var ui_back_critical = Math.round(ui_corrected_final_dmg * new_b_atk/100)
+    var ui_back_average = Math.round(avgCritDmg * new_b_atk/100)
+
+    showResultOnUi(ui_final_dmg, ui_corrected_final_dmg, avgCritDmg, ui_back_normal, ui_back_critical, ui_back_average);
 
     // get selected option string text
     var enemySelectedElement =
@@ -289,10 +311,14 @@ function calculate() {
       harrier_debuff,
       harrier_resist,
       buffs,
+      b_atk,
       skill_multi,
       ui_final_dmg,
       ui_corrected_final_dmg,
       avgCritDmg,
+      ui_back_normal,
+      ui_back_critical,
+      ui_back_average,
       calculationType,
       enemySelectedElement,
     });

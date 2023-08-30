@@ -50,7 +50,12 @@
       <p id="Damage">
         Buffs (%):
         <input type="string" name="buffs" id="buffs_string" min="0" />
-        <br />Damage value:
+        <br/>
+        Back attack buff (%):
+        <input type="string" name="buffs" id="back_attack_string" min="0" />
+        <br/>
+
+        Damage value:
         <input type="string" name="skill_multi_string" id="skill_multi_string" min="0" />
       </p>
     </div>
@@ -69,7 +74,7 @@
     </form>
     <div id="list">
       <label for="EnemyCharacter">Specific monster:</label>
-      <select id="Enemy_list" onchange="title_warn(this.value);">
+      <select id="Enemy_list" onchange="warn(this.value);">
         <option value="0">Normal monster</option>
         <option value="1">Gorgos (ToD 1F)</option>
         <option value="2">Gadosen (ToD 2F)</option>
@@ -88,6 +93,7 @@
         <option value="13">Harkyon (body)</option>
         <option value="14">Harkyon (legs)</option>
         <option value="15">Gorgos Queen</option>
+        <option value="18">Voidal Devourer</option>
       </select>
     </div>
     <div id="button">
@@ -96,6 +102,10 @@
 
     <div id="damage">
       <!--Results will show up here-->
+      <div class="column-container">
+        <div id="front-column" class="column left-column"></div>
+        <div id="back-column" class="column right-column"></div>
+      </div>
     </div>
 
     <div id="divider"></div>
@@ -132,6 +142,6 @@
   </div>
 </body>
 <footer>
-  <div id="update">v.1.2.4 - Last update: August 20th, 2023.</div>
+  <div id="update">v.1.3.0 - Last update: August 30th, 2023.</div>
 </footer>
 </html>
