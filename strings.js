@@ -8,6 +8,8 @@ const stringsErrorHarrier =
   "There is no Taint Debuff for that Specific monster. Review the entered values.";
   const stringsAlertRaid = 
   "Note: 20% Taint debuff is being applied due to the Void raid. Don't forget to enter your Taint Resistance."
+  const stringsAlertVoid2 = 
+  "Note: The buff acquired from the Voidal Enforcer, present in parts 2, 3, and 4 of the Void (Taint), is 200%. Add this value to your buffs if desired."
 
 const stringsComboDamage = "Combo damage";
 const stringsSkillDamage = "Skill damage";

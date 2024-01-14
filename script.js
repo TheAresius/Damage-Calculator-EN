@@ -1,10 +1,10 @@
 //I don't know why, but Harkyon's feet ignore the damage buffs from titles. Why do you do this KoG?
 function warn(value) {
-  if (value == "13" || value == "14") {
-    window.alert(stringsAlertHarkyon);
-  } else if(value == "18") {
-    window.alert(stringsAlertRaid)
-    }
+  if (value == "18") {
+    window.alert(stringsAlertRaid);
+  } else if (value == "20" || value == "21"){
+    window.alert(stringsAlertVoid2)
+  }
   }
 //Default values
 var ATK_factor = 0.0168;
@@ -91,9 +91,13 @@ function calculate() {
   } else if (enemy === "15") {
     DEF = 0.6;
     sDEF = 0.4;
-  } else if (enemy === "18") {
+  } else if (enemy === "18" || enemy === "19" || enemy === "20") {
     DEF = 0;
     sDEF = 0.21875;
+    harrier_debuff = 20;
+  } else if (enemy === "21"){
+    DEF = 2/3;
+    sDEF = 71/96;
     harrier_debuff = 20;
   }
 
@@ -181,7 +185,7 @@ function calculate() {
     if (b_atk < 0 || isNaN(b_atk) == true) {
       setErrorOnInputById("back_attack_string")
     }
-  } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15" && enemy!="18") {
+  } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15" && enemy!="18" && enemy!="19" && enemy!="20" && enemy!="21") {
     window.alert(stringsErrorHarrier);
 
     setErrorOnInputById("harrier_d_string");

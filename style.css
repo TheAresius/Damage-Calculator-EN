@@ -62,6 +62,11 @@ div#data_enter {
 input {
   margin-left: 10px;
 }
+.separator {
+  border-top: dashed black 1px;
+  padding: 0;
+  background-color: #fff;
+}
 
 div#damage {
   text-align: center;
