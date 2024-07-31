@@ -1,19 +1,22 @@
 // file to make translation easier
 
-const stringsAlertHarkyon =
-  "Note: Harkyon ignores damage buffs from titles.\nIf you're using a title with damage buffs remember to remove 5% or 10% from 'Buffs'.";
 const stringsErrorInvalidData =
   "Something went wrong, re-check the entered values.";
 const stringsErrorHarrier =
   "There is no Taint Debuff for that Specific monster. Review the entered values.";
-  const stringsAlertRaid = 
-  "Note: 20% Taint debuff is being applied due to the Void raid. Don't forget to enter your Taint Resistance."
-  const stringsAlertVoid2 = 
-  "Note: The buff acquired from the Voidal Enforcer, present in parts 2, 3, and 4 of the Void (Taint), is 200%. Add this value to your buffs if desired."
 
 const stringsComboDamage = "Combo damage";
 const stringsSkillDamage = "Skill damage";
 const stringsPetDamage = "Pet damage";
+
+const stringDef1 = "- Defense againts normal attacks: ";
+const stringDef2 = "- Defense against pet attack: ";
+const stringDef3 = "- Defense against skills: ";
+const stringIsBoss = "This is enemy is considered a boss. ";
+const stringIsNotBoss = "This enemy is <b>not</b> considered a boss. ";
+const stringEstHP = " - HP (estimated): ";
+const stringScaleHP = " (this enemy's HP is increased by 22% for each additional member in the party)."
+
 
 // -- historyListStrings
 const stringsHistoryListTitle = "Calculation History";

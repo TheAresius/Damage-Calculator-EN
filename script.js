@@ -1,11 +1,3 @@
-//I don't know why, but Harkyon's feet ignore the damage buffs from titles. Why do you do this KoG?
-function warn(value) {
-  if (value == "18") {
-    window.alert(stringsAlertRaid);
-  } else if (value == "20" || value == "21"){
-    window.alert(stringsAlertVoid2)
-  }
-  }
 //Default values
 var ATK_factor = 0.0168;
 var sATK_factor = 0.007;
@@ -62,18 +54,18 @@ function calculate() {
     enemy === "3" ||
     enemy === "4" ||
     enemy === "6" ||
-    enemy === "7"
-
+    enemy === "7" 
+    
   ) {
     DEF = 0.5;
     sDEF = 0.3;
   } else if (enemy === "5") {
     DEF = 0.6;
     sDEF = 0.3;
-  } else if (enemy === "17" || enemy === "9" || enemy === "10") {
+  } else if (enemy === "17" || enemy === "9" || enemy === "10" || enemy === "34") {
     DEF = 0.6;
     sDEF = 0.4;
-  } else if (enemy === "8" || enemy === "16") {
+  } else if (enemy === "8" || enemy=== "15" || enemy === "16"){
     DEF = 0.5;
     sDEF = 0.4;
   } else if (enemy === "13") {
@@ -88,9 +80,6 @@ function calculate() {
   } else if (enemy === "14") {
     DEF = 0.86;
     sDEF = 0.88;
-  } else if (enemy === "15") {
-    DEF = 0.6;
-    sDEF = 0.4;
   } else if (enemy === "18" || enemy === "19" || enemy === "20") {
     DEF = 0;
     sDEF = 0.21875;
@@ -99,6 +88,39 @@ function calculate() {
     DEF = 2/3;
     sDEF = 71/96;
     harrier_debuff = 20;
+  } else if(enemy==="22"){//Rofnus
+    DEF = 0.23075
+    sDEF = 0.399025
+  } else if(enemy==="23"){//Rofnus hp regen
+    DEF = 0
+    sDEF = 0.21875
+  } else if(enemy==="25"){//Dekane
+    DEF = -0.25
+    sDEF = 0.0234
+  } else if(enemy==="26"){//Dekane purple
+    DEF = -1.5
+    sDEF = 71/96
+  } else if(enemy==="27"){//Dekane red
+    DEF = 0.58335
+    sDEF = -0.56255
+  } else if(enemy==="28"){//Duel 3
+    DEF = 2/3
+    sDEF = 71/96
+  } else if(enemy==="29"){//Duel 3
+    DEF = 0.5
+    sDEF = 0.609375
+  } else if(enemy==="35"){
+    DEF = 0
+    sDEF = 0.21875
+  } else if(enemy==="36"){
+    DEF = -17/3
+    sDEF = -4.2084
+  } else if(enemy==="37"){
+    DEF = 0.2
+    sDEF = 0.375
+  } else if(enemy==="38"){
+    DEF = -1
+    sDEF = -0.5625
   }
 
   //Check for user input errors
@@ -185,7 +207,7 @@ function calculate() {
     if (b_atk < 0 || isNaN(b_atk) == true) {
       setErrorOnInputById("back_attack_string")
     }
-  } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15" && enemy!="18" && enemy!="19" && enemy!="20" && enemy!="21") {
+  } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15" && enemy!="18" && enemy!="19" && enemy!="20" && enemy!="21" && enemy!="35"&& enemy!="36" && enemy!="37"&& enemy!="38") {
     window.alert(stringsErrorHarrier);
 
     setErrorOnInputById("harrier_d_string");

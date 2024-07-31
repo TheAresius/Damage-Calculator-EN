@@ -12,6 +12,8 @@
   <script src="strings.js"></script>
   <script src="ui.js"></script>
   <script src="historyList.js"></script>
+  <script src="modal.js"></script>
+  <script src="modal data.js"></script>
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -73,36 +75,56 @@
       </label>
     </form>
     <div id="list">
-      <label for="EnemyCharacter">Monster Type:</label>
+      <label for="EnemyCharacter">Enemy:</label>
       <select id="Enemy_list" onchange="warn(this.value);">
         <option value="0">Normal monster</option>
-        <option class="separator" disabled>──────────────────</option>
-        <option value="1">Gorgos (ToD 1F)</option>
-        <option value="2">Gadosen (ToD 2F)</option>
-        <option value="3">Kamiki (ToD 3F)</option>
-        <option value="4">Gaikoz (ToD 4F)</option>
-        <option value="5">Kaze'aze (ToD 5F)</option>
-        <option value="6">First Gorgos (ToD 6F)</option>
-        <option value="17">Double Gorgos (ToD 6F)</option>
-        <option value="7">First Gaikoz (ToD 7F)</option>
-        <option value="16">Double Gaikoz (ToD 7F)</option>
-        <option value="8">Kamiki (ToD 8F)</option>
-        <option value="9">Gadosen (ToD 9F)</option>
-        <option value="10">Kaze'aze (ToD 10F)</option>
-        <option class="separator" disabled>──────────────────</option>
-        <option value="11">Berkas (body)</option>
-        <option value="12">Berkas (legs)</option>
-        <option class="separator" disabled>──────────────────</option>
-        <option value="13">Harkyon (body)</option>
-        <option value="14">Harkyon (legs)</option>
-        <option class="separator" disabled>──────────────────</option>
-        <option value="15">Gorgos Queen</option>
-        <option class="separator" disabled>──────────────────</option>
+        <option class="separator" disabled>INFINITY CLOISTER</option>
+        <option value="22">Rofnus</option>
+        <option value="23">Rofnus (HP regen)</option>
+        <option value="24">Skeram</option>
+        <option value="25">Decanee</option>
+        <option value="26">Decanee (purple protection)</option>
+        <option value="27">Decanee (red portection)</option>
+        <option value="28">Duell</option>
+        <option value="29">Duell (weakened)</option>
+        <option class="separator" disabled>VOID</option>
         <option value="18">Voidal Devourer</option>
         <option value="19">Voidal Sentry/Crusher</option>
         <option value="20">Voidal Enforcer</option>
         <option value="21">Voidal Gazer</option>
+        <option class="separator" disabled>TOD</option>
+        <option value="1">Gorgos (1F)</option>
+        <option value="2">Gardosen (2F)</option>
+        <option value="3">Kamiki (3F)</option>
+        <option value="4">Gaikoz (4F)</option>
+        <option value="5">Kaze'aze (5F)</option>
+        <option value="6">First Gorgos (6F)</option>
+        <option value="17">Double Gorgos (6F)</option>
+        <option value="7">First Gaikoz (7F)</option>
+        <option value="16">Double Gaikoz (7F)</option>
+        <option value="15">First Kamiki (8F)</option>
+        <option value="8">Double Kamiki (8F)</option>
+        <option value="34">First Gardosen (9F)</option>
+        <option value="9">Double Gardosen (9F)</option>
+        <option value="10">Kaze'aze (10F)</option>
+        <option class="separator" disabled>BERKAS</option>
+        <option value="11">Berkas (Body)</option>
+        <option value="12">Berkas (Legs)</option>
+        <option class="separator" disabled>HARKYON</option>
+        <option value="13">Harkion (Body)</option>
+        <option value="14">Harkion (Legs)</option>
+        <option class="separator" disabled>WIZARD'S LABYRINTH</option>
+        <option value="30">Periett</option>
+        <option value="31">Thanatos</option>
+        <option value="32">Iblis</option>
+        <option value="33">Kassias Grandiel</option>
+        <option class="separator" disabled>ANOTHER WORLD</option>
+        <option value="35">Temple Guardian</option>
+        <option value="36">Temple Guardian (weakened)</option>
+        <option value="37">Gaian</option>
+        <option value="38">Gaian (weakened)</option>
       </select>
+    <button id="showInfoButton">+Info</button>
     </div>
     <div id="button">
       <input type="button" id="skill" value="Calculate" onclick="calculate()" />
@@ -148,8 +170,18 @@
     </p>
     
   </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&#10006;</span>
+        <p id="modalText"></p>
+    </div>
+</div>
+<div id="overlay" class="overlay"></div>
+
+</div>
 </body>
 <footer>
-  <div id="update">v.1.3.1 - Last update: January 14th, 2024.</div>
+  <div id="update">v.1.4.0 - Last update: July 30th, 2024.</div>
 </footer>
 </html>
