@@ -423,7 +423,7 @@ var enemyData = {
     },
 
     "29": {
-        name: "Duell (enfraquecido) (Infinity Cloister)",
+        name: "Duell (weakened) (Infinity Cloister)",
         description: stringIsBoss + "Can be found on the last stage of Infinity Cloister on dificulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
