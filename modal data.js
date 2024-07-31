@@ -290,8 +290,8 @@ var enemyData = {
     "20": {
         name: "Voidal Enforcer",
         description: stringIsNotBoss + "Can be found in the Void (Taint) raid dungeon after the first stage.<br>"+
-                        "There is a 20% taint debuff in this dungeon. The debuff has been applied automatically in the calculator.<br>"+
-                        "The buff acquired from the Voidal Enforcer, present on phases 2, 3, and 4, is 200%. Add this value to your buffs if desired.",
+                                       "There is a 20% taint debuff in this dungeon. The debuff has been applied automatically in the calculator.<br>"+
+                                       "The buff acquired from the Voidal Enforcer, present on phases 2, 3, and 4, is <span class='yellow'>200%</span>. Add this value to your buffs if desired.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
@@ -309,9 +309,9 @@ var enemyData = {
 
     "21": {
         name: "Voidal Gazer",
-        description: stringIsBoss + "Está presente na raid Vazio (Invasão) a partir da 2° fase.<br>"+
-                     "There is a 20% taint debuff in this dungeon. The debuff has been applied automatically in the calculator.<br>"+
-                     "The buff acquired from the Voidal Enforcer, present on phases 2, 3, and 4, is 200%. Add this value to your buffs if desired.",
+        description: stringIsNotBoss + "Can be found in the Void (Taint) raid dungeon after the first stage.<br>"+
+                                       "There is a 20% taint debuff in this dungeon. The debuff has been applied automatically in the calculator.<br>"+
+                                       "The buff acquired from the Voidal Enforcer, present on phases 2, 3, and 4, is <span class='yellow'>200%</span>. Add this value to your buffs if desired.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
             defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
@@ -321,7 +321,7 @@ var enemyData = {
                         "<span class='tab'>- 3° fase <span class='yellow'>50.12M (2005 bars)</span></span>.<br>"+
                         "<span class='tab'>- 4° fase <span class='yellow'>70.18M (2807 bars)</span></span>."
         },
-        extra: "- Voidal Gazer will use 'casting' every 60 seconds"+
+        extra: "- Voidal Gazer will use 'casting' every 60 seconds.<br>"+
                "- In order to interrupt it, it is necessary to deal 2M damage on stage 3 and 3M damage on stage 4.",
         path: 'images/monsters/gazer.png'
     },
