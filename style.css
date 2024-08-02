@@ -48,6 +48,7 @@ body {
   justify-content: space-between;
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
 }
 section {
   background: #243851;
@@ -285,11 +286,14 @@ div#update {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 800px;
+  width: 90%;
   background-color: rgb(51, 48, 58);
   padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .modal-content {
@@ -299,6 +303,7 @@ div#update {
   line-height:30px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  max-height: 80vh;
 }
 
 .modal-content.show{
