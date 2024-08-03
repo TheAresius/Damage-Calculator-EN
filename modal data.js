@@ -327,7 +327,7 @@ var enemyData = {
     },
     "22": {
         name: "Rofnus (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the first stage of Infinity Cloister on dificulty 3.",
+        description: stringIsNotBoss + "Can be found on the first stage of Infinity Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>23.08%</span>",
             defense2: stringDef2 + "<span class='yellow'>23.08%</span>",
@@ -352,7 +352,7 @@ var enemyData = {
 
     "24": {
         name: "Skeram (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the second stage of Infinity Cloister on dificulty 3.",
+        description: stringIsNotBoss + "Can be found on the second stage of Infinity Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
@@ -380,7 +380,7 @@ var enemyData = {
 
     "26": {
         name: "Chaotic Witch (purple protection) (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the third stage of Infinity Cloister on dificulty 3.",
+        description: stringIsNotBoss + "Can be found on the third stage of Infinity Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
@@ -395,7 +395,7 @@ var enemyData = {
 
     "27": {
         name: "Chaotic Witch (red protection) (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the third stage of Infinity Cloister on dificulty 3.",
+        description: stringIsNotBoss + "Can be found on the third stage of Infinity Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>58.34%</span>",
             defense2: stringDef2 + "<span class='yellow'>58.34%</span>",
@@ -410,8 +410,8 @@ var enemyData = {
 
     "28": {
         name: "Duell (Infinity Cloister)",
-        description: stringIsBoss + "Can be found on the last stage of Infinity Cloister on dificulty 3.",
-        status:{
+        description: stringIsBoss + "Can be found on the last stage of Infinity Cloister on difficulty 3.",
+       status:{
             defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
             defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
             defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
@@ -424,7 +424,7 @@ var enemyData = {
 
     "29": {
         name: "Duell (weakened) (Infinity Cloister)",
-        description: stringIsBoss + "Can be found on the last stage of Infinity Cloister on dificulty 3.",
+        description: stringIsBoss + "Can be found on the last stage of Infinity Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
