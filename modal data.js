@@ -301,7 +301,7 @@ var enemyData = {
                         "<span class='tab'>- 3° fase <span class='yellow'>4.36M</span></span>.<br>"+
                         "<span class='tab'>- 4° fase <span class='yellow'>6.00M</span></span>."
         },
-        extra: "- The enemy will use 'castings' 60 seconds after being defeated for the first time, on stages 3 and 4.<br>"+
+        extra: "- The enemy will use 'casting' 60 seconds after being defeated for the first time, on stages 3 and 4.<br>"+
                "- 5 seconds after being reborn the enemy will use 'casting'.<br>"+
                "- It is necessary do deal 1M damage in order to interrupt it.",
         path: 'images/monsters/enforcer.png'
@@ -309,7 +309,7 @@ var enemyData = {
 
     "21": {
         name: "Voidal Gazer",
-        description: stringIsNotBoss + "Can be found in the Void (Taint) raid dungeon after the first stage.<br>"+
+        description: stringIsBoss + "Can be found in the Void (Taint) raid dungeon after the first stage.<br>"+
                                        "There is a 20% taint debuff in this dungeon. The debuff has been applied automatically in the calculator.<br>"+
                                        "The buff acquired from the Voidal Enforcer, present on phases 2, 3, and 4, is <span class='yellow'>200%</span>. Add this value to your buffs if desired.",
         status:{
@@ -417,8 +417,9 @@ var enemyData = {
             defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
             health: stringEstHP + "<span class='yellow'>16.10M (644 bars)</span>"
         },
-        extra: "- Duell will use 'casting' three consecutive times and it is necessary to deal 1.7M damage to interrupt it.<br>"+
-               "- When interrupted three times, Duell will be weakened and receive 50% more damage from all sources.",
+        extra: "- Duell will use 'casting' up to three consecutive times and it is necessary to deal 1.7M damage to interrupt it.<br>"+
+               "- If not interrupted, Duell will release a powerful attack and return to his usual attack patern.<br>"+
+               "- When interrupted three consecutive times, Duell will be weakened and receive 50% more damage from all sources.",
         path: 'images/monsters/duel.png'
     },
 
@@ -429,10 +430,11 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>60.94%</span>",
-            health: stringEstHP + "<span class='yellow'>16.00M (640 bars)</span>"
+            health: stringEstHP + "<span class='yellow'>16.10M (640 bars)</span>"
         },
-        extra: "- Duell will use 'casting' three consecutive times and it is necessary to deal 1.7M damage to interrupt it.<br>"+
-               "- When interrupted three times, Duell will be weakened and receive 50% more damage from all sources.",
+        extra: "- Duell will use 'casting' up to three consecutive times and it is necessary to deal 1.7M damage to interrupt it.<br>"+
+               "- If not interrupted, Duell will release a powerful attack and return to his usual attack patern.<br>"+
+               "- When interrupted three consecutive times, Duell will be weakened and receive 50% more damage from all sources.",
         path: 'images/monsters/duel.png'
     },
 
