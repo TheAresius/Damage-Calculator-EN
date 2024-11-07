@@ -163,9 +163,9 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>60.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>60.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>6.00M</span>" + stringScaleHP
+            health: stringEstHP + "<span class='yellow'>1.88M</span>" + stringScaleHP
         },
-        extra: "- It's necessary to damage only 33% of its HP to defeat it.",
+        extra: "- It's necessary to damage only 50% of its HP to defeat it.",
         path: 'images/monsters/gadosen 2.png'
     },
 
@@ -176,7 +176,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>60.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>60.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>6.00M (353 bars)</span>."
+            health: stringEstHP + "<span class='yellow'>8.08M (353 bars)</span>."
         },
         extra: "- Gardosen will use his 'soul absorption' attack every 40 seconds. If you stay in the red area, it will kill you no matter what.",
         path: 'images/monsters/gadosen 1.png'
