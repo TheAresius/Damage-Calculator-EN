@@ -297,9 +297,9 @@ var enemyData = {
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
             health: stringEstHP + "<br>"+
-                        "<span class='tab'>- 2nd phase <span class='yellow'>2.51M</span></span>.<br>"+
-                        "<span class='tab'>- 3rd phase <span class='yellow'>4.36M</span></span>.<br>"+
-                        "<span class='tab'>- 4th phase <span class='yellow'>6.00M</span></span>."
+                        "<span class='tab'>- 2nd stage <span class='yellow'>2.51M</span></span>.<br>"+
+                        "<span class='tab'>- 3rd stage <span class='yellow'>4.36M</span></span>.<br>"+
+                        "<span class='tab'>- 4th stage <span class='yellow'>6.00M</span></span>."
         },
         extra: "- The enemy will use 'casting' 60 seconds after being defeated for the first time, on stages 3 and 4.<br>"+
                "- 5 seconds after being reborn the enemy will use 'casting'.<br>"+
@@ -317,9 +317,9 @@ var enemyData = {
             defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
             defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
             health: stringEstHP + "<br>"+
-                        "<span class='tab'>- 2nd phase <span class='yellow'>25.08M (1003 bars)</span></span>.<br>"+
-                        "<span class='tab'>- 3rd phase <span class='yellow'>50.12M (2005 bars)</span></span>.<br>"+
-                        "<span class='tab'>- 4th phase <span class='yellow'>70.18M (2807 bars)</span></span>."
+                        "<span class='tab'>- 2nd stage <span class='yellow'>25.08M (1003 bars)</span></span>.<br>"+
+                        "<span class='tab'>- 3rd stage <span class='yellow'>50.12M (2005 bars)</span></span>.<br>"+
+                        "<span class='tab'>- 4th stage <span class='yellow'>70.18M (2807 bars)</span></span>."
         },
         extra: "- Voidal Gazer will use 'casting' every 60 seconds.<br>"+
                "- In order to interrupt it, it is necessary to deal 2M damage on stage 3 and 3M damage on stage 4.",
