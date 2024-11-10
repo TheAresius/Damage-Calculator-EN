@@ -19,7 +19,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>30.00%</span>",
-            health: stringEstHP + "<span class='yellow'>943k (37 bars)</span>."
+            health: stringEstHP + "<span class='yellow'>900k (37 bars)</span>."
         },
         extra: "-",
         path: 'images/monsters/gorgos 1.png'
@@ -85,9 +85,9 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>30.00%</span>",
-            health: stringEstHP + "<span class='yellow'>1.29M</span>" + stringScaleHP
+            health: stringEstHP + "<span class='yellow'>1.26M</span>" + stringScaleHP
         },
-        extra: "- It's necessary to damage only 65% of its HP to defeat it.",
+        extra: "- It's necessary to damage only 75% of its HP to defeat it.",
         path: 'images/monsters/gorgos 2.png'
     },
 
@@ -98,7 +98,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>60.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>60.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>3.31M (139 bars)</span>."
+            health: stringEstHP + "<span class='yellow'>3.46M (139 bars)</span>."
         },
         extra: "-",
         path: 'images/monsters/gorgos 1.png'
@@ -111,7 +111,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>30.00%</span>",
-            health: stringEstHP + "<span class='yellow'>1.81M</span>" + stringScaleHP
+            health: stringEstHP + "<span class='yellow'>1.89M</span>" + stringScaleHP
         },
         extra: "- It's necessary to damage only 50% of its HP to defeat it.",
         path: 'images/monsters/gaikoz 2.png'
@@ -124,7 +124,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>30.00%</span>",
-            health: stringEstHP + "<span class='yellow'>3.97M (167 bars)</span>."
+            health: stringEstHP + "<span class='yellow'>4.15M (167 bars)</span>."
         },
         extra: "-",
         path: 'images/monsters/gaikoz 1.png'
@@ -137,7 +137,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>3.37M</span>" + stringScaleHP
+            health: stringEstHP + "<span class='yellow'>3.52M</span>" + stringScaleHP
         },
         extra: "- Kamiki will use a freezing mist every 20 seconds on a selected region in the map. It will quickly damage your HP.",
         path: 'images/monsters/kamiki 2.png'
@@ -150,7 +150,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>3.37M (141 bars)</span>."
+            health: stringEstHP + "<span class='yellow'>3.52M (141 bars)</span>."
         },
         extra: "- Kamiki will use a freezing mist every 20 seconds on a selected region in the map. It will quickly damage your HP.",
         path: 'images/monsters/kamiki 1.png'
@@ -163,9 +163,9 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>60.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>60.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>1.88M</span>" + stringScaleHP
+            health: stringEstHP + "<span class='yellow'>1.97M</span>" + stringScaleHP
         },
-        extra: "- It's necessary to damage only 50% of its HP to defeat it.",
+        extra: "- It's necessary to damage only 60% of its HP to defeat it.",
         path: 'images/monsters/gadosen 2.png'
     },
 
@@ -176,7 +176,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>60.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>60.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>8.08M (353 bars)</span>."
+            health: stringEstHP + "<span class='yellow'>8.44M (353 bars)</span>."
         },
         extra: "- Gardosen will use his 'soul absorption' attack every 40 seconds. If you stay in the red area, it will kill you no matter what.",
         path: 'images/monsters/gadosen 1.png'
@@ -189,7 +189,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>60.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>60.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>52.77M (2401 bars)</span>."
+            health: stringEstHP + "<span class='yellow'>55.18M (2401 bars)</span>."
         },
         extra: "- From time to time Kaze'aze will teleport herself to the center of the map and start concentrating energy. A set of marks will appear in the floor showing the sequence of her attack.<br>"+
                "- If you use skills next to her during this action, you can delay her attack and end up killing your party members.",
