@@ -64,34 +64,41 @@
 
     <form id="form">
       <label>
-        <input type="radio" id="Normal" name="damage_type" value="Normal" />Combo damage<br />
+        <input type="radio" id="Normal" name="damage_type" value="Normal" />Basic commands<br/>
       </label>
       <label>
-        <input type="radio" id="Special" name="damage_type" value="Special" checked />Skill damage<br />
+        <input type="radio" id="Special" name="damage_type" value="Special" checked />Skill damage<br/>
       </label>
       <label>
-        <input type="radio" id="Pet" name="damage_type" value="Pet" />Pet
+        <input type="radio" id="Pet" name="damage_type" value="Pet"/>Pet
         damage
       </label>
     </form>
     <div id="list">
-      <label for="EnemyCharacter">Enemy:</label>
+      <label for="EnemyCharacter">Enemy:<br></label>
       <select id="Enemy_list" onchange="warn(this.value);">
         <option value="0">Normal monster</option>
-        <option class="separator" disabled>INFINITY CLOISTER</option>
-        <option value="22">Rofnus</option>
-        <option value="23">Rofnus (HP regen)</option>
-        <option value="24">Skeram</option>
-        <option value="25">Decanee</option>
-        <option value="26">Decanee (purple protection)</option>
-        <option value="27">Decanee (red portection)</option>
-        <option value="28">Duell</option>
-        <option value="29">Duell (weakened)</option>
-        <option class="separator" disabled>VOID</option>
+
+
+        <option class="separator" disabled>VOID 1</option>
         <option value="18">Voidal Devourer</option>
+
+        <option class="separator" disabled>VOID 2</option>
         <option value="19">Voidal Sentry/Crusher</option>
         <option value="20">Voidal Enforcer</option>
         <option value="21">Voidal Gazer</option>
+
+        <option class="separator" disabled>VOID 3</option>
+        <option value="44">Heart of the Absolute: bottom</option>
+        <option value="45">Heart of the Absolute (weakened): bottom</option>
+        <option value="46">Heart of the Absolute: top</option>
+        <option value="47">Heart of the Absolute (weakened): top</option>
+        <option value="48">Voidal Apostle 2F</option>
+        <option value="49">Voidal Apostle 3F</option>
+        <option value="50">Voidal Apostle 4F</option>
+        <option value="51">Voidal Apostle 4F (blue orb)</option>
+        <option value="52">Voidal Apostle 4F (red orb)</option>
+
         <option class="separator" disabled>TOD</option>
         <option value="1">Gorgos (1F)</option>
         <option value="2">Gardosen (2F)</option>
@@ -107,6 +114,17 @@
         <option value="34">First Gardosen (9F)</option>
         <option value="9">Double Gardosen (9F)</option>
         <option value="10">Kaze'aze (10F)</option>
+
+        <option class="separator" disabled>INFINITY CLOISTER</option>
+        <option value="22">Rofnus</option>
+        <option value="23">Rofnus (HP regen)</option>
+        <option value="24">Skeram</option>
+        <option value="25">Decanee</option>
+        <option value="26">Decanee (purple protection)</option>
+        <option value="27">Decanee (red portection)</option>
+        <option value="28">Duell</option>
+        <option value="29">Duell (weakened)</option>
+
         <option class="separator" disabled>BERKAS</option>
         <option value="11">Berkas (Body)</option>
         <option value="12">Berkas (Legs)</option>
@@ -182,6 +200,6 @@
 </div>
 </body>
 <footer>
-  <div id="update">v.1.4.3 - Last update: November 10th, 2024.</div>
+  <div id="update">v.1.4.4 - Last update: November 30th, 2024.</div>
 </footer>
 </html>

@@ -88,39 +88,57 @@ function calculate() {
     DEF = 2/3;
     sDEF = 71/96;
     harrier_debuff = 20;
-  } else if(enemy==="22"){//Rofnus
-    DEF = 0.23075
+  } else if(enemy==="22"){
+    DEF = 0.23075;
     sDEF = 0.399025
-  } else if(enemy==="23"){//Rofnus hp regen
-    DEF = 0
-    sDEF = 0.21875
-  } else if(enemy==="25"){//Dekane
-    DEF = -0.25
-    sDEF = 0.0234
-  } else if(enemy==="26"){//Dekane purple
-    DEF = -1.5
-    sDEF = 71/96
-  } else if(enemy==="27"){//Dekane red
-    DEF = 0.58335
-    sDEF = -0.56255
-  } else if(enemy==="28"){//Duel 3
-    DEF = 2/3
-    sDEF = 71/96
-  } else if(enemy==="29"){//Duel 3
-    DEF = 0.5
-    sDEF = 0.609375
+  } else if(enemy==="23"){
+    DEF = 0;
+    sDEF = 0.21875;
+  } else if(enemy==="25"){
+    DEF = -0.25;
+    sDEF = 0.0234;
+  } else if(enemy==="26"){
+    DEF = -1.5;
+    sDEF = 71/96;
+  } else if(enemy==="27"){
+    DEF = 0.58335;
+    sDEF = -0.56255;
+  } else if(enemy==="28"||enemy==="42"){
+    DEF = 2/3;
+    sDEF = 71/96;
+  } else if(enemy==="29"||enemy==="43"){
+    DEF = 0.5;
+    sDEF = 0.609375;
   } else if(enemy==="35"){
-    DEF = 0
-    sDEF = 0.21875
+    DEF = 0;
+    sDEF = 0.21875;
   } else if(enemy==="36"){
-    DEF = -17/3
-    sDEF = -4.2084
+    DEF = -17/3;
+    sDEF = -4.2084;
   } else if(enemy==="37"){
-    DEF = 0.2
-    sDEF = 0.375
+    DEF = 0.2;
+    sDEF = 0.375;
   } else if(enemy==="38"){
-    DEF = -1
-    sDEF = -0.5625
+    DEF = -1;
+    sDEF = -0.5625;
+  } else if(enemy==="44" || enemy==="46") {
+    DEF = 0.9;
+    sDEF = 236/256;
+  } else if(enemy==="45" || enemy==="47") {
+    DEF = 0.7;
+    sDEF = 0.282596;
+  } else if(enemy==="48" || enemy==="49") {
+    DEF = 2/3;
+    sDEF = 71/96;
+  } else if(enemy==="50") {
+    DEF = 5/6;
+    sDEF = 167/192;
+  } else if(enemy==="51") {
+    DEF = 5/6;
+    sDEF = 67/192;
+  } else if(enemy==="52") {
+    DEF = -2/3;
+    sDEF = 167/192;
   }
 
   //Check for user input errors
@@ -207,7 +225,8 @@ function calculate() {
     if (b_atk < 0 || isNaN(b_atk) == true) {
       setErrorOnInputById("back_attack_string")
     }
-  } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15" && enemy!="18" && enemy!="19" && enemy!="20" && enemy!="21" && enemy!="35"&& enemy!="36" && enemy!="37"&& enemy!="38") {
+  } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15" && enemy!="18" && enemy!="19" && enemy!="20" && enemy!="21" && enemy!="35" && enemy!="36" && enemy!="37"&& enemy!="38" 
+             && enemy!="44" && enemy!="45" && enemy!="46" && enemy!="47" && enemy!="48" && enemy!="49" && enemy!="50" && enemy!="51" && enemy!="52") {
     window.alert(stringsErrorHarrier);
 
     setErrorOnInputById("harrier_d_string");

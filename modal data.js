@@ -206,7 +206,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>7.90M (307 bars)</span>" + stringScaleHP
         },
         extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body and legs. <br>"+
-               "- The damage dealt to its legs is reduced by 60%",
+               "- The damage dealt to its legs is reduced by 60%"+
+               "- Your damage is reduced by 66.66% without the suppressor",
         path: 'images/monsters/berkas.png'
     },
 
@@ -220,7 +221,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>7.90M (307 bars)</span>" + stringScaleHP
         },
         extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body and legs. <br>"+
-               "- The damage dealt to its legs is reduced by 60%",
+               "- The damage dealt to its legs is reduced by 60%"+
+               "- Your damage is reduced by 66.66% without the suppressor",
         path: 'images/monsters/berkas.png'
     },
 
@@ -543,6 +545,141 @@ var enemyData = {
         extra: "- When below 66% HP, Gaian can summon his golens in the map. You will have 12 seconds to defeat them.<br>"+
                "- If they are defeated, Gaian will get frozen in time and will receive 150% more damage during 10 seconds.",
         path: 'images/monsters/gaian.png'
+    },
+
+    "44": {
+        name: "Heart of the Absolute - bottom of the map",
+        description: stringIsNotBoss + "Can be found in the bottom part of the map on the first stage of Void (Nightmare).",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>90.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>90.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>92.18%</span>",
+            health: stringEstHP + "<span class='yellow'>2.10M </span>"
+        },
+        extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
+               "- While being attacked, the Heart of the Absolute will lose its defense and it will receive much more damage from skills.",
+        path: 'images/monsters/heart 1.png'
+    },
+
+    "45": {
+        name: "Heart of the Absolute - bottom of the map (weakened)",
+        description: stringIsNotBoss + "Can be found in the bottom part of the map on the first stage of Void (Nightmare).",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>70.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>70.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>28.26%</span>",
+            health: stringEstHP + "<span class='yellow'>2.10M </span>"
+        },
+        extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
+               "- While being attacked, the Heart of the Absolute will lose its defense and it will receive much more damage from skills.",
+        path: 'images/monsters/heart 1.png'
+    },
+
+    "46": {
+        name: "Heart of the Absolute - top of the map",
+        description: stringIsNotBoss + "Can be found in the upper part of the map on the first stage of Void (Nightmare).",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>90.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>90.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>92.18%</span>",
+            health: stringEstHP + "<span class='yellow'>7.30M </span>"
+        },
+        extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
+               "- While being attacked, the Heart of the Absolute will lose its defense and it will receive much more damage from skills.",
+        path: 'images/monsters/heart 2.png'
+    },
+
+    "47": {
+        name: "Heart of the Absolute - top of the map (weakened)",
+        description: stringIsNotBoss + "Can be found in the upper part of the map on the first stage of Void (Nightmare).",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>70.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>70.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>28.26%</span>",
+            health: stringEstHP + "<span class='yellow'>7.30M </span>"
+        },
+        extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
+               "- While being attacked, the Heart of the Absolute will lose its defense and it will receive much more damage from skills.",
+        path: 'images/monsters/heart 2.png'
+    },
+
+    "48": {
+        name: "Voidal Apostle (Nightmare) - 2F",
+        description: stringIsBoss + "Can be found on the second stage of Void (Nightmare).<br>It is not possible to break this enemy's defense.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
+            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
+            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            health: stringEstHP + "<span class='yellow'>6.58M (263 bars)</span>"
+        },
+        extra: "- From time to time the Voidal Apostle will summon a purple aura on the map. During this attack the Voidal Apostle will remain still and vulnerable to damage, however players within the aura will also summon multiple thorns wherever they move.<br><br>"+
+               "- After ~1:30 from the begining of the stage, the Voidal Apostle will use the 'Danger' mechanics, which will summon multiple spheres through the map. During this perior the Voidal Apostle will leave the map and it won't be possible to damage it.<br>",
+        path: 'images/monsters/apostle 1.png'
+    },
+
+    "49": {
+        name: "Voidal Apostle (Nightmare) - 3F",
+        description: stringIsBoss + "Can be found on the third stage of Void (Nightmare).<br>It is not possible to break this enemy's defense.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
+            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
+            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            health: stringEstHP + "<span class='yellow'>14.92M (597 bars)</span>"
+        },
+        extra: "- From time to time the Voidal Apostle will teleport itself to the right (if it's on the left portion of the map) or left (if it's on the right portion of the map) corner of the map and shoot an energy wave. During this period the Voidal Apostle will remain still and be very susceptible to damage.<br><br>"+
+               "- The Voidal Apostle may use the 'Danger' mechanics. A wind will blow from left to right or right to left, indicating which side the boss will move while dealing a high amount of damage. If it flies to the left it will remain at the bottom platform; if it flies to the right it will remain at the topmost platform .<br><br>"+
+               "- After using the teleport mechanis twice, Voidal Apostle may use the 'Summon' mechanics and will leave the map until all 'Nightmare Gazers' are defeated. Once defeated, they will summon a damage buff orb and the Voidal Apostle will remain vulnerable for ~15 seconds.<br><br>"+
+               "- The buff acquired from the 'Nightmare Gazers' is <span class='yellow'>150%</span>. Add this value to your buffs if desired.<br><br>"+
+               "- If the Voidal Apostle is defeated before the 'Summon' mechanics it will be possible to access the hidden stage (4F) of Void (Nightmare).",
+        path: 'images/monsters/apostle 2.png'
+    },
+
+    "50": {
+        name: "Voidal Apostle (Nightmare) - 4F",
+        description: stringIsBoss + "Can be found on the hidden stage (4F) of Void (Nightmare). It is only possible to access the hidden stage if stage 3 is cleared before the 'Summon' mechanics.<br>It is not possible to break this enemy's defense.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
+            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
+            defense3: stringDef3 + "<span class='yellow'>92.18%</span>",
+            health: stringEstHP + "<span class='yellow'>35.82M (1433 bars)</span>"
+        },
+        extra: "- The Voidal Apostle will remain still in the center of the map while concentrating energy and dealing a small amount of damage to players. If it is not defeated within 1 minute the dungeon will fail automatically.<br><br>"+
+               "- Every 10 seconds the Voidal Apostle will summon buff orbs across the map. Those orbs will be avaible for 10 seconds and they grant a particular buff until they vanish from the map.<br><br>"+
+               "- Blue orb: reduces the cooldown of all skill by 20 seconds, restores two MP bars and causes the Voidal Apostle to receive <span class='yellow'>400%</span> more damage from skills (this is not considered a buff but rather a direct increase in the damage received by the boss).<br><br>"+
+               "- Red orb: restores 1000 HP and causes the Voidal Apostle to receive <span class='yellow'>900%</span> more damage from basic commands and pets (this is not considered a buff but rather a direct increase in the damage received by the boss).",
+        path: 'images/monsters/apostle 3.png'
+    },
+
+    "51": {
+        name: "Voidal Apostle (Nightmare) - 4F (Blue orb)",
+        description: stringIsBoss + "Can be found on the hidden stage (4F) of Void (Nightmare). It is only possible to access the hidden stage if stage 3 is cleared before the 'Summon' mechanics.<br>It is not possible to break this enemy's defense.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
+            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
+            defense3: stringDef3 + "<span class='yellow'>92.18%</span>",
+            health: stringEstHP + "<span class='yellow'>35.82M (1433 bars)</span>"
+        },
+        extra: "- The Voidal Apostle will remain still in the center of the map while concentrating energy and dealing a small amount of damage to players. If it is not defeated within 1 minute the dungeon will fail automatically.<br><br>"+
+               "- Every 10 seconds the Voidal Apostle will summon buff orbs across the map. Those orbs will be avaible for 10 seconds and they grant a particular buff until they vanish from the map.<br><br>"+
+               "- Blue orb: reduces the cooldown of all skill by 20 seconds, restores two MP bars and causes the Voidal Apostle to receive <span class='yellow'>400%</span> more damage from skills (this is not considered a buff but rather a direct increase in the damage received by the boss).<br><br>"+
+               "- Red orb: restores 1000 HP and causes the Voidal Apostle to receive <span class='yellow'>900%</span> more damage from basic commands and pets (this is not considered a buff but rather a direct increase in the damage received by the boss).",
+        path: 'images/monsters/apostle 3.png'
+    },
+
+    "52": {
+        name: "Voidal Apostle (Nightmare) - 4F (Red orb)",
+        description: stringIsBoss + "Can be found on the hidden stage (4F) of Void (Nightmare). It is only possible to access the hidden stage if stage 3 is cleared before the 'Summon' mechanics.<br>It is not possible to break this enemy's defense.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
+            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
+            defense3: stringDef3 + "<span class='yellow'>92.18%</span>",
+            health: stringEstHP + "<span class='yellow'>35.82M (1433 bars)</span>"
+        },
+        extra: "- The Voidal Apostle will remain still in the center of the map while concentrating energy and dealing a small amount of damage to players. If it is not defeated within 1 minute the dungeon will fail automatically.<br><br>"+
+               "- Every 10 seconds the Voidal Apostle will summon buff orbs across the map. Those orbs will be avaible for 10 seconds and they grant a particular buff until they vanish from the map.<br><br>"+
+               "- Blue orb: reduces the cooldown of all skill by 20 seconds, restores two MP bars and causes the Voidal Apostle to receive <span class='yellow'>400%</span> more damage from skills (this is not considered a buff but rather a direct increase in the damage received by the boss).<br><br>"+
+               "- Red orb: restores 1000 HP and causes the Voidal Apostle to receive <span class='yellow'>900%</span> more damage from basic commands and pets (this is not considered a buff but rather a direct increase in the damage received by the boss).",
+        path: 'images/monsters/apostle 3.png'
     },
 
 };
