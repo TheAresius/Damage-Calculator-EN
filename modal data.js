@@ -203,7 +203,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
-            health: stringEstHP + "<span class='yellow'>7.90M (307 bars)</span>" + stringScaleHP
+            health: stringEstHP + "<span class='yellow'>7.65M (307 bars)</span>" + stringScaleHP
         },
         extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body and legs. <br>"+
                "- The damage dealt to its legs is reduced by 60%"+
@@ -218,7 +218,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>40.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>40.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>53.12%</span>",
-            health: stringEstHP + "<span class='yellow'>7.90M (307 bars)</span>" + stringScaleHP
+            health: stringEstHP + "<span class='yellow'>7.65M (307 bars)</span>" + stringScaleHP
         },
         extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body and legs. <br>"+
                "- The damage dealt to its legs is reduced by 60%"+
