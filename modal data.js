@@ -484,7 +484,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
-            health: stringEstHP + "<span class='yellow'>17.41M</span>"
+            health: stringEstHP + "<span class='yellow'>17.42M (697 bars)</span>"
         },
         extra: "- When Grandiel gets below 80% HP he can become invulnerable and summon Drawl and Veron, which will attack simultaneously. It is necessary to defeat them in order to make Grandiel vulnerable to damage again.<br>"+
                "- After defeating Drawl and Veron, and when Grandiel is below 50% HP, he can summon his 5 clones, which will attack simultaneously.",
