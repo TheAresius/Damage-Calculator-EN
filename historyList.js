@@ -46,6 +46,10 @@ function showResponsesOnUI() {
               </span>
             </div>
 
+            <div style="line-height:50%;">
+            <br>
+            </div>
+
             <div class="response-list-item-value">
               ${stringsHistoryListAttack}:
               <span>
@@ -92,22 +96,75 @@ function showResponsesOnUI() {
               </span>
             </div>
 
+            <div style="line-height:210%;">
+            <br>
+            </div>
+
             <div class="response-list-item-value">
-            ${stringsHistoryListBuffs}:
-            <span>
-              ${response.buffs}%
-            </span>
-          </div>
+              ${stringsNormalHitDamage+" (front)"}: 
+              <span class="yellow">
+                ${response.ui_final_dmg.toLocaleString('en')}
+              </span>
+            </div>
+
+            <div class="response-list-item-value">
+              ${stringsCriticalHitDamage+" (front)"}: 
+              <span class="yellow">
+                ${response.ui_corrected_final_dmg.toLocaleString('en')}
+              </span>
+            </div>
+
+            <div class="response-list-item-value">
+              ${stringsAverageDamage+" (front)"}: 
+              <span class="yellow">
+                ${response.avgCritDmg.toLocaleString('en')}
+              </span>
+            </div>
 
           </div>
 
           <div>
-          
+
+          <div class="response-list-item-value">
+            ${stringsHistoryListASD}:
+            <span>
+              ${response.asd_buffs}%
+            </span>
+            </div>
+
+            <div class="response-list-item-value">
+            ${stringsHistoryListPola}:
+            <span>
+              ${response.pola_buffs}%
+            </span>
+            </div>
+
+            <div class="response-list-item-value">
+            ${stringsHistoryListBossDmg}:
+            <span>
+              ${response.boss_dmg_buffs}%
+            </span>
+            </div>
+
             <div class="response-list-item-value">
               ${stringsHistoryListBAtk}:
               <span>
                 ${response.b_atk}%
               </span>
+            </div>
+
+            <div class="response-list-item-value">
+            ${stringsHistoryListBuffs}:
+            <span>
+              ${response.buffs}%
+            </span>
+            </div>
+
+            <div class="response-list-item-value">
+            ${stringsHistoryListDef}:
+            <span>
+              ${response.def_pierce}%
+            </span>
             </div>
 
             <div class="response-list-item-value">
@@ -117,30 +174,11 @@ function showResponsesOnUI() {
               </span>
             </div>
 
-            <div style="line-height:94%;">
+            <div style="line-height:350%;">
             <br>
             </div>
 
-            <div class="response-list-item-value">
-              ${stringsNormalHitDamage+" (frontal)"}: 
-              <span class="yellow">
-                ${response.ui_final_dmg}
-              </span>
-            </div>
-
-            <div class="response-list-item-value">
-              ${stringsCriticalHitDamage+" (frontal)"}: 
-              <span class="yellow">
-                ${response.ui_corrected_final_dmg}
-              </span>
-            </div>
-
-            <div class="response-list-item-value">
-              ${stringsAverageDamage+" (frontal)"}: 
-              <span class="yellow">
-                ${response.avgCritDmg}
-              </span>
-            </div>
+            
 
             <div style="line-height:50%;">
             <br>
@@ -149,21 +187,21 @@ function showResponsesOnUI() {
             <div class="response-list-item-value">
               ${stringsNormalHitDamage+" (back)"}: 
               <span class="yellow">
-                ${response.ui_back_normal}
+                ${response.ui_back_normal.toLocaleString('en')}
               </span>
             </div>
 
             <div class="response-list-item-value">
               ${stringsCriticalHitDamage+" (back)"}: 
               <span class="yellow">
-                ${response.ui_back_critical}
+                ${response.ui_back_critical.toLocaleString('en')}
               </span>
             </div>
 
             <div class="response-list-item-value">
               ${stringsAverageDamage+" (back)"}: 
               <span class="yellow">
-                ${response.ui_back_average}
+                ${response.ui_back_average.toLocaleString('en')}
               </span>
             </div>
 

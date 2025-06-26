@@ -16,6 +16,9 @@ html {
   min-height: 100%;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
 /*Firefox up/down arrow removing*/
 input[type="number"] {
   -moz-appearance: textfield;
@@ -34,7 +37,44 @@ h1 {
   font-weight: 800;
   font-size: 24pt;
   text-align: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+.justified{
+  text-align: justify;
+  text-justify: inter-character;
+  scroll-behavior: smooth;
+}
+
+.separator {
+  border-top: solid white 1px;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+}
+
+.indent{
+  text-indent: 0em;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 95%;
+  margin-top: -8px;
+  margin-bottom: -8px;
+}
+
+.topic{
+  display: inline-block;
+  position: relative;
+  bottom: -8px;
+  width: 1em;
+}
+
+.title-separator {
+  height: 1px;
+  background-color: #8f8f8f;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 html {
   height: 100%;
 }
@@ -55,18 +95,38 @@ section {
   border-radius: 10px;
   border-style: solid;
   border-color: #b9d5e7;
-  width: 550px;
+  width: 600px;
   margin: auto;
   margin-top: 10pt;
 }
-div#data_enter {
+
+#data_enter {
   text-align: left;
   margin-left: 60px;
+  font-weight: 600;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-input {
-  margin-left: 10px;
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1px 0;
 }
+
+.input-group label {
+  margin-right: 10px;
+}
+
+.input-wrapper input[type="checkbox"] {
+  position: relative;
+  top: -0.15em;
+  width: 16px;
+  height: 16px;
+}
+
+
 .separator {
   border-top: dashed black 1px;
   padding: 0;
@@ -80,6 +140,7 @@ div#list {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 5px;
+  
 }
 #Enemy_list{
   font-size:12pt;
@@ -89,6 +150,7 @@ form {
   max-height: 300px;
   text-align: left;
   margin-left: 160px;
+  margin-top: 10px;
 }
 div#pet {
   text-align: center;
@@ -99,15 +161,30 @@ div#button {
 }
 #level {
   margin-bottom: 0px;
+  color: #F2F4F4;
 }
-#main_stats,
-#harrier {
-  margin-top: 7px;
+#main_stats{
+  margin-top: 20px;
   margin-bottom: 0px;
+  color: #FFB347;
+}
+#harrier {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  color: #9370DB;
 }
 #Damage {
-  margin-top: 7px;
+  margin-top: 20px;
+  color: #5DADE2;
 }
+
+#buffs {
+  margin-top: 20px;
+  color: #ce6363;
+}
+
+
+
 #yourLV_string,
 #monsterLV_string,
 #ATK_string,
@@ -117,8 +194,12 @@ div#button {
 #harrier_d_string,
 #harrier_r_string,
 #buffs_string,
+#asd_buffs_string,
+#pola_buffs_string,
+#boss_buffs_string,
 #back_attack_string,
-#skill_multi_string {
+#skill_multi_string,
+#def_multi_string {
   width: 100px;
   float: right;
   margin-right: 60px;
@@ -127,7 +208,7 @@ div#button {
 div#end {
   font-family: "Montserrat", sans-serif;
   font-size: 11pt;
-  max-width: 500px;
+  max-width: 600px;
   margin: 25pt auto;
   text-align: justify;
 }
@@ -176,7 +257,7 @@ a.two:active {
   padding-left: 20px;
 }
 
-#skill, #showInfoButton {
+#skill, #showInfoButton, #calc-info {
   align-items: center;
   flex:1;
   margin-top: 5px;
@@ -192,7 +273,7 @@ a.two:active {
   font-family: 'CustomFont', sans-serif;
   transition: 0.3s ease;
 }
-#skill:hover, #showInfoButton:hover {
+#skill:hover, #showInfoButton:hover, #calc-info:hover {
   box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.6);
 }
 
@@ -260,8 +341,8 @@ div#update {
 .column-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 0 36px;
-  max-width: 512px;
+  margin: 0 0 0 32px;
+  max-width: 600px;
   font-size: 12.5pt;
 }
 
@@ -340,6 +421,8 @@ div#update {
 .modal-header {
   display: flex;
   align-items: center;
+  font-weight: 600;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .modal-name {
   color: #007BFF;
@@ -348,6 +431,7 @@ div#update {
   margin-left:5px;
   display: flex;
   align-items: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .modal-separator {
@@ -361,6 +445,8 @@ div#update {
   font-size:18px;
   margin-top:20px;
   color: #007BFF;
+  font-weight: 600;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 option.separator {

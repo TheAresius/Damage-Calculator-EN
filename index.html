@@ -15,6 +15,7 @@
   <script src="modal.js"></script>
   <script src="modal data.js"></script>
   <script src="script.js"></script>
+  <script src="calc-info.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -22,49 +23,144 @@
   <section>
     <h1>Grand Chase <br />Damage calculator</h1>
     <div id="data_enter">
-      <p id="level">
-        Character level (1~85):
-        <input type="number" name="yourLV_string" id="yourLV_string" min="1" max="85" />
+      
+      <div id="level" class="section">
 
-        <br />Monster level (1~149):
-        <input type="number" name="monsterLV_string" id="monsterLV_string" min="1" max="149" />
-      </p>
-      <p id="main_stats">
-        Attack:
-        <input type="string" name="ATK_string" id="ATK_string" min="0" />
+        <div class="input-group">
+          <label for="yourLV_string">Character level (1~85):</label>
+          <input type="number" name="yourLV_string" id="yourLV_string" min="1" max="85" />
+        </div>
+    
+        <div class="input-group">
+          <label for="monsterLV_string">Monster level (1~149):</label>
+          <input type="number" name="monsterLV_string" id="monsterLV_string" min="1" max="149" />
+        </div>
 
-        <br />Special attack:
-        <input type="string" name="sATK_string" id="sATK_string" min="0" />
+      </div>
+    
 
-        <br />Critical rate (%):
-        <input type="string" name="crit_r_string" id="crit_r_string" min="0" />
 
-        <br />Critical damage (%):
-        <input type="string" name="crit_d_string" id="crit_d_string" min="0" />
-      </p>
-      <p id="harrier">
-        Taint debuff (%):
-        <input type="string" name="harrier_debuff" id="harrier_d_string" min="0" />
 
-        <br />Taint resistance (%):
-        <input type="string" name="harrier_resist" id="harrier_r_string" min="0" />
-      </p>
-      <p id="Damage">
-        Buffs (%):
-        <input type="string" name="buffs" id="buffs_string" min="0" />
-        <br/>
-        Back attack buff (%):
-        <input type="string" name="buffs" id="back_attack_string" min="0" />
-        <br/>
+      <div id="main_stats" class="section">
 
-        Damage value:
-        <input type="string" name="skill_multi_string" id="skill_multi_string" min="0" />
-      </p>
+        <div class="input-group">
+          <label for="ATK_string">Attack:</label>
+          <input type="text" name="ATK_string" id="ATK_string" />
+        </div>
+    
+        <div class="input-group">
+          <label for="sATK_string">Special attack:</label>
+          <input type="text" name="sATK_string" id="sATK_string" />
+        </div>
+    
+        <div class="input-group">
+          <label for="crit_r_string">Critical rate (%):</label>
+          <input type="text" name="crit_r_string" id="crit_r_string" />
+        </div>
+    
+        <div class="input-group">
+          <label for="crit_d_string">Critical damage (%):</label>
+          <input type="text" name="crit_d_string" id="crit_d_string" />
+        </div>
+
+      </div>
+    
+
+
+
+      <div id="harrier" class="section">
+
+        <div class="input-group">
+          <label for="harrier_d_string">Taint debuff (%):</label>
+          <input type="text" name="harrier_debuff" id="harrier_d_string" />
+        </div>
+    
+        <div class="input-group">
+          <label for="harrier_r_string">Taint resistance (%):</label>
+          <input type="text" name="harrier_resist" id="harrier_r_string" />
+        </div>
+
+      </div>
+    
+
+
+
+      <div id="buffs" class="section">
+        <div class="input-group">
+          <label for="asd_buffs_string">All skill damage (%):</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="asd_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
+            <input type="text" name="buffs" id="asd_buffs_string" />
+            
+          </div>
+          
+        </div>
+    
+        <div class="input-group">
+          <label for="pola_buffs_string">Attack / attacked damage (%):</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="pola_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
+            <input type="text" name="buffs" id="pola_buffs_string" />
+            
+          </div>
+          
+        </div>
+    
+        <div class="input-group">
+          <label for="boss_buffs_string">Damage to bosses (%):</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="boss_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
+            <input type="text" name="buffs" id="boss_buffs_string" />
+            
+          </div>
+          
+        </div>
+    
+        <div class="input-group">
+          <label for="back_attack_string">Back attack damage (%):</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="back_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
+            <input type="text" name="buffs" id="back_attack_string" />
+            
+          </div>
+          
+        </div>
+
+        <div class="input-group">
+          <label for="buffs_string">Other buffs (%):</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="other_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
+            <input type="text" name="buffs" id="buffs_string" />
+            
+          </div>
+          
+        </div>
+
+        <div class="input-group">
+          <label for="def_multi_string">Defense ignore debuffs (%):</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="def_multi_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
+            <input type="text" name="buffs" id="def_multi_string" />
+            
+          </div>
+          
+        </div>
+      </div>
+    
+
+
+
+      <div id="Damage" class="section">
+        <div class="input-group">
+          <label for="skill_multi_string">Base damage:</label>
+          <input type="text" name="skill_multi_string" id="skill_multi_string" />
+        </div>
+      </div>
     </div>
 
     <form id="form">
       <label>
-        <input type="radio" id="Normal" name="damage_type" value="Normal" />Basic commands<br/>
+        <input type="radio" id="Normal" name="damage_type" value="Normal" />Basic command damage<br/>
       </label>
       <label>
         <input type="radio" id="Special" name="damage_type" value="Special" checked />Skill damage<br/>
@@ -76,9 +172,28 @@
     </form>
     <div id="list">
       <label for="EnemyCharacter">Enemy:<br></label>
-      <select id="Enemy_list" onchange="warn(this.value);">
+      <select id="Enemy_list">
         <option value="0">Normal monster</option>
 
+        <option class="separator" disabled>INFINITE CLOISTER 4</option>
+        <option value="53">Ashtaroth (Corners)</option>
+        <option value="54">Ashtaroth (Mid)</option>
+        <option value="55">Dragon Knight</option>
+        <option value="56">Dragon Knight (weakened)</option>
+        <option value="57">Dragon Knight (super weakened)</option>
+        <option value="58">Harbinger</option>
+        <option value="59">Duell</option>
+        <option value="60">Duell (weakened)</option>
+
+        <option class="separator" disabled>INFINITE CLOISTER 3</option>
+        <option value="22">Rofnus</option>
+        <option value="23">Rofnus (HP regen)</option>
+        <option value="24">Skeram</option>
+        <option value="25">Decanee</option>
+        <option value="26">Decanee (purple protection)</option>
+        <option value="27">Decanee (red portection)</option>
+        <option value="28">Duell</option>
+        <option value="29">Duell (weakened)</option>
 
         <option class="separator" disabled>VOID 1</option>
         <option value="18">Voidal Devourer</option>
@@ -115,16 +230,6 @@
         <option value="9">Double Gardosen (9F)</option>
         <option value="10">Kaze'aze (10F)</option>
 
-        <option class="separator" disabled>INFINITY CLOISTER</option>
-        <option value="22">Rofnus</option>
-        <option value="23">Rofnus (HP regen)</option>
-        <option value="24">Skeram</option>
-        <option value="25">Decanee</option>
-        <option value="26">Decanee (purple protection)</option>
-        <option value="27">Decanee (red portection)</option>
-        <option value="28">Duell</option>
-        <option value="29">Duell (weakened)</option>
-
         <option class="separator" disabled>BERKAS</option>
         <option value="11">Berkas (Body)</option>
         <option value="12">Berkas (Legs)</option>
@@ -145,7 +250,8 @@
     <button id="showInfoButton">+Info</button>
     </div>
     <div id="button">
-      <input type="button" id="skill" value="Calculate" onclick="calculate()" />
+      <input type="button" id="skill" value="Calcular" onclick="calculate()" />
+      <button id="calc-info"  class="calc-info" data-tooltip="Clique para mostrar informações sobre a calculadora.">Calc Info</button>
     </div>
 
     <div id="damage">
@@ -169,8 +275,8 @@
       <span id="me">aresius4407</span>.
     </p>
     <p id="comment2">
-      Thanks to DsinC and 이빛나 who helped create the PvE Damage Sheets and
-      to Esawa for the Calculation History.
+      Thanks to 'DsinC' and 'i' who helped create the PvE Damage Sheets and
+      to 'Esawa' for the Calculation History.
     </p>
     <p id="comment3">
       Check this
@@ -200,6 +306,6 @@
 </div>
 </body>
 <footer>
-  <div id="update">v.1.4.4 - Last update: November 30th, 2024.</div>
+  <div id="update">v.1.6.0 - Last update: June 26th, 2025.</div>
 </footer>
 </html>

@@ -29,13 +29,26 @@ function calculate() {
     "input#harrier_r_string"
   ).value;
   harrier_resist = Number(harrier_resist.replace(/,/, "."));
+
   var buffs = window.document.querySelector("input#buffs_string").value;
   buffs = Number(buffs.replace(/,/, "."));
+
+  var asd_buffs = window.document.querySelector("input#asd_buffs_string").value;
+  asd_buffs = Number(asd_buffs.replace(/,/, "."));
+
+  var pola_buffs = window.document.querySelector("input#pola_buffs_string").value;
+  pola_buffs = Number(pola_buffs.replace(/,/, "."));
+
+  var boss_dmg_buffs = window.document.querySelector("input#boss_buffs_string").value;
+  boss_dmg_buffs = Number(boss_dmg_buffs.replace(/,/, "."));
+
   var b_atk = window.document.querySelector("input#back_attack_string").value;
   b_atk = Number(b_atk.replace(/,/, "."));
-  var skill_multi = window.document.querySelector(
-    "input#skill_multi_string"
-  ).value;
+
+  var def_pierce = window.document.querySelector("input#def_multi_string").value;
+  def_pierce = Number(def_pierce.replace(/,/, "."));
+
+  var skill_multi = window.document.querySelector("input#skill_multi_string").value;
   skill_multi = Number(skill_multi.replace(/,/g, "."));
 
   //Setup for possible user input errors
@@ -103,7 +116,7 @@ function calculate() {
   } else if(enemy==="27"){
     DEF = 0.58335;
     sDEF = -0.56255;
-  } else if(enemy==="28"||enemy==="42"){
+  } else if(enemy==="28"||enemy==="42" ||enemy==="59"){
     DEF = 2/3;
     sDEF = 71/96;
   } else if(enemy==="29"||enemy==="43"){
@@ -124,23 +137,45 @@ function calculate() {
   } else if(enemy==="44" || enemy==="46") {
     DEF = 0.9;
     sDEF = 236/256;
+    harrier_debuff = 20;
   } else if(enemy==="45" || enemy==="47") {
-    DEF = 0.7;
+    DEF = 69/99;
     sDEF = 0.282596;
+    harrier_debuff = 20;
   } else if(enemy==="48" || enemy==="49") {
     DEF = 2/3;
     sDEF = 71/96;
+    harrier_debuff = 20;
   } else if(enemy==="50") {
     DEF = 5/6;
     sDEF = 167/192;
+    harrier_debuff = 20;
   } else if(enemy==="51") {
     DEF = 5/6;
     sDEF = 67/192;
+    harrier_debuff = 20;
   } else if(enemy==="52") {
     DEF = -2/3;
     sDEF = 167/192;
+    harrier_debuff = 20;
+  } else if (enemy==="53" || enemy==="54" || enemy==="56" || enemy==="58") {
+    DEF = 0.5;
+    sDEF = 78/128;
+  } else if (enemy==="55") {
+    DEF = 0.9;
+    sDEF = 59/64;
+  } else if (enemy==="57") {
+    DEF = 0;
+    sDEF = 0.21875;
+  } else if (enemy==="60") {
+    DEF = 0.6;
+    sDEF = 11/16;
   }
 
+  var selectedOption = document.getElementById('Enemy_list').value;
+  var IsBoss = enemyData[selectedOption].IsBoss;
+
+  
   //Check for user input errors
   if (
     yourLV < 1 ||
@@ -155,8 +190,8 @@ function calculate() {
     Number.isInteger(Number(ATK)) == false ||
     isNaN(ATK) == true ||
     +sATK < 0 ||
-    Number.isInteger(Number(sATK)) == false ||
-    isNaN(sATK) == true ||
+    Number.isInteger(sATK) == false ||
+    isNaN(Number(sATK)) == true ||
     +crit_r < 0 ||
     isNaN(crit_r) == true ||
     +crit_d < 0 ||
@@ -170,7 +205,17 @@ function calculate() {
     +skill_multi < 0 ||
     isNaN(skill_multi) == true ||
     +b_atk <0 ||
-    isNaN(b_atk) == true
+    isNaN(b_atk) == true ||
+    +asd_buffs < 0 || 
+    isNaN(asd_buffs) ||
+    +pola_buffs < 0 || 
+    isNaN(pola_buffs) ||
+    +boss_dmg_buffs < 0 ||
+    isNaN(boss_dmg_buffs) ||
+    +def_pierce <0 ||
+    isNaN(def_pierce) == true||
+    +def_pierce >= 100 ||
+    isNaN(def_pierce) == true
   ) {
     window.alert(stringsErrorInvalidData);
 
@@ -218,15 +263,30 @@ function calculate() {
     }
     if (buffs < 0 || isNaN(buffs) == true) {
       setErrorOnInputById("buffs_string");
+    } 
+    if (asd_buffs < 0 || isNaN(asd_buffs) == true) {
+      setErrorOnInputById("asd_buffs_string");
     }
+
+    if (pola_buffs < 0 || isNaN(pola_buffs) == true) {
+      setErrorOnInputById("pola_buffs_string")
+    }
+
+    if (boss_dmg_buffs < 0 || isNaN(boss_dmg_buffs) == true) {
+      setErrorOnInputById("boss_buffs_string")
+    }
+
     if (skill_multi < 0 || isNaN(skill_multi) == true) {
       setErrorOnInputById("skill_multi_string");
     }
     if (b_atk < 0 || isNaN(b_atk) == true) {
       setErrorOnInputById("back_attack_string")
     }
+    if (def_pierce < 0 || isNaN(def_pierce) == true || def_pierce >= 100) {
+      setErrorOnInputById("def_multi_string")
+    }
   } else if (harrier_debuff > 0 && enemy != "0" && enemy != "15" && enemy!="18" && enemy!="19" && enemy!="20" && enemy!="21" && enemy!="35" && enemy!="36" && enemy!="37"&& enemy!="38" 
-             && enemy!="44" && enemy!="45" && enemy!="46" && enemy!="47" && enemy!="48" && enemy!="49" && enemy!="50" && enemy!="51" && enemy!="52") {
+              && enemy!="44" && enemy!="45" && enemy!="46" && enemy!="47" && enemy!="48" && enemy!="49" && enemy!="50" && enemy!="51" && enemy!="52") {
     window.alert(stringsErrorHarrier);
 
     setErrorOnInputById("harrier_d_string");
@@ -234,8 +294,47 @@ function calculate() {
   } else {
     //Removes the red borders and procedes with the calculation
     removeRedBorders();
+    var buff_multi = 1
 
-    var buff_multi = 1 + buffs / 100;
+    if (document.getElementById('asd_buffs_checkbox').checked) {
+      buff_multi += asd_buffs/100;
+    }
+    if (document.getElementById('asd_buffs_checkbox').checked == false) {
+      asd_buffs = 0;
+    }
+
+    if (document.getElementById('pola_buffs_checkbox').checked) {
+      buff_multi += pola_buffs/100;
+    }
+    if (document.getElementById('pola_buffs_checkbox').checked == false) {
+      pola_buffs = 0;
+    }
+
+    if (IsBoss && document.getElementById('boss_buffs_checkbox').checked) {
+      buff_multi += boss_dmg_buffs / 100;
+    } else {
+        boss_dmg_buffs = 0;
+    }
+
+    if (document.getElementById('other_buffs_checkbox').checked) {
+      buff_multi += buffs/100;
+    }
+    if (document.getElementById('other_buffs_checkbox').checked == false) {
+      buffs = 0;
+    }
+
+    if (document.getElementById('back_buffs_checkbox').checked == false) {
+      b_atk = 0
+    }
+
+    if (document.getElementById('def_multi_checkbox').checked == false) {
+      def_pierce = 0
+    }
+
+
+
+
+    
 
     //Fixes the level difference
     if (yourLV - monsterLV <= 5) {
@@ -261,7 +360,7 @@ function calculate() {
           skill_multi *
           (100 + 2 * valid_lv_dif)) /
           100) *
-        buff_multi;
+        (buff_multi - asd_buffs/100);
     } else if (isSpecialChecked) {
       calculationType = stringsSkillDamage;
       var effecttive_ATK = ATK + sATK;
@@ -283,9 +382,10 @@ function calculate() {
           skill_multi *
           (100 + 2 * valid_lv_dif)) /
           100) *
-        buff_multi;
+        (buff_multi - asd_buffs/100);
       //Remember: Red pet magic stone (4%, 8% or 10%) multiplies 'final_dmg' by 1.04, 1.08 or 1.1. It is not a type of buff for 'buff_multi'
     }
+    
     //Harrier World debuff and adjustments
     if (harrier_debuff > 0) {
       var harrier_final = (harrier_debuff - harrier_resist) / 100;
@@ -318,15 +418,10 @@ function calculate() {
     }
 
     //Presentation of results
-    var avgCritDmg = Math.round(
-      final_dmg * (new_crit_r / 100) * (1.5 + new_crit_d / 100) +
-        final_dmg * (1 - new_crit_r / 100)
-    );
+    var avgCritDmg = Math.round((final_dmg * (new_crit_r / 100) * (1.5 + new_crit_d / 100) + final_dmg * (1 - new_crit_r / 100)) / (1 - def_pierce/100));
 
-    var ui_final_dmg = Math.round(final_dmg);
-    var ui_corrected_final_dmg = Math.round(
-      final_dmg * (1.5 + new_crit_d / 100)
-    );
+    var ui_final_dmg = Math.round(final_dmg / (1 - def_pierce/100));
+    var ui_corrected_final_dmg = Math.round(final_dmg * (1.5 + new_crit_d / 100) / (1 - def_pierce/100));
 
     var ui_back_normal = Math.round(ui_final_dmg * new_b_atk/100)
     var ui_back_critical = Math.round(ui_corrected_final_dmg * new_b_atk/100)
@@ -344,6 +439,7 @@ function calculate() {
     harrier_debuff = Number(harrier_debuff).toFixed(2);
     harrier_resist = Number(harrier_resist).toFixed(2);
 
+
     count += 1; //Adds current calculation number to the history
     updateCalculationResultList({
       count,
@@ -355,8 +451,12 @@ function calculate() {
       crit_d,
       harrier_debuff,
       harrier_resist,
+      asd_buffs,
+      pola_buffs,
+      boss_dmg_buffs,
       buffs,
       b_atk,
+      def_pierce,
       skill_multi,
       ui_final_dmg,
       ui_corrected_final_dmg,

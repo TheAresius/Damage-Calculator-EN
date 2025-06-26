@@ -9,7 +9,8 @@ var enemyData = {
             health: ""
         },
         extra: "-",
-        path: 'images/monsters/general monster.png'
+        path: 'images/monsters/general monster.png',
+        IsBoss: true
     },
 
     "1": {
@@ -22,7 +23,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>900k (37 bars)</span>."
         },
         extra: "-",
-        path: 'images/monsters/gorgos 1.png'
+        path: 'images/monsters/gorgos 1.png',
+        IsBoss: true
     },
 
     "2": {
@@ -35,7 +37,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>1.88M (72 bars)</span>" + stringScaleHP
         },
         extra: "-",
-        path: 'images/monsters/gadosen 1.png'
+        path: 'images/monsters/gadosen 1.png',
+        IsBoss: true
     },
 
     "3": {
@@ -48,7 +51,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>1.80M (72 bars)</span>."
         },
         extra: "-",
-        path: 'images/monsters/kamiki 1.png'
+        path: 'images/monsters/kamiki 1.png',
+        IsBoss: true
     },
 
     "4": {
@@ -61,7 +65,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>1.89M (76 bars)</span>."
         },
         extra: "-",
-        path: 'images/monsters/gaikoz 1.png'
+        path: 'images/monsters/gaikoz 1.png',
+        IsBoss: true
     },
 
     "5": {
@@ -75,7 +80,8 @@ var enemyData = {
         },
         extra: "- From time to time Kaze'aze will teleport herself to the center of the map and start concentrating energy. A set of marks will appear in the floor showing the sequence of her attack.<br>"+
                "- If you use skills next to her during this action, you can delay her attack and end up killing your party members.",
-        path: 'images/monsters/cazeaje.png'
+        path: 'images/monsters/cazeaje.png',
+        IsBoss: true
     },
 
     "6": {
@@ -88,7 +94,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>1.26M</span>" + stringScaleHP
         },
         extra: "- It's necessary to damage only 75% of its HP to defeat it.",
-        path: 'images/monsters/gorgos 2.png'
+        path: 'images/monsters/gorgos 2.png',
+        IsBoss: true
     },
 
     "17": {
@@ -101,7 +108,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>3.46M (139 bars)</span>."
         },
         extra: "-",
-        path: 'images/monsters/gorgos 1.png'
+        path: 'images/monsters/gorgos 1.png',
+        IsBoss: true
     },
 
     "7": {
@@ -114,7 +122,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>1.89M</span>" + stringScaleHP
         },
         extra: "- It's necessary to damage only 50% of its HP to defeat it.",
-        path: 'images/monsters/gaikoz 2.png'
+        path: 'images/monsters/gaikoz 2.png',
+        IsBoss: true
     },
 
     "16": {
@@ -127,7 +136,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>4.15M (167 bars)</span>."
         },
         extra: "-",
-        path: 'images/monsters/gaikoz 1.png'
+        path: 'images/monsters/gaikoz 1.png',
+        IsBoss: true
     },
 
     "15": {
@@ -140,7 +150,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>3.52M</span>" + stringScaleHP
         },
         extra: "- Kamiki will use a freezing mist every 20 seconds on a selected region in the map. It will quickly damage your HP.",
-        path: 'images/monsters/kamiki 2.png'
+        path: 'images/monsters/kamiki 2.png',
+        IsBoss: true
     },
 
     "8": {
@@ -153,7 +164,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>3.52M (141 bars)</span>."
         },
         extra: "- Kamiki will use a freezing mist every 20 seconds on a selected region in the map. It will quickly damage your HP.",
-        path: 'images/monsters/kamiki 1.png'
+        path: 'images/monsters/kamiki 1.png',
+        IsBoss: true
     },
 
     "34": {
@@ -166,7 +178,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>1.97M</span>" + stringScaleHP
         },
         extra: "- It's necessary to damage only 60% of its HP to defeat it.",
-        path: 'images/monsters/gadosen 2.png'
+        path: 'images/monsters/gadosen 2.png',
+        IsBoss: true
     },
 
     "9": {
@@ -179,7 +192,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>8.44M (353 bars)</span>."
         },
         extra: "- Gardosen will use his 'soul absorption' attack every 40 seconds. If you stay in the red area, it will kill you no matter what.",
-        path: 'images/monsters/gadosen 1.png'
+        path: 'images/monsters/gadosen 1.png',
+        IsBoss: true
     },
 
     "10": {
@@ -193,7 +207,8 @@ var enemyData = {
         },
         extra: "- From time to time Kaze'aze will teleport herself to the center of the map and start concentrating energy. A set of marks will appear in the floor showing the sequence of her attack.<br>"+
                "- If you use skills next to her during this action, you can delay her attack and end up killing your party members.",
-        path: 'images/monsters/cazeaje.png'
+        path: 'images/monsters/cazeaje.png',
+        IsBoss: true
     },
 
     "11": {
@@ -208,7 +223,8 @@ var enemyData = {
         extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body and legs. <br>"+
                "- The damage dealt to its legs is reduced by 60%"+
                "- Your damage is reduced by 66.66% without the suppressor",
-        path: 'images/monsters/berkas.png'
+        path: 'images/monsters/berkas.png',
+        IsBoss: true
     },
 
     "12": {
@@ -223,7 +239,8 @@ var enemyData = {
         extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body and legs. <br>"+
                "- The damage dealt to its legs is reduced by 60%"+
                "- Your damage is reduced by 66.66% without the suppressor",
-        path: 'images/monsters/berkas.png'
+        path: 'images/monsters/berkas.png',
+        IsBoss: true
     },
 
     "13": {
@@ -237,7 +254,8 @@ var enemyData = {
         },
         extra: "- Harkion has two sets of hitbox, its body and its legs.<br>"+
                "- The damage dealt to its legs is reduced by 80%.",
-        path: 'images/monsters/harkyon.png'
+        path: 'images/monsters/harkyon.png',
+        IsBoss: true
     },
 
     "14": {
@@ -251,7 +269,8 @@ var enemyData = {
         },
         extra: "- Harkion has two sets of hitbox, its body and its legs.<br>"+
                "- The damage dealt to its legs is reduced by 80%.",
-        path: 'images/monsters/harkyon.png'
+        path: 'images/monsters/harkyon.png',
+        IsBoss: true
     },
 
     "18": {
@@ -270,7 +289,8 @@ var enemyData = {
         },
         extra: "- On stages 3 and 4 the Voidal Devourer will use its 'breath' 70 seconds after the beginning of the stage.<br>"+
                "- In order to interrupt it, it is necessary to deal 2M damage on stage 3 and 3.2M damage on stage 4.",
-        path: 'images/monsters/devourer.png'
+        path: 'images/monsters/devourer.png',
+        IsBoss: true
     },
 
     "19": {
@@ -286,7 +306,8 @@ var enemyData = {
                     "<span class='tab'>- Voidal Crusher: <span class='yellow'>672k</span></span>."
         },
         extra: "-",
-        path: 'images/monsters/crusher.png'
+        path: 'images/monsters/crusher.png',
+        IsBoss: true
     },
 
     "20": {
@@ -306,7 +327,8 @@ var enemyData = {
         extra: "- The enemy will use 'casting' 60 seconds after being defeated for the first time, on stages 3 and 4.<br>"+
                "- 5 seconds after being reborn the enemy will use 'casting'.<br>"+
                "- It is necessary do deal 1M damage in order to interrupt it.",
-        path: 'images/monsters/enforcer.png'
+        path: 'images/monsters/enforcer.png',
+        IsBoss: true
     },
 
     "21": {
@@ -325,11 +347,12 @@ var enemyData = {
         },
         extra: "- Voidal Gazer will use 'casting' every 60 seconds.<br>"+
                "- In order to interrupt it, it is necessary to deal 2M damage on stage 3 and 3M damage on stage 4.",
-        path: 'images/monsters/gazer.png'
+        path: 'images/monsters/gazer.png',
+        IsBoss: true
     },
     "22": {
-        name: "Rofnus (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the first stage of Infinity Cloister on difficulty 3.",
+        name: "Rofnus (Infinite Cloister)",
+        description: stringIsNotBoss + "Can be found on the first stage of Infinite Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>23.08%</span>",
             defense2: stringDef2 + "<span class='yellow'>23.08%</span>",
@@ -337,11 +360,12 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>8.00M</span>."
         },
         extra: "Rofnus is more susceptible to damage when recovering HP. Your final damage is increased by 30%.",
-        path: 'images/monsters/rofnus.png'
+        path: 'images/monsters/rofnus.png',
+        IsBoss: true
     },
     "23": {
-        name: "Rofnus (HP regeneration) (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the first stage of Infinity Cloister on dificulty 3.",
+        name: "Rofnus (HP regeneration) (Infinite Cloister)",
+        description: stringIsNotBoss + "Can be found on the first stage of Infinite Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
@@ -349,12 +373,13 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>8.00M</span>"
         },
         extra: "Rofnus is more susceptible to damage when recovering HP. Your final damage is increased by 30%.",
-        path: 'images/monsters/rofnus.png'
+        path: 'images/monsters/rofnus.png',
+        IsBoss: true
     },
 
     "24": {
-        name: "Skeram (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the second stage of Infinity Cloister on difficulty 3.",
+        name: "Skeram (Infinite Cloister)",
+        description: stringIsNotBoss + "Can be found on the second stage of Infinite Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
@@ -362,12 +387,13 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>10.00M</span>"
         },
         extra: "-",
-        path: 'images/monsters/skeram.png'
+        path: 'images/monsters/skeram.png',
+        IsBoss: true
     },
 
     "25": {
-        name: "Chaotic Witch (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the third stage of Infinity Cloister on dificulty 3.",
+        name: "Chaotic Witch (Infinite Cloister)",
+        description: stringIsNotBoss + "Can be found on the third stage of Infinite Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
@@ -377,12 +403,13 @@ var enemyData = {
         extra: "- When not using the protection skill, the Chaotic Witch receives 25% more damage from normal attacks and pet when compared to enemies with the same defense.<br>"+
                "- When the <span class='purple'>purple protection</span> is active, the Chaotic Witch receives 100% more damage from normal attacks and pet, and reduces damage from skills by 73%. <br>"+
                "- When the <span class='red'>red protection</span>, is active, the Chaotic Witch reduces damage from normal attacks and pet by 66% and receives 60% more damage from skills.",
-        path: 'images/monsters/dekane.png'
+        path: 'images/monsters/dekane.png',
+        IsBoss: true
     },
 
     "26": {
-        name: "Chaotic Witch (purple protection) (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the third stage of Infinity Cloister on difficulty 3.",
+        name: "Chaotic Witch (purple protection) (Infinite Cloister)",
+        description: stringIsNotBoss + "Can be found on the third stage of Infinite Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
@@ -392,12 +419,13 @@ var enemyData = {
         extra: "- When not using the protection skill, the Chaotic Witch receives 25% more damage from normal attacks and pet when compared to enemies with the same defense.<br>"+
                "- When the <span class='purple'>purple protection</span> is active, the Chaotic Witch receives 100% more damage from normal attacks and pet, and reduces damage from skills by 73%. <br>"+
                "- When the <span class='red'>red protection</span>, is active, the Chaotic Witch reduces damage from normal attacks and pet by 66% and receives 60% more damage from skills.",
-        path: 'images/monsters/dekane.png'
+        path: 'images/monsters/dekane.png',
+        IsBoss: true
     },
 
     "27": {
-        name: "Chaotic Witch (red protection) (Infinity Cloister)",
-        description: stringIsNotBoss + "Can be found on the third stage of Infinity Cloister on difficulty 3.",
+        name: "Chaotic Witch (red protection) (Infinite Cloister)",
+        description: stringIsNotBoss + "Can be found on the third stage of Infinite Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>58.34%</span>",
             defense2: stringDef2 + "<span class='yellow'>58.34%</span>",
@@ -407,12 +435,13 @@ var enemyData = {
         extra: "- When not using the protection skill, the Chaotic Witch receives 25% more damage from normal attacks and pet when compared to enemies with the same defense.<br>"+
                "- When the <span class='purple'>purple protection</span> is active, the Chaotic Witch receives 100% more damage from normal attacks and pet, and reduces damage from skills by 73%. <br>"+
                "- When the <span class='red'>red protection</span>, is active, the Chaotic Witch reduces damage from normal attacks and pet by 66% and receives 60% more damage from skills.",
-        path: 'images/monsters/dekane.png'
+        path: 'images/monsters/dekane.png',
+        IsBoss: true
     },
 
     "28": {
-        name: "Duell (Infinity Cloister)",
-        description: stringIsBoss + "Can be found on the last stage of Infinity Cloister on difficulty 3.",
+        name: "Duell (Infinite Cloister 3)",
+        description: stringIsBoss + "Can be found on the last stage of Infinite Cloister on difficulty 3.",
        status:{
             defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
             defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
@@ -420,14 +449,15 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>16.10M (644 bars)</span>"
         },
         extra: "- Duell will use 'casting' after ~45 seconds up to three consecutive times. It is necessary to deal, respectively, 1.7M, 1.5M and 1.4M damage to interrupt it.<br>"+
-               "- If not interrupted, Duell will release a powerful attack and return to his usual attack patern.<br>"+
+               "- If not interrupted, Duell will release a powerful attack and return to his usual attack pattern.<br>"+
                "- When interrupted three consecutive times, Duell will be weakened and receive 50% more damage from all sources.",
-        path: 'images/monsters/duel.png'
+        path: 'images/monsters/duel.png',
+        IsBoss: true
     },
 
     "29": {
-        name: "Duell (weakened) (Infinity Cloister)",
-        description: stringIsBoss + "Can be found on the last stage of Infinity Cloister on difficulty 3.",
+        name: "Duell (weakened) (Infinite Cloister 3)",
+        description: stringIsBoss + "Can be found on the last stage of Infinite Cloister on difficulty 3.",
         status:{
             defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
@@ -435,9 +465,10 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>16.10M (640 bars)</span>"
         },
         extra: "- Duell will use 'casting' after ~45 seconds up to three consecutive times. It is necessary to deal, respectively, 1.7M, 1.5M and 1.4M damage to interrupt it.<br>"+
-               "- If not interrupted, Duell will release a powerful attack and return to his usual attack patern.<br>"+
+               "- If not interrupted, Duell will release a powerful attack and return to his usual attack pattern.<br>"+
                "- When interrupted three consecutive times, Duell will be weakened and receive 50% more damage from all sources.",
-        path: 'images/monsters/duel.png'
+        path: 'images/monsters/duel.png',
+        IsBoss: true
     },
 
     "30": {
@@ -450,7 +481,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>5.64M</span>"
         },
         extra: "-",
-        path: 'images/monsters/periett.png'
+        path: 'images/monsters/periett.png',
+        IsBoss: true
     },
     "31": {
         name: "Thanatos",
@@ -462,7 +494,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>15.38M</span>"
         },
         extra: "-",
-        path: 'images/monsters/thanatos.png'
+        path: 'images/monsters/thanatos.png',
+        IsBoss: true
     },
 
     "32": {
@@ -475,7 +508,8 @@ var enemyData = {
             health: stringEstHP + "<span class='yellow'>8.47M</span>"
         },
         extra: "- Iblis can randomly block your attack and reduce your damage by 99.9%.",
-        path: 'images/monsters/evilis.png'
+        path: 'images/monsters/evilis.png',
+        IsBoss: true
     },
     "33": {
         name: "Kassias Grandiel",
@@ -488,7 +522,8 @@ var enemyData = {
         },
         extra: "- When Grandiel gets below 80% HP he can become invulnerable and summon Drawl and Veron, which will attack simultaneously. It is necessary to defeat them in order to make Grandiel vulnerable to damage again.<br>"+
                "- After defeating Drawl and Veron, and when Grandiel is below 50% HP, he can summon his 5 clones, which will attack simultaneously.",
-        path: 'images/monsters/grandiel.png'
+        path: 'images/monsters/grandiel.png',
+        IsBoss: true
     },
 
     "35": {
@@ -502,7 +537,8 @@ var enemyData = {
         },
         extra: "- When below 95% HP, the enemy can become invulnerable and if it does so, it will summon two golens on the map. You will have 12 seconds to defeat them.<br>"+
                "- If they are defeated, the Temple Guardian will get weakened and will receive 566% more damage from all sources during 10 seconds.",
-        path: 'images/monsters/guardiao.png'
+        path: 'images/monsters/guardiao.png',
+        IsBoss: true
     },
     
     "36": {
@@ -516,7 +552,8 @@ var enemyData = {
         },
         extra: "- When below 95% HP, the enemy can become invulnerable and if it does so, it will summon two golens on the map. You will have 12 seconds to defeat them.<br>"+
                "- If they are defeated, the Temple Guardian will get weakened and will receive 566% more damage from all sources during 10 seconds.",
-        path: 'images/monsters/guardiao.png'
+        path: 'images/monsters/guardiao.png',
+        IsBoss: true
     },
 
     "37": {
@@ -530,7 +567,8 @@ var enemyData = {
         },
         extra: "- When below 66% HP, Gaian can summon his golens in the map. You will have 12 seconds to defeat them.<br>"+
                "- If they are defeated, Gaian will get frozen in time and will receive 150% more damage during 10 seconds.",
-        path: 'images/monsters/gaian.png'
+        path: 'images/monsters/gaian.png',
+        IsBoss: true
     },
 
     "38": {
@@ -544,7 +582,8 @@ var enemyData = {
         },
         extra: "- When below 66% HP, Gaian can summon his golens in the map. You will have 12 seconds to defeat them.<br>"+
                "- If they are defeated, Gaian will get frozen in time and will receive 150% more damage during 10 seconds.",
-        path: 'images/monsters/gaian.png'
+        path: 'images/monsters/gaian.png',
+        IsBoss: true
     },
 
     "44": {
@@ -558,7 +597,8 @@ var enemyData = {
         },
         extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
                "- While being attacked, the Heart of the Absolute will lose its defense and it will receive much more damage from skills.",
-        path: 'images/monsters/heart 1.png'
+        path: 'images/monsters/heart 1.png',
+        IsBoss: true
     },
 
     "45": {
@@ -572,7 +612,8 @@ var enemyData = {
         },
         extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
                "- While being attacked, the Heart of the Absolute will lose its defense and it will receive much more damage from skills.",
-        path: 'images/monsters/heart 1.png'
+        path: 'images/monsters/heart 1.png',
+        IsBoss: true
     },
 
     "46": {
@@ -586,7 +627,8 @@ var enemyData = {
         },
         extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
                "- While being attacked, the Heart of the Absolute will lose its defense and it will receive much more damage from skills.",
-        path: 'images/monsters/heart 2.png'
+        path: 'images/monsters/heart 2.png',
+        IsBoss: true
     },
 
     "47": {
@@ -600,7 +642,8 @@ var enemyData = {
         },
         extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
                "- While being attacked, the Heart of the Absolute will lose its defense and it will receive much more damage from skills.",
-        path: 'images/monsters/heart 2.png'
+        path: 'images/monsters/heart 2.png',
+        IsBoss: true
     },
 
     "48": {
@@ -614,7 +657,8 @@ var enemyData = {
         },
         extra: "- From time to time the Voidal Apostle will summon a purple aura on the map. During this attack the Voidal Apostle will remain still and vulnerable to damage, however players within the aura will also summon multiple thorns wherever they move.<br><br>"+
                "- After ~1:30 from the begining of the stage, the Voidal Apostle will use the 'Danger' mechanics, which will summon multiple spheres through the map. During this perior the Voidal Apostle will leave the map and it won't be possible to damage it.<br>",
-        path: 'images/monsters/apostle 1.png'
+        path: 'images/monsters/apostle 1.png',
+        IsBoss: true
     },
 
     "49": {
@@ -631,7 +675,8 @@ var enemyData = {
                "- After using the teleport mechanis twice, Voidal Apostle may use the 'Summon' mechanics and will leave the map until all 'Nightmare Gazers' are defeated. Once defeated, they will summon a damage buff orb and the Voidal Apostle will remain vulnerable for ~15 seconds.<br><br>"+
                "- The buff acquired from the 'Nightmare Gazers' is <span class='yellow'>150%</span>. Add this value to your buffs if desired.<br><br>"+
                "- If the Voidal Apostle is defeated before the 'Summon' mechanics it will be possible to access the hidden stage (4F) of Void (Nightmare).",
-        path: 'images/monsters/apostle 2.png'
+        path: 'images/monsters/apostle 2.png',
+        IsBoss: true
     },
 
     "50": {
@@ -647,7 +692,8 @@ var enemyData = {
                "- Every 10 seconds the Voidal Apostle will summon buff orbs across the map. Those orbs will be avaible for 10 seconds and they grant a particular buff until they vanish from the map.<br><br>"+
                "- Blue orb: reduces the cooldown of all skill by 20 seconds, restores two MP bars and causes the Voidal Apostle to receive <span class='yellow'>400%</span> more damage from skills (this is not considered a buff but rather a direct increase in the damage received by the boss).<br><br>"+
                "- Red orb: restores 1000 HP and causes the Voidal Apostle to receive <span class='yellow'>900%</span> more damage from basic commands and pets (this is not considered a buff but rather a direct increase in the damage received by the boss).",
-        path: 'images/monsters/apostle 3.png'
+        path: 'images/monsters/apostle 3.png',
+        IsBoss: true
     },
 
     "51": {
@@ -663,7 +709,8 @@ var enemyData = {
                "- Every 10 seconds the Voidal Apostle will summon buff orbs across the map. Those orbs will be avaible for 10 seconds and they grant a particular buff until they vanish from the map.<br><br>"+
                "- Blue orb: reduces the cooldown of all skill by 20 seconds, restores two MP bars and causes the Voidal Apostle to receive <span class='yellow'>400%</span> more damage from skills (this is not considered a buff but rather a direct increase in the damage received by the boss).<br><br>"+
                "- Red orb: restores 1000 HP and causes the Voidal Apostle to receive <span class='yellow'>900%</span> more damage from basic commands and pets (this is not considered a buff but rather a direct increase in the damage received by the boss).",
-        path: 'images/monsters/apostle 3.png'
+        path: 'images/monsters/apostle 3.png',
+        IsBoss: true
     },
 
     "52": {
@@ -679,7 +726,141 @@ var enemyData = {
                "- Every 10 seconds the Voidal Apostle will summon buff orbs across the map. Those orbs will be avaible for 10 seconds and they grant a particular buff until they vanish from the map.<br><br>"+
                "- Blue orb: reduces the cooldown of all skill by 20 seconds, restores two MP bars and causes the Voidal Apostle to receive <span class='yellow'>400%</span> more damage from skills (this is not considered a buff but rather a direct increase in the damage received by the boss).<br><br>"+
                "- Red orb: restores 1000 HP and causes the Voidal Apostle to receive <span class='yellow'>900%</span> more damage from basic commands and pets (this is not considered a buff but rather a direct increase in the damage received by the boss).",
-        path: 'images/monsters/apostle 3.png'
+        path: 'images/monsters/apostle 3.png',
+        IsBoss: true
+    },
+
+    "53": {
+        name: "Ashtaroth, the Creator (corners)",
+        description: stringIsNotBoss + "Can be found on the first stage of Infinite Cloister on difficulty 4.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>60.93%</span>",
+            health: stringEstHP + "<span class='yellow'>8.95M</span>"
+        },
+        extra: "-",
+        path: 'images/monsters/astaroth cloister.png',
+        IsBoss: false
+    },
+
+    "54": {
+        name: "Ashtaroth, the Creator (meio)",
+        description: stringIsNotBoss + "Can be found on the first stage of Infinite Cloister on difficulty 4.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>60.93%</span>",
+            health: stringEstHP + "<span class='yellow'>22.31M</span>"
+        },
+        extra: "-",
+        path: 'images/monsters/astaroth cloister.png',
+        IsBoss: false
+    },
+
+    "55": {
+        name: "Dragon Knight",
+        description: stringIsNotBoss + "Can be found on the second stage of Infinite Cloister on difficulty 4.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>90.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>90.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>92.19%</span>",
+            health: stringEstHP + "<span class='yellow'>46.24M</span>"
+        },
+        extra: "- The Dragon Knight has an extremely high defense, if not stricken by the catapult (you only deal 10% of your usual damage). When hit by the catapult, its defense will be reduced for 10 seconds (it can be extended with pet freeze).<br><br>"+
+               "- When weakened, its defense will start switching from time to time as such:<br>"+
+               "<span class='tab'>- 3 seconds with reduced defense (the Dragon takes 10x the usual damage)</span></span>.<br>"+
+               "<span class='tab'>- 1 second with extremely reduced defense (the Dragon takes 20x the usual damage)</span></span>.<br><br>"+
+               "- In order to optimize damage, it is necessary to freeze the Dragon with a pet during the 'super weakened' state. By doing this you can extend the duration of its extremely reduced defense.",
+        path: 'images/monsters/dragon cloister.png',
+        IsBoss: false
+    },
+
+    "56": {
+        name: "Dragon Knight (weakened)",
+        description: stringIsNotBoss + "Can be found on the second stage of Infinite Cloister on difficulty 4.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>60.93%</span>",
+            health: stringEstHP + "<span class='yellow'>46.24M</span>"
+        },
+        extra: "- The Dragon Knight has an extremely high defense, if not stricken by the catapult (you only deal 10% of your usual damage). When hit by the catapult, its defense will be reduced for 10 seconds (it can be extended with pet freeze).<br><br>"+
+               "- When weakened, its defense will start switching from time to time as such:<br>"+
+               "<span class='tab'>- 3 seconds with reduced defense (the Dragon takes 10x the usual damage)</span></span>.<br>"+
+               "<span class='tab'>- 1 second with extremely reduced defense (the Dragon takes 20x the usual damage)</span></span>.<br><br>"+
+               "- In order to optimize damage, it is necessary to freeze the Dragon with a pet during the 'super weakened' state. By doing this you can extend the duration of its extremely reduced defense.",
+        path: 'images/monsters/dragon cloister.png',
+        IsBoss: false
+    },
+
+    "57": {
+        name: "Dragon Knight (super weakened)",
+        description: stringIsNotBoss + "Can be found on the second stage of Infinite Cloister on difficulty 4.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            health: stringEstHP + "<span class='yellow'>46.24M</span>"
+        },
+        extra: "- The Dragon Knight has an extremely high defense, if not stricken by the catapult (you only deal 10% of your usual damage). When hit by the catapult, its defense will be reduced for 10 seconds (it can be extended with pet freeze).<br><br>"+
+               "- When weakened, its defense will start switching from time to time as such:<br>"+
+               "<span class='tab'>- 3 seconds with reduced defense (the Dragon takes 10x the usual damage)</span></span>.<br>"+
+               "<span class='tab'>- 1 second with extremely reduced defense (the Dragon takes 20x the usual damage)</span></span>.<br><br>"+
+               "- In order to optimize damage, it is necessary to freeze the Dragon with a pet during the 'super weakened' state. By doing this you can extend the duration of its extremely reduced defense.",
+        path: 'images/monsters/dragon cloister.png',
+        IsBoss: false
+    },
+    
+    "58": {
+        name: "Harbinger",
+        description: stringIsNotBoss + "Can be found on the third stage of Infinite Cloister on difficulty 4.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>60.93%</span>",
+            health: stringEstHP + "<span class='yellow'>23.82M</span>"
+        },
+        extra: "- On every ~27 seconds she will summon a new 'On Target' skill (up to 3).<br>"+
+               "- When she reaches 50% HP, she will use 'Havoc' (Warning) and start gathering energy in order to use 'Last Destruction'.<br>"+
+               "- During her Warning, she will always keep looking to the right, which allows a very certain back attack opportunity.<br>"+
+               "- Upon reaching the maximum energy limit, she will teleport to the opposite side of where she is at the moment (right corner, if she is between the center and the left corner of the map and vice versa)",
+        path: 'images/monsters/encantrix cloister.png',
+        IsBoss: false
+    },
+
+    "59": {
+        name: "Duell (Infinite Cloister 4)",
+        description: stringIsBoss + "Can be found on the last stage of Infinite Cloister on difficulty 4.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
+            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
+            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            health: stringEstHP + "<span class='yellow'>46.25M (1850 bars)</span>"
+        },
+        extra: "- Duell will use 'casting' after ~45 seconds up to four consecutive times. It is necessary to deal 3.7M damage to interrupt it.<br>"+
+               "- Sometimes (randomly? needs more testing) it is necessary to deal up to 4.8M damage in order to interrupt the casting.<br>"+
+               "- If not interrupted, Duell will release a powerful attack and return to his usual attack pattern.<br>"+
+               "- When interrupted four consecutive times, Duell will be weakened and receive 20% more damage from all sources (it can be extended with pet freeze).",
+        path: 'images/monsters/duel4.png',
+        IsBoss: true
+    },
+
+    "60": {
+        name: "Duell (Infinite Cloister 4) (weakened)",
+        description: stringIsBoss + "Can be found on the last stage of Infinite Cloister on difficulty 4.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>68.75%</span>",
+            health: stringEstHP + "<span class='yellow'>46.25M (1850 bars)</span>"
+        },
+        extra: "- Duell will use 'casting' after ~45 seconds up to four consecutive times. It is necessary to deal 3.7M damage to interrupt it.<br>"+
+               "- Sometimes (randomly? needs more testing) it is necessary to deal up to 4.8M damage in order to interrupt the casting.<br>"+
+               "- If not interrupted, Duell will release a powerful attack and return to his usual attack pattern.<br>"+
+               "- When interrupted four consecutive times, Duell will be weakened and receive 20% more damage from all sources (it can be extended with pet freeze).",
+        path: 'images/monsters/duel4.png',
+        IsBoss: true
     },
 
 };
