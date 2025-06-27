@@ -838,10 +838,10 @@ var enemyData = {
             defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
             health: stringEstHP + "<span class='yellow'>46.25M (1850 bars)</span>"
         },
-        extra: "- Duell will use 'casting' after ~45 seconds up to four consecutive times. It is necessary to deal 3.7M damage to interrupt it.<br>"+
-               "- Sometimes (randomly? needs more testing) it is necessary to deal up to 4.8M damage in order to interrupt the casting.<br>"+
+        extra: "- Duell will use 'casting' after ~45 seconds up to four consecutive times. You have 10 seconds to interrupt each one.<br>"+
+               "- It is necessary to deal 3.7M damage to interrupt the first three castings and 2.9M do interrupt the last one.<br>" +
                "- If not interrupted, Duell will release a powerful attack and return to his usual attack pattern.<br>"+
-               "- When interrupted four consecutive times, Duell will be weakened and receive 20% more damage from all sources (it can be extended with pet freeze).",
+               "- When interrupted four consecutive times, Duell will be weakened and receive 20% more damage from all sources during 8 seconds.",
         path: 'images/monsters/duel4.png',
         IsBoss: true
     },
@@ -855,10 +855,10 @@ var enemyData = {
             defense3: stringDef3 + "<span class='yellow'>68.75%</span>",
             health: stringEstHP + "<span class='yellow'>46.25M (1850 bars)</span>"
         },
-        extra: "- Duell will use 'casting' after ~45 seconds up to four consecutive times. It is necessary to deal 3.7M damage to interrupt it.<br>"+
-               "- Sometimes (randomly? needs more testing) it is necessary to deal up to 4.8M damage in order to interrupt the casting.<br>"+
+        extra: "- Duell will use 'casting' after ~45 seconds up to four consecutive times. You have 10 seconds to interrupt each one.<br>"+
+               "- It is necessary to deal 3.7M damage to interrupt the first three castings and 2.9M do interrupt the last one.<br>" +
                "- If not interrupted, Duell will release a powerful attack and return to his usual attack pattern.<br>"+
-               "- When interrupted four consecutive times, Duell will be weakened and receive 20% more damage from all sources (it can be extended with pet freeze).",
+               "- When interrupted four consecutive times, Duell will be weakened and receive 20% more damage from all sources during 8 seconds.",
         path: 'images/monsters/duel4.png',
         IsBoss: true
     },
