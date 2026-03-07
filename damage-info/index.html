@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>How does damage work?</title>
+    
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../general-style.css" />
+  <link rel="shortcut icon" href="../images/icon.ico" type="image/x-icon" />
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+  <script src="script.js" defer></script>
+  <script src="../alerts.js" defer></script>
+  
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+
+  <meta name="view-transition" content="same-origin" />
+</head>
+
+<body>
+    <a href="https://thearesius.github.io/Damage-Calculator-BR/damage-info/" class="floating-lang-btn" title="Trocar para Português">
+        <img src="../images/brazil.png" alt="Brazil Flag">
+    </a>
+    <button id="menuTrigger" class="floating-menu-btn" title="Menu Principal">
+        <ion-icon name="menu-outline"></ion-icon>
+  </button>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <h3 class="menu-title">Grand Chase Tools<br><span>Aresius</span></h3>
+            <button id="menuClose" class="menu-close-btn">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+
+        <div class="menu-content">
+            <div class="menu-group">
+                <span class="group-title">Navigation</span>
+
+                <a href="../index.html" class="menu-link">
+                    <ion-icon name="calculator-outline"></ion-icon>
+                    Damage Calculator
+                </a>
+                
+                <a href="index.html" class="menu-link">
+                    <ion-icon name="book-outline"></ion-icon>
+                    How does damage work?
+                </a>
+                
+
+                <a href="../roadmap/index.html" class="menu-link">
+                    <ion-icon name="map-outline"></ion-icon>
+                    Roadmap
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <span class="group-title">Support Us / Donate</span>
+                
+                <a href="#" class="menu-link" onclick="openLivePix(); return false;">
+                    <ion-icon name="qr-code-outline"></ion-icon>
+                    LivePix (QR Code)
+                </a>
+
+                <a href="https://ko-fi.com/TheAresius" target="_blank" class="menu-link">
+                    <img src="https://storage.ko-fi.com/cdn/cup-border.png" class="support-icon kofi-wiggle" alt="Ko-fi">
+                    Ko-fi
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <span class="group-title">Social</span>
+                
+                <a href="https://linktr.ee/thearesius" target="_blank" class="menu-link">
+                    <img src="../images/icons/extras/linktree.ico" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">
+                    LinkTree
+                </a>
+                <a href="https://github.com/TheAresius/Damage-Calculator-EN" target="_blank" class="menu-link">
+                    <img src="../images/icons/extras/github.png" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">
+                    GitHub Project
+                </a>
+                <a href="http://discordapp.com/users/289929075886129152" target="_blank" class="menu-link">
+                    <img src="../images/icons/extras/discord.png" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">
+                    Discord: aresius4407
+                </a>
+                <a href="https://www.youtube.com/@Aresius" target="_blank" class="menu-link">
+                    <img src="../images/icons/extras/youtube.png" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">
+                    YouTube Channel
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <span class="group-title">Extras</span>
+                <a href="https://docs.google.com/spreadsheets/d/1FGxKHQuwz_Jx-GdYd6647FiAE9UbS6mZgufXor9_DZk/edit#gid=722314000" target="_blank" class="menu-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">   
+                    Base damage sheet
+                </a>
+
+                <a href="https://eitur.github.io/gcc-card/" target="_blank" class="menu-link">
+                    <img src="../images/icons/extras/card.ico" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">   
+                    Card Manager (by daughterly)
+                </a>
+            </div>
+
+        </div>
+
+        <div class="menu-footer">
+            <p>Developed by <strong>Aresius</strong></p>
+            
+            <div class="credits-container">
+                <span class="credits-label">Special Thanks</span>
+                <p class="credits-names">
+                    DsinC &bull; i &bull; Esawa
+                </p>
+            </div>
+
+            <p class="copyright">
+                © 2026 Grand Chase Tools
+            </p>
+            
+        </div>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <div class="navigation-header">
+    
+    </div>
+
+    <main>
+        <div class="dmg-description">
+            <h1>How does damage work?</h1>
+
+            <p class="justified"><span class="tab">First, I will demonstrate the mathematical formalism and data analysis method for the game's damage formula, and then I will explain in detail how it works.</span></p>
+            
+            <div class="separator"></div>
+            
+            <h3>Mathematical formalism of the damage formula</h3>
+
+            <p class="justified"><span class="tab">Several mathematical models were proposed for the in-game damage formula: linear, polynomial, exponential, and combinations of non-linear models.</span></p>
+            <p class="justified"><span class="tab">A model that, in principle, makes sense within the game and managed to yield positive results was:</span></p>
+
+            <div class="latex">\( \text{damage} = \text{correction constant} \times \left( \text{Attack + Special Attack} \right)\times (1-\text{defense}) \times \text{base damage}\)</div>
+            <p class="justified"><span class="tab">Or, in mathematical language, damage can be written as a function \( f: \mathbb{R}^4\to \mathbb{R} \) that maps a vector \(\mathbf{X}=(x_1, x_2, x_3, x_4)\), \( \mathbf{X} \in \mathbb{R}^4 \) and returns a scalar:</span></p>
+            <div class="latex">\( f(\mathbf{X})=k(x_1+x_2)(1-x_3)x_4 \)</div>
+            <p class="justified">
+                <span class="tab">
+                    This means the damage formula takes four factors into account for the calculation: Attack (\( x_1\)), Special Attack (\( x_2\)), Enemy Defense <br>(\( x_3\)), and the base damage your character deals with a specific attack (\( x_4\)).
+                    To simplify reading, I will call variables \(x_1\) as \(x_{ATK}\), \(x_2\) as \(x_{SPA}\), \(x_3\) as \(x_{DEF}\), and \(x_4\) as \(x_{BASE}\)
+                </span>
+            </p>
+            <p class="justified">
+                <span class="tab">
+                    To test the validity of this model, it would be necessary, first, to collect diverse damage data for each set of attack, special attack, defense, and base damage so that, subsequently, a multivariate analysis could be performed and the correction constant value obtained.
+                </span>
+            </p>
+            <p class="justified">
+                <span class="tab">
+                    This form of analysis can be computationally very expensive, since we are dealing with four independent variables and a large volume of data. To bypass this problem, we usually start from a simpler model and make it increasingly complex 
+                    and closer to reality.
+                </span>
+
+                <p class="justified">
+                <span class="tab">
+                    Initially, the base damage and defense values were fixed, varying only the attack and special attack values; that is, the stats were changed for each test, but the monster and skill used were the same, making the analysis form much simpler and allowing the use of a data fitting method 
+                    like least squares.
+                </span>
+                
+            </p>
+
+            <p class="justified">
+                <span class="tab">
+                    It was also interesting to adopt a form of "resultant attack", which would be the sum of attack and special attack. I called this "resultant attack" \(x_{RES}\). Thus: \(x_{RES} = x_{ATK} + x_{SPA}\).
+            </p>
+            <p class="justified">
+                <span class="tab">
+                    I also coupled the defense and base damage to the correction constant \(k\), since, when using the same attack on the same enemy, the damage always remains the same. Thus, we have that the new correction constant is: \(k' = k \cdot x_{DEF} \cdot x_{BASE}\).
+                </span>
+            </p>
+            <p class="justified">
+                <span class="tab">
+                    With this, the proposed model was simplified to a function \( f: \mathbb{R}\to \mathbb{R} \):
+                </span>
+            </p>
+            <div class="latex">\( f(x_{RES})=k'x_{RES} \)</div>
+            <p class="justified">
+                    where the value of \(k'\) represents the coupling of the correction constant, defense, and base damage. Thus, since the only variables now are the "resultant attack" and the damage value we can see on screen, it became very simple to perform a statistical analysis of the 
+                    resultant attack versus the damage dealt to the enemy. Thus, it was possible to obtain the value of this constant, and finally, it was possible to predict damage using any combination of attack and special attack.
+            </p>
+
+            <p class="justified">
+                <span class="tab">
+                However, while the analysis was being conducted, the famous <a href="https://docs.google.com/spreadsheets/d/1FGxKHQuwz_Jx-GdYd6647FiAE9UbS6mZgufXor9_DZk/edit#gid=722314000" class="inline-link" target="_blank" rel="noopener noreferrer">Korean table</a>
+                was published. Thus, it was possible to decouple the base damage value from the constant \(k'\) and rewrite our damage formula so that publicly accessible information could be used.
+            </p>
+            <p class="justified">
+                <span class="tab">
+                The damage formula can be refined, and now, with base damage decoupled from defense, our new version of the experimental damage formula becomes:
+            </p>
+            <div class="latex">\( f(x_{RES})=k''x_{RES}\cdot x_{BASE} \)</div>
+            <p class="justified">
+                where \(k'' = (1-x_{DEF})k\)
+            </p>
+
+            <p class="justified">
+                <span class="tab">
+                    It is coherent to adopt a defense value as a number between 0 and 1, or between 0% and 100%. Thus, it is possible to isolate the value of \(x_{DEF}\) and think of it as a "defense constant" \(0\leq k_d \leq 1\), which changes only for different enemies: if the enemy changes, the defense changes. 
+                </span>
+            </p>
+
+            <p class="justified">
+                <span class="tab">
+                    In some cases, the value of \(k''\) showed alterations depending on the enemy. Well, our 'base postulate' is that the correction constant \(k\) is fixed, so the change in the value of \(k''\) depends only on the enemy's defense. 
+                </span>
+            </p>
+            <p class="justified">
+                <span class="tab">
+                    From this point, for the same skill, damage data was collected for various sets of attack, special attack, and distinct enemies. Several skills were used to generate a large variation in the value of \(k''\).
+                </span>
+            </p>            
+            <p class="justified">
+                <span class="tab">
+                    This strategy brought a very precise analysis for various values of \(k''\) and allowed the value of constant \(k\) to be found, and consequently, the defense of various enemy types.
+                </span>
+            </p>
+            <p class="justified">
+                <span class="tab">
+                    It is important to emphasize that this mathematical model needed to be adapted and divided into three types of "damage sources": Skill Damage, Basic Command Damage, and Pet Damage. For each damage source, a correction constant is used.
+                    It was also necessary to adopt two types of defense used by enemies: common defense, which acts against basic commands and pet attacks, and special defense, which acts against skills. It is worth noting that special attack appeared to work only 
+                    on skill damage.
+                </span>
+            </p>
+
+            <h3>The damage formula</h3>
+
+            <p class="justified">
+                <span class="tab">
+                    Finally, the statistical and data analysis provided sufficient results to obtain the damage formula:
+                </span>
+            </p>
+
+            <div class="latex-result">
+                \[
+                    d_0 =\left\{ \begin{array}{ll}
+                    0.007\times(\text{Attack} + \text{Special Attack})\times (1-\text{special defense})\times \text{base damage} & : \ \text{skill damage} \\
+                    0.0168\times(\text{Attack})\times (1-\text{defense})\times \text{base damage} & : \ \text{basic attack damage} \\
+                    0.00477148\times(\text{Attack})\times (1-\text{defense})\times \text{base damage} & : \ \text{pet damage} \\
+                    \end{array} \right.
+                \]
+            </div>
+            
+            <div class="separator"></div>
+
+            <h3>Additional factors</h3>
+            <p class="justified">
+                <span class="tab">
+                    From this damage formula, it was possible to perform simple and individual tests to introduce each type of damage addition, such as damage buffs, taint resistance, back attack damage,
+                    critical damage, defense ignore, among many other effects. The game appears to use a very simple way to deal with different types of damage additions, which is based on a non-linear function with the product
+                    between each different type of damage addition; that is, the famous Multiplier! Those multipliers have been calculated as:
+                </span>
+            </p>
+
+            <table>
+                <tr>
+                    <td>\[k_{\text{crit}}=\frac{(150 + \text{%_crit_dmg})}{100}\]</td>
+                    <td>\[k_{\text{buffs}}=\frac{(100 + \text{%_buffs})}{100}\]</td>
+                    <td>\[k_{\text{back}}=\frac{130 + \text{%_back} }{100}\]</td>
+                </tr>
+                <tr> 
+                    <td>\[k_{aerial}=1.5\] </td>
+                    <td>\[k_{\text{taint}}=\frac{(100 - \text{%_taint}+\text{%_resist})}{100}\]</td>
+                    <td>\[k_{\text{debuff_def}}=\frac{(100-\text{%-debuff_def})}{100}\]</td>
+                </tr>
+                <tr>
+                    <td>\[k_{\text{lv}} =\left\{ \begin{array}{cl}
+                        1 & : \ \text{char_lv}-\text{monst_lv} \leq5 \\
+                        \frac{100+2(\text{char_lv}-\text{monst_lv}-5)}{100} & : \ \text{char_lv}-\text{monst_lv} \gt 5 \\
+                        \end{array} \right.\] </td>
+                    <td>\[k_{enemy}=1\]</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <p class="justified">
+                where \(k_\text{crit}\) is the critical damage contribution to final damage (which shows that critical damage has a base value of 50% in the game); \(k_{\text{buffs}}\) is the contribution of all buffs (GC Club, Chase Point, Second Gear Ring, skill buffs, etc.) to final damage; \(k_{\text{back}}\) is the
+                back attack contribution; \(k_{\text{aerial}}\) is the contribution of damage dealt to an airborne enemy; \(k_{\text{taint}}\) is the contribution of the taint debuff and taint resistance; \(k_{\text{debuff_def}}\)
+                is the contribution of defense ignore debuffs; \(k_{\text{lv}}\) is the contribution of your character's level (not chase level) and the monster's level; \(k_{\text{enemy}}\) is the contribution of damage dealt to enemies with damage reduction buffs, or who possess some mechanism that alters how they receive damage.
+            </p>
+ 
+            <p class="justified">
+                <span class="tab">
+                    The damage reduction buffs that enemies possess are also accounted for in the damage formula through a contribution \(k_{enemy}\). If this buff does not exist, the value is \(k_{enemy}=1\); otherwise, it works as follows:
+                </span>
+            </p>
+            
+            <table>
+                <tr>
+                    <th colspan="2">Buff</th>
+                    <th>Correction</th>
+                    <th>Observation</th>
+                </tr>
+                <tr>
+                    <td><img src="../images/icons/resist/increased_defense.png" width="48" height="48" oncontextmenu="return false;"></td>
+                    <td>Increased Defense</td>
+                    <td>\(k_{enemy}=0.8\)</td>
+                    <td>Applies to any damage source (basic commands, skill, or pet).</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/icons/resist/damage_reduction.png" width="48" height="48" oncontextmenu="return false;"></td>
+                    <td>Damage Reduction</td>
+                    <td>\(k_{enemy}=0.7\)</td>
+                    <td>Applies to basic command damage and pet attacks.</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/icons/resist/special_damage_reduction.png" width="48" height="48" oncontextmenu="return false;"></td>
+                    <td>Special Damage Reduction</td>
+                    <td>\(k_{enemy}=0.7\)</td>
+                    <td>Applies only to skill damage.</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/icons/resist/cdmg_reduction.png" width="48" height="48" oncontextmenu="return false;"></td>
+                    <td>Critical Damage Reduction</td>
+                    <td>\(k_{\text{crit}}=\frac{(150 + \text{%_crit_dmg} - 150)}{100}\)</td>
+                    <td>Reduces your critical damage by 150%.</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/icons/resist/air.png" width="48" height="48" oncontextmenu="return false;"></td>
+                    <td>Aerial Damage Reduction</td>
+                    <td>\(k_{aerial}=1\)</td>
+                    <td>Makes aerial damage identical to ground damage.</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/monsters/blue_aura.png" width="48" height="48" oncontextmenu="return false;"></td>
+                    <td>General Defense Increase</td>
+                    <td>\(k_{enemy}=0.333\)</td>
+                    <td>Applies to any damage source (basic commands, skill, or pet).</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/monsters/purple_aura.png" width="48" height="48" oncontextmenu="return false;"></td>
+                    <td>Special Skill Defense Increase</td>
+                    <td>\(k_{enemy}=0.1\)</td>
+                    <td>Applies only to skill damage.</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/monsters/red_aura.png" width="48" height="48" oncontextmenu="return false;"></td>
+                    <td>Basic/Pet Defense Increase</td>
+                    <td>\(k_{enemy}=0.1\)</td>
+                    <td>Applies to basic command damage and pet attacks.</td>
+                </tr>
+            </table>
+
+            <p class="justified">
+                <span class="tab">
+                    At the end of the entire damage calculation, Hell Spear (\(HS\)) damage is added. It is possible to verify from the formula that Hell Spear benefits from NONE of the damage buffs, back attack, critical damage, etc. Because of this, Hell Spear
+                    ends up becoming a bad property for the absolute majority of the game's content.
+                </span>
+            </p>
+            <p class="justified">
+                <span class="tab">
+                    However, Hell Spear temporarily alters the \(k_{enemy}\) value, causing some enemies to take much more damage from Hell Spear, but this works only for some very specific enemies, such as the Heart of the Absolute in Void 3: Nightmare. 
+                </span>
+            </p>
+            <p class="justified">
+                <span class="tab">
+                    There is also damage dealt to portals inside some dungeons, like in Abyssal Path. These portals do not follow the damage formula; they always take a pre-defined constant damage.
+                </span>
+            </p>
+            <h3>The final formula</h3>
+            <p class="justified">
+                <span class="tab">
+                    Unifying all these corrections, the game's damage formula can be written as:
+                </span>
+            </p>
+
+            <div class="latex-result">
+                \[
+                    d_0 =\left\{ \begin{array}{ll}
+                    0.007\times(\text{Attack} + \text{Special Attack})\times (1-\text{special defense})\times \text{base damage} & : \ \text{skill damage} \\
+                    0.0168\times(\text{Attack})\times (1-\text{defense})\times \text{base damage} & : \ \text{basic attack damage} \\
+                    0.00477148\times(\text{Attack})\times (1-\text{defense})\times \text{base damage} & : \ \text{pet damage} \\
+                    \end{array} \right.
+                \]
+            </div>
+
+            <div class="latex-final">
+                \[
+                    d_{\text{final}}=(d_0\frac{k_{\text{crit}}   k_{\text{buffs}}   k_{\text{back}}   k_{\text{aerial}}   k_{\text{taint}}   k_{\text{lv}}   k_{enemy}} {k_{\text{debuff_def}}}+\text{HS})
+                \]
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="ending">
+                <h3><span class="yellow">Final Considerations</span></h3>
+                
+                <p>There are some important conclusions to be drawn from these values:</p>
+
+                <ul class="conclusion-list">
+                    <li>
+                        <strong>'Hidden' base values:</strong>
+                        <p>
+                            Some properties have a hidden value within the game. When you create a brand new account, your critical damage will be 50%(\( \text{normal damage} \times 1.5 \)), even if you have 0% in your stats.
+                        </p>
+                        <p>
+                            Another property with a hidden value is back attack. Its base value is 30% (\( \text{normal damage} \times 1.3 \)), even if you have 0% in yourt stats.
+                        </p>
+                    </li>
+
+                    <li>
+                        <strong>Attack Equivalence:</strong>
+                        <p>
+                            Attack and Special Attack have the same weight for skills. Gaining 100 Attack or 100 Special Attack will result in exactly the same final damage increase for your abilities.
+                        </p>
+                    </li>
+
+                    <li>
+                        <strong>Stat Saturation:</strong>
+                        <p>
+                            The more you invest in a single stat, the lower the actual perception of gain. For example: adding 10% critical damage when you have 500% represents a gain of \( \frac{10}{500 +150} \approx 1.5 \text{%} \) final damage. However, adding the same 10% when you already have 
+                            900% represents only \( \frac{10}{900 + 150} \approx 0.95 \text{%} \) final damage. Because of this, players in the endgame (1000%+ critical damage) feel little difference when increasing their stats.
+                        </p>
+                    </li>
+
+                    <li>
+                        <strong>Buff separation:</strong>
+                        <p>
+                            On most games, damage buffs are multiplicative, which means they all have their own contribution to the damage composition. For example:
+                            \[
+                                \text{final_dmg} = \text{raw_dmg} \times (1 + \text{boss_dmg}) \times (1 + \text{skill_dmg}) \times (1 + \text{skill_tier_dmg}) \times \cdots.
+                            \]
+                        </p>
+                        <p>
+                            This doesn't happen on Grand Chase, however. Different buffs are additive (instead of multiplicative), which means a 10% All Skill Damage buff behaves EXACTLY the same as 10% Damage to Bosses, no matter how much of other buffs you have.
+                        </p>
+                        <p>
+                            The difference between buffs rely simply on where they are applied: Damage to Bosses on bosses only, All Skill Damage on skills only and so on.
+                        </p>
+                    </li>
+
+                    <li>
+                        <strong>Buff Dilution:</strong>
+                        <p>
+                            Buffs in the game add up with each other before multiplying damage. Because of this, a 10% buff does not increase your final damage by 10% if you already have other active buffs. If you already have 50% accumulated bonus and receive another 10%, the actual perceived gain will be only 
+                            \( \frac{10}{100 + 50} \approx 6.66 \) in final damage.
+                        </p>
+                    </li>
+
+                    <li>
+                        <strong>Damage Percent:</strong>
+                        <p>
+                            On most games, it is common to present damage values as 'this skill causes \(309 \text{%}\) physical damage', for example. Notice the damage formula has a correction constant ( \(0.007\) for skills, \(0.0168\) for basic command and \(0.000477148\) for pets). It is possible
+                            to rewrite the base damage using this value, for example:<br><br>
+                            The skill Blame Buster does \(364.864\) base damage. We can rewrite it as: \(364.864 \times 0.007 \times 100 = 255.4048 \text{%}\) (Attack + Special Attack).
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+            <p class="justified">
+                <span class="tab">
+                Finally, instead of needing to worry about working with all this math, you can simply use my <a href="../index.html" class="inline-link" target="_blank" rel="noopener noreferrer">damage calculator</a>!
+                </span>
+            </p>
+        </div>
+    </main>
+
+    <button id="btnTop" class="btn-scroll-top">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+</body>
+</html>

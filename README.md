@@ -5,6 +5,17 @@ The mathematical model for the damage formula was obtained using the Least Squar
 # Changelog
 
 All notable changes to this project will be documented in this file (from Jan 14th, 2024 on).
+## [v2.0.0] - March 7th, 2026
+
+- Improved UI/UX;
+- Added Buff Selection window;
+- Added Debuff Selection window;
+- Added Damage Comparison;
+- Added specific tier/skill buffs from the Rune System update;
+- Added damage formula explanation;
+- Added monsters from Abyssal Path and Solene;
+- Changed enemy selection feature.
+
 ## [v1.4.0] - Jul 30th, 2024
 
 - Added a '+info' button to show a modal with information about each enemy;

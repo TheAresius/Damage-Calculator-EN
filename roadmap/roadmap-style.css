@@ -1,0 +1,122 @@
+.roadmap-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.roadmap-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.roadmap-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #4facfe;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    }
+
+.roadmap-header p {
+    color: #aab2c0;
+    font-size: 1.1rem;
+}
+
+.roadmap-section {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title-dev { color: #f9d71c; text-shadow: 0 0 5px rgba(249, 215, 28, 0.3); }
+.title-plan { color: #4facfe; text-shadow: 0 0 5px rgba(79, 172, 254, 0.3); }
+.title-done { color: #2effa8; text-shadow: 0 0 5px rgba(46, 255, 168, 0.3); }
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.roadmap-card {
+    background: rgba(31, 41, 58, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card-dev { border-left: 4px solid #f9d71c; }
+.card-plan { border-left: 4px solid #4facfe; }
+.card-done { border-left: 4px solid #2effa8; opacity: 0.8; }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tag-feature { background: rgba(79, 172, 254, 0.2); color: #4facfe; }
+.tag-fix { background: rgba(255, 107, 107, 0.2); color: #ff6b6b; }
+.tag-content { background: rgba(249, 215, 28, 0.2); color: #f9d71c; }
+
+.card-desc {
+    font-size: 0.9rem;
+    color: #b0b3b8;
+    line-height: 1.5;
+}
+
+.progress-container {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #f9d71c, #ffeb3b);
+    border-radius: 3px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .roadmap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

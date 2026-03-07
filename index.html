@@ -1,261 +1,411 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Damage Calculator - Grand Chase</title>
-  <link rel="stylesheet" href="style.css" />
 
-  <script src="strings.js"></script>
-  <script src="ui.js"></script>
-  <script src="historyList.js"></script>
-  <script src="modal.js"></script>
-  <script src="modal data.js"></script>
-  <script src="script.js"></script>
-  <script src="calc-info.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="general-style.css" />
+  <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+
+  <script src="alerts.js" defer></script>
+  <script src="strings.js" defer></script>
+  <script src="data.js" defer></script> 
+  <script src="ui.js" defer></script>
+  <script src="historyList.js" defer></script>
+  <script src="buffs.js" defer></script> 
+  <script src="modal.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="calc-info.js" defer></script>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+
+  <meta name="view-transition" content="same-origin" />
 </head>
 
 <body>
+  <a href="https://thearesius.github.io/Damage-Calculator-BR/" class="floating-lang-btn" title="Trocar para Português">
+    <img src="images/brazil.png" alt="Brazil Flag">
+  </a>
+
+  <button id="menuTrigger" class="floating-menu-btn" title="Menu Principal">
+        <ion-icon name="menu-outline"></ion-icon>
+    </button>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <h3 class="menu-title">Grand Chase Tools<br><span>Aresius</span></h3>
+            <button id="menuClose" class="menu-close-btn">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+
+        <div class="menu-content">
+            <div class="menu-group">
+                <span class="group-title">Navigation</span>
+
+                <a href="index.html" class="menu-link">
+                    <ion-icon name="calculator-outline"></ion-icon>
+                    Damage Calculator
+                </a>
+                
+                <a href="damage-info/index.html" class="menu-link">
+                    <ion-icon name="book-outline"></ion-icon>
+                    How does damage work?
+                </a>
+                
+                <a href="roadmap/index.html" class="menu-link">
+                    <ion-icon name="map-outline"></ion-icon>
+                    Roadmap
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <span class="group-title">Support Us / Donate</span>
+                
+                <a href="#" class="menu-link" onclick="openLivePix(); return false;">
+                    <ion-icon name="qr-code-outline"></ion-icon>
+                    LivePix (QR Code)
+                </a>
+
+                <a href="https://ko-fi.com/TheAresius" target="_blank" class="menu-link">
+                    <img src="https://storage.ko-fi.com/cdn/cup-border.png" class="support-icon kofi-wiggle" alt="Ko-fi">
+                    Ko-fi
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <span class="group-title">Social</span>
+                
+                <a href="https://linktr.ee/thearesius" target="_blank" class="menu-link">
+                    <img src="images/icons/extras/linktree.ico" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">
+                    LinkTree
+                </a>
+                
+                <a href="https://github.com/TheAresius/Damage-Calculator-BR" target="_blank" class="menu-link">
+                    <img src="images/icons/extras/github.png" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">
+                    GitHub Project
+                </a>
+                <a href="http://discordapp.com/users/289929075886129152" target="_blank" class="menu-link">
+                    <img src="images/icons/extras/discord.png" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">
+                    Discord: aresius4407
+                </a>
+                <a href="https://www.youtube.com/@Aresius" target="_blank" class="menu-link">
+                    <img src="images/icons/extras/youtube.png" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">
+                    YouTube Channel
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <span class="group-title">Extras</span>
+                <a href="https://docs.google.com/spreadsheets/d/1FGxKHQuwz_Jx-GdYd6647FiAE9UbS6mZgufXor9_DZk/edit#gid=722314000" target="_blank" class="menu-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">   
+                    Base damage sheet
+                </a>
+
+                <a href="https://eitur.github.io/gcc-card/" target="_blank" class="menu-link">
+                    <img src="images/icons/extras/card.ico" width="19.2" height="19.2" oncontextmenu="return false" style="margin-right: 12px;">   
+                    Card Manager (by daughterly)
+                </a>
+            </div>
+
+            
+        </div>
+
+        <div class="menu-footer">
+            <p>Developed by <strong>Aresius</strong></p>
+            
+            <div class="credits-container">
+                <span class="credits-label">Special Thanks</span>
+                <p class="credits-names">
+                    DsinC &bull; i &bull; Esawa
+                </p>
+            </div>
+
+            <p class="copyright">
+                © 2026 Grand Chase Tools
+            </p>
+            
+        </div>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <div class="navigation-header">
+    </div>
+
   <section>
-    <h1>Grand Chase <br />Damage calculator</h1>
+    <div id="calc-title">Grand Chase<br>Damage Calculator</div>
     <div id="data_enter">
       
-      <div id="level" class="section">
-
+      <div id="level">
         <div class="input-group">
-          <label for="yourLV_string">Character level (1~85):</label>
-          <input type="number" name="yourLV_string" id="yourLV_string" min="1" max="85" />
-        </div>
-    
-        <div class="input-group">
-          <label for="monsterLV_string">Monster level (1~149):</label>
-          <input type="number" name="monsterLV_string" id="monsterLV_string" min="1" max="149" />
-        </div>
-
-      </div>
-    
-
-
-
-      <div id="main_stats" class="section">
-
-        <div class="input-group">
-          <label for="ATK_string">Attack:</label>
-          <input type="text" name="ATK_string" id="ATK_string" />
-        </div>
-    
-        <div class="input-group">
-          <label for="sATK_string">Special attack:</label>
-          <input type="text" name="sATK_string" id="sATK_string" />
-        </div>
-    
-        <div class="input-group">
-          <label for="crit_r_string">Critical rate (%):</label>
-          <input type="text" name="crit_r_string" id="crit_r_string" />
-        </div>
-    
-        <div class="input-group">
-          <label for="crit_d_string">Critical damage (%):</label>
-          <input type="text" name="crit_d_string" id="crit_d_string" />
-        </div>
-
-      </div>
-    
-
-
-
-      <div id="harrier" class="section">
-
-        <div class="input-group">
-          <label for="harrier_d_string">Taint debuff (%):</label>
-          <input type="text" name="harrier_debuff" id="harrier_d_string" />
-        </div>
-    
-        <div class="input-group">
-          <label for="harrier_r_string">Taint resistance (%):</label>
-          <input type="text" name="harrier_resist" id="harrier_r_string" />
-        </div>
-
-      </div>
-    
-
-
-
-      <div id="buffs" class="section">
-        <div class="input-group">
-          <label for="asd_buffs_string">All skill damage (%):</label>
-          <div class="input-wrapper">
-            <input type="checkbox" id="asd_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
-            <input type="text" name="buffs" id="asd_buffs_string" />
-            
+          <label for="yourLV_string">Character level (1~90)</label>
+          <div class="input-container">
+            <input type="number" name="yourLV_string" id="yourLV_string"/>
           </div>
-          
         </div>
-    
         <div class="input-group">
-          <label for="pola_buffs_string">Attack / attacked damage (%):</label>
-          <div class="input-wrapper">
-            <input type="checkbox" id="pola_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
-            <input type="text" name="buffs" id="pola_buffs_string" />
-            
+          <label for="monsterLV_string">Monster level (1~149)</label>
+          <div class="input-container">
+            <input type="number" name="monsterLV_string" id="monsterLV_string"/>
           </div>
-          
-        </div>
-    
-        <div class="input-group">
-          <label for="boss_buffs_string">Damage to bosses (%):</label>
-          <div class="input-wrapper">
-            <input type="checkbox" id="boss_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
-            <input type="text" name="buffs" id="boss_buffs_string" />
-            
-          </div>
-          
-        </div>
-    
-        <div class="input-group">
-          <label for="back_attack_string">Back attack damage (%):</label>
-          <div class="input-wrapper">
-            <input type="checkbox" id="back_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
-            <input type="text" name="buffs" id="back_attack_string" />
-            
-          </div>
-          
-        </div>
-
-        <div class="input-group">
-          <label for="buffs_string">Other buffs (%):</label>
-          <div class="input-wrapper">
-            <input type="checkbox" id="other_buffs_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
-            <input type="text" name="buffs" id="buffs_string" />
-            
-          </div>
-          
-        </div>
-
-        <div class="input-group">
-          <label for="def_multi_string">Defense ignore debuffs (%):</label>
-          <div class="input-wrapper">
-            <input type="checkbox" id="def_multi_checkbox" checked title="Marque essa opção para incluir este buff no seu dano" tabindex="-1"/>
-            <input type="text" name="buffs" id="def_multi_string" />
-            
-          </div>
-          
         </div>
       </div>
     
-
-
-
-      <div id="Damage" class="section">
+      <div id="main_stats">
         <div class="input-group">
-          <label for="skill_multi_string">Base damage:</label>
-          <input type="text" name="skill_multi_string" id="skill_multi_string" />
+          <label for="ATK_string">Attack</label>
+          <div class="input-container">
+            <input type="text" name="ATK_string" id="ATK_string" />
+          </div>  
+        </div>
+        <div class="input-group">
+          <label for="sATK_string">Special attack</label>
+          <div class="input-container">
+            <input type="text" name="sATK_string" id="sATK_string" />
+          </div>
+        </div>
+        <div class="input-group">
+            <label for="crit_r_string">Critical rate</label> 
+            <div class="input-container">
+                <input type="text" name="crit_r_string" id="crit_r_string" />
+                <span class="input-symbol">%</span>
+            </div>
+        </div>
+        <div class="input-group">
+          <label for="crit_d_string">Critical damage</label>
+          <div class="input-container">
+              <input type="text" name="crit_d_string" id="crit_d_string" />
+              <span class="input-symbol">%</span>
+          </div>
+        </div>
+      </div>
+    
+      <div id="harrier">
+        <div class="input-group">
+          <label for="harrier_d_string">Taint debuff</label>
+          <div class="input-container">
+              <input type="text" name="harrier_debuff" id="harrier_d_string" />
+              <span class="input-symbol">%</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="harrier_r_string">Taint resist</label>
+          <div class="input-container">
+              <input type="text" name="harrier_resist" id="harrier_r_string" />
+              <span class="input-symbol">%</span>
+          </div>
+        </div>
+      </div>
+    
+      <div id="buffs">
+        <div class="input-group">
+          <label for="asd_buffs_string">All skill damage</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="asd_buffs_checkbox" checked tabindex="-1"/>
+            <div class="input-container">
+                <input type="text" name="buffs" id="asd_buffs_string" />
+                <span class="input-symbol">%</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="input-group">
+          <label for="pola_buffs_string">Attack / attacked damage</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="pola_buffs_checkbox" checked tabindex="-1"/>
+            <div class="input-container">
+              <input type="text" name="buffs" id="pola_buffs_string" />
+              <span class="input-symbol">%</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="input-group">
+          <label for="boss_buffs_string">Damage to bosses</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="boss_buffs_checkbox" checked tabindex="-1"/>
+            <div class="input-container">
+              <input type="text" name="buffs" id="boss_buffs_string" />
+              <span class="input-symbol">%</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="input-group">
+          <label for="back_attack_string">Back attack damage</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="back_buffs_checkbox" checked tabindex="-1"/>
+            <div class="input-container">
+                <input type="text" name="buffs" id="back_attack_string" />
+                <span class="input-symbol">%</span>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="input-group">
+            <label for="buffs_string">Other buffs</label>
+            <div class="input-wrapper">
+                <input type="checkbox" id="other_buffs_checkbox" checked tabindex="-1"/>
+                <div class="input-container"> 
+                    <input type="text" name="buffs" id="buffs_string" />
+                    <span class="input-symbol">%</span>
+                </div>
+                <button id="openBuffsBtn" class="plus-btn" onclick="return false;"><ion-icon name="add-outline"></ion-icon>
+                  <span class="tooltip-text">Add buffs</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="buffsModal" class="modal">
+            <span class="close-button-buffs">&#10006;</span>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-name">Buff selection</div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-subtitle-buffs">Click on the icons to toggle on/off</div>
+                    <div id="buffsGrid" class="buffs-grid-container"></div>
+                    <div class="modal-subtitle-buffs">Effects summary</div>
+                    <div class="buffs-summary-container"></div>
+                    <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
+                      <button id="applyBuffsBtn" class="calc-btn">Apply</button>
+                      <button id="clearBuffsBtn" class="calc-btn">Remove all</button>
+                      <div class="section-footer"><br></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+          <label for="def_multi_string">Defense ignore debuffs</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="def_multi_checkbox" checked tabindex="-1"/>
+            <div class="input-container">
+                <input type="text" name="buffs" id="def_multi_string" />
+                <span class="input-symbol">%</span>
+            </div>
+                <button id="openDebuffsBtn" class="plus-btn" onclick="return false;"><ion-icon name="add-outline"></ion-icon>
+                  <span class="tooltip-text">Add debuffs</span>
+                </button>
+
+          </div>
+        </div>
+      </div>
+    
+      <div id="Damage">
+        <div class="input-group">
+          <label for="specific_tier_string">Specific tier buff</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="specific_tier_checkbox" checked tabindex="-1"/>
+            <div class="input-container">
+                <input type="text" name="specific_tier" id="specific_tier_string" />
+                <span class="input-symbol">%</span>
+            </div>
+          </div>
+        </div> 
+
+        <div class="input-group">
+          <label for="specific_skill_string">Specific skill buff</label>
+          <div class="input-wrapper">
+            <input type="checkbox" id="specific_skill_checkbox" checked tabindex="-1"/>
+            <div class="input-container">
+                <input type="text" name="specific_skill" id="specific_skill_string" />
+                <span class="input-symbol">%</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <label for="skill_multi_string">Base damage</label>
+          
+          <div class="input-wrapper">
+            <div class="input-container">
+              <input type="text" name="skill_multi_string" class="base_dmg_input" id="skill_multi_string" />
+            </div>
+            
+            <button id="reverse-calc" class="plus-btn reverse-btn">
+              <ion-icon name="swap-horizontal-outline"></ion-icon>
+              <span class="tooltip-text">Find base damage</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
+    
+    
 
-    <form id="form">
-      <label>
-        <input type="radio" id="Normal" name="damage_type" value="Normal" />Basic command damage<br/>
-      </label>
-      <label>
-        <input type="radio" id="Special" name="damage_type" value="Special" checked />Skill damage<br/>
-      </label>
-      <label>
-        <input type="radio" id="Pet" name="damage_type" value="Pet"/>Pet
-        damage
-      </label>
-    </form>
+      <div class="section-title">
+        Damage type
+      </div>
+      
+      <div class="damage-cards">
+        <label class="dmg-card">
+            <input type="radio" id="Normal" name="dmg_type" value="normal">
+            <div class="card-content">
+                <img src="images/icons/damage_type/zxc.png" oncontextmenu="return false">
+                <span>Basic</span>
+            </div>
+        </label>
+
+        <label class="dmg-card">
+            <input type="radio" id="Special" name="dmg_type" value="special" checked>
+            <div class="card-content">
+                <img src="images/icons/damage_type/skill-dmg.png" oncontextmenu="return false">
+                <span>Skill</span>
+            </div>
+        </label>
+
+        <label class="dmg-card">
+            <input type="radio" id="Pet" name="dmg_type" value="pet">
+            <div class="card-content">
+                <img src="images/icons/damage_type/pet.png" oncontextmenu="return false">
+                <span>Pet</span>
+            </div>
+        </label>
+    </div>
+
+    
     <div id="list">
-      <label for="EnemyCharacter">Enemy:<br></label>
-      <select id="Enemy_list">
-        <option value="0">Normal monster</option>
+      <label>Dungeon:</label>
+        <div class="select-wrapper">
+            <select id="category_select" onchange="loadEnemies()"></select>
+        </div>
 
-        <option class="separator" disabled>INFINITE CLOISTER 4</option>
-        <option value="53">Ashtaroth (Corners)</option>
-        <option value="54">Ashtaroth (Mid)</option>
-        <option value="55">Dragon Knight</option>
-        <option value="56">Dragon Knight (weakened)</option>
-        <option value="57">Dragon Knight (super weakened)</option>
-        <option value="58">Harbinger</option>
-        <option value="59">Duell</option>
-        <option value="60">Duell (weakened)</option>
-
-        <option class="separator" disabled>INFINITE CLOISTER 3</option>
-        <option value="22">Rofnus</option>
-        <option value="23">Rofnus (HP regen)</option>
-        <option value="24">Skeram</option>
-        <option value="25">Decanee</option>
-        <option value="26">Decanee (purple protection)</option>
-        <option value="27">Decanee (red portection)</option>
-        <option value="28">Duell</option>
-        <option value="29">Duell (weakened)</option>
-
-        <option class="separator" disabled>VOID 1</option>
-        <option value="18">Voidal Devourer</option>
-
-        <option class="separator" disabled>VOID 2</option>
-        <option value="19">Voidal Sentry/Crusher</option>
-        <option value="20">Voidal Enforcer</option>
-        <option value="21">Voidal Gazer</option>
-
-        <option class="separator" disabled>VOID 3</option>
-        <option value="44">Heart of the Absolute: bottom</option>
-        <option value="45">Heart of the Absolute (weakened): bottom</option>
-        <option value="46">Heart of the Absolute: top</option>
-        <option value="47">Heart of the Absolute (weakened): top</option>
-        <option value="48">Voidal Apostle 2F</option>
-        <option value="49">Voidal Apostle 3F</option>
-        <option value="50">Voidal Apostle 4F</option>
-        <option value="51">Voidal Apostle 4F (blue orb)</option>
-        <option value="52">Voidal Apostle 4F (red orb)</option>
-
-        <option class="separator" disabled>TOD</option>
-        <option value="1">Gorgos (1F)</option>
-        <option value="2">Gardosen (2F)</option>
-        <option value="3">Kamiki (3F)</option>
-        <option value="4">Gaikoz (4F)</option>
-        <option value="5">Kaze'aze (5F)</option>
-        <option value="6">First Gorgos (6F)</option>
-        <option value="17">Double Gorgos (6F)</option>
-        <option value="7">First Gaikoz (7F)</option>
-        <option value="16">Double Gaikoz (7F)</option>
-        <option value="15">First Kamiki (8F)</option>
-        <option value="8">Double Kamiki (8F)</option>
-        <option value="34">First Gardosen (9F)</option>
-        <option value="9">Double Gardosen (9F)</option>
-        <option value="10">Kaze'aze (10F)</option>
-
-        <option class="separator" disabled>BERKAS</option>
-        <option value="11">Berkas (Body)</option>
-        <option value="12">Berkas (Legs)</option>
-        <option class="separator" disabled>HARKYON</option>
-        <option value="13">Harkion (Body)</option>
-        <option value="14">Harkion (Legs)</option>
-        <option class="separator" disabled>WIZARD'S LABYRINTH</option>
-        <option value="30">Periett</option>
-        <option value="31">Thanatos</option>
-        <option value="32">Iblis</option>
-        <option value="33">Kassias Grandiel</option>
-        <option class="separator" disabled>ANOTHER WORLD</option>
-        <option value="35">Temple Guardian</option>
-        <option value="36">Temple Guardian (weakened)</option>
-        <option value="37">Gaian</option>
-        <option value="38">Gaian (weakened)</option>
-      </select>
-    <button id="showInfoButton">+Info</button>
+        <label>Enemy:</label>
+        <div class="dropdown-row">
+            <div class="select-wrapper" style="width: 100%;">
+                <select id="Enemy_list"></select>
+            </div>
+            <button id="showInfoButton" class="showInfoButton">
+              +Info <span class="tooltip-text">Show info<br>for this monster</span>
+            </button>
+        </div>
+    </div>
+      
     </div>
     <div id="button">
-      <input type="button" id="skill" value="Calcular" onclick="calculate()" />
-      <button id="calc-info"  class="calc-info" data-tooltip="Clique para mostrar informações sobre a calculadora.">Calc Info</button>
+      <input type="button" id="skill" value="Calculate" onclick="calculate()" />
+      <button id="calc-info" class="calc-info">
+        Calc Info
+      </button>
+      
     </div>
+    
 
     <div id="damage">
-      <!--Results will show up here-->
       <div class="column-container">
         <div id="front-column" class="column left-column"></div>
         <div id="back-column" class="column right-column"></div>
@@ -265,35 +415,8 @@
     <div id="divider"></div>
 
     <div id="resultList">
-      <!--Results will show up here-->
     </div>
   </section>
-  <div id="end">
-    <p id="comment1">
-      Calculator by Aresius. For feedback, bug reports, suggestions, data
-      discussion etc you can find me on Discord:
-      <span id="me">aresius4407</span>.
-    </p>
-    <p id="comment2">
-      Thanks to 'DsinC' and 'i' who helped create the PvE Damage Sheets and
-      to 'Esawa' for the Calculation History.
-    </p>
-    <p id="comment3">
-      Check this
-      <a class="one"
-        href="https://docs.google.com/spreadsheets/d/1FGxKHQuwz_Jx-GdYd6647FiAE9UbS6mZgufXor9_DZk/"
-        target="_blank" rel="noopener noreferrer">sheet</a>
-      for all the Damage Values of skills, combo and pets.
-      
-      <br />Check this
-      <a class="one" href="https://youtu.be/X0lOQGllrN4?t=61" target="_blank" rel="noopener noreferrer">video</a>
-      for a detailed explanation on the calculator.
-
-      <br>Check out my other calculators
-      <a class="one" href="https://linktr.ee/thearesius" target="_blank" rel="noopener noreferrer">here</a>.
-    </p>
-    
-  </div>
 
   <div id="modal" class="modal">
     <div class="modal-content">
@@ -301,11 +424,85 @@
         <p id="modalText"></p>
     </div>
   </div>
-<div id="overlay" class="overlay"></div>
+
+  <div id="debuffsModal" class="modal">
+    <span class="close-button-debuffs">&#10006;</span>
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="modal-name">Debuff selection</div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-subtitle-buffs">Click on the icons to toggle on/off</div>
+              
+           <div id="debuffsGrid" class="buffs-grid-container"></div>
+              
+              <div class="modal-subtitle-buffs">Effects summary</div>
+              <div class="buffs-summary-container"></div> <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
+                  <button id="applyDebuffsBtn" class="calc-btn">Apply</button>
+                  <button id="clearDebuffsBtn" class="calc-btn">Remove all</button>
+                  <div class="section-footer"><br></div>
+              </div>
+          </div>
+    </div>
+  </div>
+  
+  <div id="reverseModal" class="modal">
+    <div class="modal-content reverse-modal-content">
+        <span class="close-button-reverse">&#10006;</span>
+        
+        <div class="modal-header">
+            <div class="modal-name">Calculate base damage</div>
+        </div>
+
+        <div class="modal-body reverse-modal-body">
+            <p class="modal-description">
+                Enter the damage shown on game screen to find the base damage.
+            </p>
+
+            <div class="modal-form-group">
+                <label>Observed Damage:</label>
+                <div class="input-container full-width-input">
+                    <input type="text" id="rev_dmg_input" placeholder="Ex: 50.000" inputmode="numeric" />
+                </div>
+            </div>
+
+            <div class="modal-form-group">
+                <label>Hit type:</label>
+                
+                <div id="rev_dropdown_wrapper" class="reverse-select-wrapper">
+                    <select id="rev_dmg_type" class="modal-select">
+                        <option value="ui_corrected_final_dmg">Critical (Front)</option>
+                        <option value="ui_final_dmg">Normal (Front)</option>
+                        <option value="ui_back_critical">Critical (Back)</option>
+                        <option value="ui_back_normal">Normal (Back)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-confirm" onclick="applyReverseCalculation()">
+                    Calculate
+                </button>
+                
+                <button class="btn-cancel" onclick="hideReverseModal()">
+                    Cancel
+                </button>
+            </div>
+            
+            <div class="section-footer-reverse">
+              In order to avoid over-fitting, calculation precision was defined as two decimal places (±0.01).
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <div id="overlay" class="overlay"></div>
 
 </div>
+
+<button id="btnTop" class="btn-scroll-top">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+</button>
+
 </body>
-<footer>
-  <div id="update">v.1.6.0 - Last update: June 26th, 2025.</div>
-</footer>
 </html>
