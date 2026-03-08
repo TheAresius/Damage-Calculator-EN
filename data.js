@@ -1937,10 +1937,24 @@ window.buffsData = [
         stats: {ignore_def: 7}  
     },
     { 
+        id: "rage_cutter", 
+        name: "Rage Cutter",
+        category: "defense",
+        icon: "images/icons/defense/rage_cutter.png", 
+        stats: {ignore_def: 5}  
+    },
+    { 
         id: "block", 
         name: "Block (Aegis Knight)",
         category: "defense",
         icon: "images/icons/defense/block.png", 
+        stats: {ignore_def: 5}  
+    },
+    { 
+        id: "pretty_virus", 
+        name: "Pretty Virus",
+        category: "defense",
+        icon: "images/icons/defense/pretty_virus.png", 
         stats: {ignore_def: 5}  
     },
     { 
