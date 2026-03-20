@@ -1265,73 +1265,35 @@ var enemyData = {
         IsBoss: false
     },
 
-    "85": {
-        name: "Surtrark of Flames",
-        description: stringIsBoss + "Can be found in the Sanctuary of Divine Beasts.",
+    "87": {
+        name: "Ereb",
+        description: stringIsBoss + "Can be found in the Path Shrouded in Darkness",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>60.94%</span>",
+            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
+            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
+            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
             health: stringEstHP + "<br>"+
-                        "<span class='tab'>- Normal: <span class='yellow'>4.75M (190 bars)</span></span>.<br>"+
-                        "<span class='tab'>- Master: <span class='yellow'>35.45M (1418 bars)</span></span>.<br>"+stringScaleHP
+                        "<span class='tab'>- Normal: <span class='yellow'>2.22M (89 bars)</span></span>.<br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>-</span></span><br>"+stringScaleHP
         },
-        extra: `
-                - This boss has two Danger patterns based on HP:
-                <br>
-                <b>※ Above 60% HP</b>
-                <br>
-                <span class='tab'>
-                After dashing back and spreading fire feathers around the map / throwing fire balls, the boss can place a mark on a player for 1 second. After 1 second, if the player isn't on an i-frame stance (performing Saving Action or during a skill), the boss will transform the player into a chicken.
-                <br></span>
-                <span class='tab'>
-                Then, the boss will start gathering energy (indicated by a gauge above it) and it will release an energy wave across the map. After that, the boss will get weakened, lose all its defenses and it will take 100% more damage for 5 seconds.
-                </span>
-
-                <br>
-
-                <b>※ Below 60% HP</b>
-                <br>
-                <span class='tab'>
-                The boss will teleport to the center of the map and make fire balls rain from the sky. It will recover HP for each hit the players take. After that, the boss will release an energy wave across the map.
-                </span>
-               `,
-        path: 'images/monsters/solene/sanctuary/surtrark_of_flames.png',
+        extra: ``,
+        path: 'images/monsters/solene/path/ereb.png',
         IsBoss: true
     },
 
-    "86": {
-        name: "Surtrark of Flames (Weakened)",
-        description: stringIsBoss + "Can be found in the Sanctuary of Divine Beasts.",
+    "88": {
+        name: "The Forgotten One",
+        description: stringIsBoss + "Can be found in the Path Shrouded in Darkness.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
+            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
+            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
             health: stringEstHP + "<br>"+
-                        "<span class='tab'>- Normal: <span class='yellow'>4.75M (190 bars)</span></span>.<br>"+
-                        "<span class='tab'>- Master: <span class='yellow'>35.45M (1418 bars)</span></span>.<br>"+stringScaleHP
+                        "<span class='tab'>- Normal: <span class='yellow'>3.18M (127 bars)</span></span>.<br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>-</span></span><br>"+stringScaleHP
         },
-        extra: `
-                - This boss has two Danger patterns based on HP:
-                <br>
-                <b>※ Above 60% HP</b>
-                <br>
-                <span class='tab'>
-                After dashing back and spreading fire feathers around the map / throwing fire balls, the boss can place a mark on a player for 1 second. After 1 second, if the player isn't on an i-frame stance (performing Saving Action or during a skill), the boss will transform the player into a chicken.
-                <br></span>
-                <span class='tab'>
-                Then, the boss will start gathering energy (indicated by a gauge above it) and it will release an energy wave across the map. After that, the boss will get weakened, lose all its defenses and it will take 100% more damage for 5 seconds.
-                </span>
-
-                <br>
-
-                <b>※ Below 60% HP</b>
-                <br>
-                <span class='tab'>
-                The boss will teleport to the center of the map and make fire balls rain from the sky. It will recover HP for each hit the players take. After that, the boss will release an energy wave across the map.
-                </span>
-               `,
-        path: 'images/monsters/solene/sanctuary/surtrark_of_flames.png',
+        extra: ``,
+        path: 'images/monsters/solene/path/forgotten_one.png',
         IsBoss: true
     },
 
@@ -1343,6 +1305,7 @@ const categoryMap = {
     "Solene - Chapel of Eternity": ["73", "74", "75"],
     "Solene - Hall of Harmony": ["76", "77", "78", "79", "80", "81"],
     "Solene - Sanctuary of Divine Beasts": ["82", "83", "84", "85", "86"],
+    "Solene - Path Shrouded in Darkness": ["87", "88"],
     "Void 1: Invasion": ["18"],
     "Void 2: Taint": ["19", "20", "21"],
     "Void 3: Nightmare": ["44", "45", "46", "47", "48", "49", "50", "51", "52"],

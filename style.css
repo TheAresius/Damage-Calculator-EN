@@ -866,6 +866,10 @@ footer {
     overflow: hidden;
 }
 
+.history-stat-value {
+  color:#00cfff;
+}
+
 .icon-rotated {
     transform: rotate(180deg);
 }

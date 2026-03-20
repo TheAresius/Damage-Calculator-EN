@@ -112,18 +112,18 @@ function renderHistory() {
                     <div class="response-list-item-content">
                         <div class="column-left">
                             <div class="stat-group">
-                                <div class="response-list-item-value">${stringsHistoryListCharacterLevel}: <span>${item.yourLV}</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListMonsterLevel}: <span>${item.monsterLV}</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListCharacterLevel}: <span class='history-stat-value'>${item.yourLV}</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListMonsterLevel}: <span class='history-stat-value'>${item.monsterLV}</span></div>
                             </div>
                             <div class="stat-group">
-                                <div class="response-list-item-value">${stringsHistoryListAttack}: <span>${item.ATK}</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListSpecialAttack}: <span>${item.sATK}</span></div>
-                                <div class="response-list-item-value">${stringHistoryListCriticalRate}: <span>${item.crit_r}% (${(item.meta.savedCritExtra  >= 0 ? '+' : '')}${item.meta.savedCritExtra || 0}%)</span></div>
-                                <div class="response-list-item-value">${stringHistoryListCriticalDamage}<span>${item.crit_d}% (${(item.meta.savedCdmg >= 0 ? '+' : '')}${item.meta.savedCdmg || 0}%)</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListAttack}: <span class='history-stat-value'>${item.ATK}</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListSpecialAttack}: <span class='history-stat-value'>${item.sATK}</span></div>
+                                <div class="response-list-item-value">${stringHistoryListCriticalRate}: <span class='history-stat-value'>${item.crit_r}% (${(item.meta.savedCritExtra  >= 0 ? '+' : '')}${item.meta.savedCritExtra || 0}%)</span></div>
+                                <div class="response-list-item-value">${stringHistoryListCriticalDamage}<span class='history-stat-value'>${item.crit_d}% (${(item.meta.savedCdmg >= 0 ? '+' : '')}${item.meta.savedCdmg || 0}%)</span></div>
                             </div>
                             <div class="stat-group">
-                            <div class="response-list-item-value">${stringsHistoryListHarrierDebuff}: <span>${item.harrier_debuff}%</span></div>
-                            <div class="response-list-item-value">${stringsHistoryListHarrierResistance}: <span>${item.harrier_resist}%</span></div>
+                            <div class="response-list-item-value">${stringsHistoryListHarrierDebuff}: <span class='history-stat-value'>${item.harrier_debuff}%</span></div>
+                            <div class="response-list-item-value">${stringsHistoryListHarrierResistance}: <span class='history-stat-value'>${item.harrier_resist}%</span></div>
                         </div>
                             <div class="stat-group result-group">
                                 <div class="response-list-item-value">${stringsNormalHitDamage}: <span class="yellow">${Number(item.ui_final_dmg).toLocaleString('en-US')}</span></div>
@@ -134,17 +134,17 @@ function renderHistory() {
                         
                         <div class="column-right">
                             <div class="stat-group">
-                                <div class="response-list-item-value">${stringsHistoryListASD}: <span>${item.asd_buffs}%</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListPola}: <span>${item.pola_buffs}%</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListBossDmg}: <span>${item.boss_dmg_buffs}%</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListBAtk}: <span>${item.b_atk}%</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListBuffs}: <span>${item.buffs}% (${(item.meta.savedBuffExtra>= 0 ? '+' : '')}${item.meta.savedBuffExtra || 0}%)</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListDef}: <span>${item.def_pierce}% (${(item.meta.savedDefPierce>= 0 ? '+' : '')}${item.meta.savedDefPierce || 0}%)</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListASD}: <span class='history-stat-value'>${item.asd_buffs}%</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListPola}: <span class='history-stat-value'>${item.pola_buffs}%</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListBossDmg}: <span class='history-stat-value'>${item.boss_dmg_buffs}%</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListBAtk}: <span class='history-stat-value'>${item.b_atk}%</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListBuffs}: <span class='history-stat-value'>${item.buffs}% (${(item.meta.savedBuffExtra>= 0 ? '+' : '')}${item.meta.savedBuffExtra || 0}%)</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListDef}: <span class='history-stat-value'>${item.def_pierce}% (${(item.meta.savedDefPierce>= 0 ? '+' : '')}${item.meta.savedDefPierce || 0}%)</span></div>
                             </div>
                             <div class="stat-group">
-                                <div class="response-list-item-value">${stringsHistoryListSpecificTier}: <span>${item.specific_tier}%</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListSpecificSkill}: <span>${item.specific_skill}%</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListDamageValue}: <span>${item.skill_multi}</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListSpecificTier}: <span class='history-stat-value'>${item.specific_tier}%</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListSpecificSkill}: <span class='history-stat-value'>${item.specific_skill}%</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListDamageValue}: <span class='history-stat-value'>${item.skill_multi}</span></div>
                             </div>
                             <div class="stat-group result-group">
                                 <div class="response-list-item-value">${stringsNormalHitDamage} (back): <span class="yellow">${Number(item.ui_back_normal).toLocaleString('en-US')}</span></div>
