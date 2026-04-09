@@ -1265,6 +1265,76 @@ var enemyData = {
         IsBoss: false
     },
 
+    "85": {
+        name: "Surtrark of Flames",
+        description: stringIsBoss + "Can be found in the Sanctuary of Divine Beasts.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            health: stringEstHP + "<br>"+
+                        "<span class='tab'>- Normal: <span class='yellow'>4.75M (190 bars)</span></span>.<br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>35.45M (1418 bars)</span></span>.<br>"+stringScaleHP
+        },
+        extra: `
+                - This boss has two Danger patterns based on its HP:
+                <br>
+                <b>※ Above 60% HP</b>
+                <br>
+                <span class='tab'>
+                After dashing backwards and spreading fire feathers across the map / throwing fire balls, Surtrark can place a mark on a player for 1 second. After 1 second, If the player is not in an i-frame instance (performing Saving Action or during a skill), they will be transformed into a chicken.
+                <br></span>
+                <span class='tab'>
+                Following this pattern, Surtrark will start concentrating energy (indicated by a gauge) and launch an energy wave across the map. After this pattern, Surtrark will be weakened and will take 100% more damage.
+                </span>
+
+                <br>
+
+                <b>※ Below 60% de HP</b>
+                <br>
+                <span class='tab'>
+                Surtrark will teleport to the center of the map and summon a rain of fire balls. It will recover HP for every hit the fire balls deal to each player. After finishing this pattern, an energy wave will be launched across the map.
+                </span>
+               `,
+        path: 'images/monsters/solene/sanctuary/surtrark_of_flames.png',
+        IsBoss: true
+    },
+
+    "86": {
+        name: "Surtrark of Flames (Weakened)",
+        description: stringIsBoss + "Can be found in the Sanctuary of Divine Beasts.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            health: stringEstHP + "<br>"+
+                        "<span class='tab'>- Normal: <span class='yellow'>4.75M (190 bars)</span></span>.<br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>35.45M (1418 bars)</span></span>.<br>"+stringScaleHP
+        },
+        extra: `
+                - This boss has two Danger patterns based on its HP:
+                <br>
+                <b>※ Above 60% HP</b>
+                <br>
+                <span class='tab'>
+                After dashing backwards and spreading fire feathers across the map / throwing fire balls, Surtrark can place a mark on a player for 1 second. After 1 second, if the player is not in an i-frame instance (performing Saving Action or during a skill), they will be transformed into a chicken.
+                <br></span>
+                <span class='tab'>
+                Following this pattern, Surtrark will start concentrating energy (indicated by a gauge) and launch an energy wave across the map. After this pattern, Surtrark will be weakened and will take 100% more damage.
+                </span>
+
+                <br>
+
+                <b>※ Below 60% de HP</b>
+                <br>
+                <span class='tab'>
+                Surtrark will teleport to the center of the map and summon a rain of fire balls. It will recover HP for every hit the fire balls deal to each player. After finishing this pattern, an energy wave will be launched across the map.
+                </span>
+               `,
+        path: 'images/monsters/solene/sanctuary/surtrark_of_flames.png',
+        IsBoss: true
+    },
+
     "87": {
         name: "Ereb",
         description: stringIsBoss + "Can be found in the Path Shrouded in Darkness",
@@ -1273,10 +1343,13 @@ var enemyData = {
             defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
             defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
             health: stringEstHP + "<br>"+
-                        "<span class='tab'>- Normal: <span class='yellow'>2.22M (89 bars)</span></span>.<br>"+
-                        "<span class='tab'>- Master: <span class='yellow'>-</span></span><br>"+stringScaleHP
+                        "<span class='tab'>- Normal: <span class='yellow'>2.22M (89 bars)</span></span><br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>9.93M (397 bars)</span></span><br>"+stringScaleHP
         },
-        extra: ``,
+        extra: `-<span class='tab'>When below 70% HP, Ereb can use a Danger pattern and will start concentrating energy. His defense will be increased and he will take only 50% of usual damage until he releases an energy wave across the map.</span><br>
+                -<span class='tab'>After the first Danger, Ereb will keep concentrating energy until defeated. When the gauge reaches the maximum charge, he will charge against the player dealing an enormous amount of damage.</span><br>
+                -<span class='tab'>When below 50% HP, Ereb can use a Danger pattern and will teleport to one of the sides of the map (if on the right side, he will teleport to the left side and vice-versa). After teleporting he will shoot homing energy spheres.</span>
+               `,
         path: 'images/monsters/solene/path/ereb.png',
         IsBoss: true
     },
@@ -1289,10 +1362,13 @@ var enemyData = {
             defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
             defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
             health: stringEstHP + "<br>"+
-                        "<span class='tab'>- Normal: <span class='yellow'>3.18M (127 bars)</span></span>.<br>"+
-                        "<span class='tab'>- Master: <span class='yellow'>-</span></span><br>"+stringScaleHP
+                        "<span class='tab'>- Normal: <span class='yellow'>3.18M (127 bars)</span></span><br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>17.35M (694 bars)</span></span><br>"+stringScaleHP
         },
-        extra: ``,
+        extra: `
+                -<span class='tab'>When below 70% HP, The Forgotten One will can use a Danger pattern from time to time. He will teleport to the player and release 3 energy waves: one across the whole map and two facing each side of the map.</span><br>
+                -<span class='tab'>After the Danger pattern, he will return to his usual attack pattern.
+               `,
         path: 'images/monsters/solene/path/forgotten_one.png',
         IsBoss: true
     },
@@ -2058,6 +2134,13 @@ window.buffsData = [
         category: "resist",
         icon: "images/monsters/red_aura.png", 
         stats: {resist_normal: -90, crit: 0}  
+    },
+    { 
+        id: "ereb_resist", 
+        name: "Energy Gathering - Ereb",
+        category: "resist",
+        icon: "images/icons/resist/ereb_resist.jpg", 
+        stats: {resist_all: -50}  
     },
     
 ];
