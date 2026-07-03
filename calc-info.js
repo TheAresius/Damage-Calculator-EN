@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h3 class="info-title" style="color: #FFB347;">[Stats]</h3>
                 <ul class="info-list">
                     <li>Here you will input your character's stat values.</li>
+                    <li>Check the Hell Spear checkbox, if you wish to see your basic command damage with hell spear. Note that hell spear will only work if your hell spear damage is greater than zero. </li>
                 </ul>
             </div>
 

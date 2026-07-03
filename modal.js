@@ -59,6 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
             .map(item => `<div class="extra-item">${item}</div>`)
             .join('');
 
+        var dmgRedDisplay = enemyInfo.status.monster_DmgRed 
+        ? enemyInfo.status.monster_DmgRed 
+        : stringDmgRed + "<span class='yellow'>-</span>";
+
         modalText.innerHTML = `
             <div class="modal-header">
                 <img src="${enemyInfo.path}" alt="${enemyInfo.name}" class="modal-image" oncontextmenu="return false;">
@@ -71,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="status-item">${enemyInfo.status.defense1}</div>
                         <div class="status-item">${enemyInfo.status.defense2}</div>
                         <div class="status-item">${enemyInfo.status.defense3}</div>
+                        <div class="status-item">${dmgRedDisplay}</div>
                         <div class="status-item full-width">${enemyInfo.status.health}</div>
                     </div>
                 </div>

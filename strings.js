@@ -11,12 +11,13 @@ const stringsComboDamage = "Basic command damage";
 const stringsSkillDamage = "Skill damage";
 const stringsPetDamage = "Pet damage";
 
-const stringDef1 = "- Defense to basic command damage: ";
-const stringDef2 = "- Defense to pet attack: ";
-const stringDef3 = "- Defense to skills: ";
+const stringDef1 = "<img src='images/icons/monster_stat/command.png' class='monster-stat-icon' alt='Normal'> Defense to basic command damage: ";
+const stringDef2 = "<img src='images/icons/monster_stat/pet.png' class='monster-stat-icon' alt='Pet'> Defense to pet attack: ";
+const stringDef3 = "<img src='images/icons/monster_stat/skill.png' class='monster-stat-icon' alt='Skill'> Defense to skills: ";
+const stringDmgRed = "<img src='images/icons/monster_stat/resist.png' class='monster-stat-icon' alt='Damage reduction'> Damage Reduction: ";
 const stringIsBoss = "This enemy is considered a boss. ";
 const stringIsNotBoss = "This enemy is <b>not</b> considered a boss. ";
-const stringEstHP = " - HP (estimated): ";
+const stringEstHP = "<img src='images/icons/monster_stat/hp.png' class='monster-stat-icon' alt='HP'> HP (estimated): ";
 const stringScaleHP = " (this enemy's HP is increased for each additional member in the party)."
 const stringDelay = "<div class='paralyze'><img src='/assets/icons/calculators/damage-calculator/modal/delay.png' alt='Delay Icon' class='modal-icon'>This enemy is vulnerable to skill delay.</div>"
 const stringNoDelay = "<div class='paralyze'><img src='/assets/icons/calculators/damage-calculator/modal/no-delay.png' alt='Delay Icon' class='modal-icon'>This enemy is not vulnerable to skill delay.</div>"
@@ -43,6 +44,8 @@ const stringsHistoryListDamageValue = "Base damage";
 const stringsHistoryListDef = "Defense ignore debuffs";
 const stringsHistoryListSpecificTier = "Specific tier buff";
 const stringsHistoryListSpecificSkill = "Specific skill buff";
+const stringsHistoryListHSChance = "Hell Spear chance";
+const stringsHistoryListHSDamage = "Hell Spear damage";
 
 
 const stringsNormalHitDamage = "Normal damage";

@@ -301,6 +301,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
             health: stringEstHP + "<br>"+
                     "<span class='tab'>- Voidal Sentry: <span class='yellow'>124k</span></span>.<br>"+
                     "<span class='tab'>- Voidal Crusher: <span class='yellow'>672k</span></span>."
@@ -319,6 +320,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- 2nd stage <span class='yellow'>2.51M</span></span>.<br>"+
                         "<span class='tab'>- 3rd stage <span class='yellow'>4.36M</span></span>.<br>"+
@@ -338,9 +340,10 @@ var enemyData = {
                                        "There is a 20% taint debuff in this dungeon. The debuff has been applied automatically in the calculator.<br>"+
                                        "The buff acquired from the Voidal Enforcer, present on phases 2, 3, and 4, is <span class='yellow'>200%</span>. Add this value to your buffs if desired.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
-            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
-            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- 2nd stage <span class='yellow'>25.08M (1003 bars)</span></span>.<br>"+
                         "<span class='tab'>- 3rd stage <span class='yellow'>50.12M (2005 bars)</span></span>.<br>"+
@@ -671,9 +674,10 @@ var enemyData = {
         name: "Heart of the Absolute - bottom of the map",
         description: stringIsNotBoss + "Can be found in the bottom part of the map on the first stage of Void (Nightmare).",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>90.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>90.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>92.18%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>90.00%</span>",
             health: stringEstHP + "<span class='yellow'>2.10M </span>"
         },
         extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
@@ -686,9 +690,10 @@ var enemyData = {
         name: "Heart of the Absolute - bottom of the map (weakened)",
         description: stringIsNotBoss + "Can be found in the bottom part of the map on the first stage of Void (Nightmare).",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>70.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>70.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>28.26%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>0.00%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>69.69%</span>",
             health: stringEstHP + "<span class='yellow'>2.10M </span>"
         },
         extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
@@ -701,9 +706,10 @@ var enemyData = {
         name: "Heart of the Absolute - top of the map",
         description: stringIsNotBoss + "Can be found in the upper part of the map on the first stage of Void (Nightmare).",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>90.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>90.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>92.18%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>90.00%</span>",
             health: stringEstHP + "<span class='yellow'>7.30M </span>"
         },
         extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
@@ -716,9 +722,10 @@ var enemyData = {
         name: "Heart of the Absolute - top of the map (weakened)",
         description: stringIsNotBoss + "Can be found in the upper part of the map on the first stage of Void (Nightmare).",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>70.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>70.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>28.26%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>0.00%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>69.69%</span>",
             health: stringEstHP + "<span class='yellow'>7.30M </span>"
         },
         extra: "- The Heart of the Absolute will summon multiple monsters while it remains alive. You must defeat 5 'Void Invaders' for the enemy '???' to start charging energy and firing at the Heart of the Absolute.<br>"+
@@ -914,9 +921,10 @@ var enemyData = {
         name: "Duell",
         description: stringIsBoss + "Can be found on the last stage of Infinity Cloister on difficulty 4.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
-            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
-            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
             health: stringEstHP + "<span class='yellow'>46.25M (1850 bars)</span>"
         },
         extra: "- Duell will use 'casting' after ~45 seconds up to four consecutive times. You have 10 seconds to interrupt each one.<br>"+
@@ -931,9 +939,10 @@ var enemyData = {
         name: "Duell (weakened)",
         description: stringIsBoss + "Can be found on the last stage of Infinity Cloister on difficulty 4.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>68.75%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>59.84%</span>",
             health: stringEstHP + "<span class='yellow'>46.25M (1850 bars)</span>"
         },
         extra: "- Duell will use 'casting' after ~45 seconds up to four consecutive times. You have 10 seconds to interrupt each one.<br>"+
@@ -951,6 +960,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
             health: ""
         },
         extra: "- The random effects from each stage are only applied after ~7 seconds from the stage start. Therefore it is necessary for the party to deal the highest amount of damage possible during that time in order to avoid those defense buffs.<br>"+
@@ -969,6 +979,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Stage 3: <span class='yellow'>52.82M (2165 bars)</span></span>.<br>"+
                         "<span class='tab'>- Stage 9: <span class='yellow'>72.50M (2900 bars)</span></span>.<br>"
@@ -985,6 +996,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Stage 5: <span class='yellow'>14.68M</span></span>.<br>"+
                         "<span class='tab'>- Stage 11: <span class='yellow'>21.12M</span></span>.<br>"
@@ -1003,9 +1015,10 @@ var enemyData = {
         name: "Abyssal Dominator",
         description: stringIsBoss + "Can be found on stages (0-3), 6 and 12 from Abyssal Path.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
-            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
-            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Stage (0-3): <span class='yellow'>707k (29 bars)</span></span>.<br>"+
                         "<span class='tab'>- Stage 6: <span class='yellow'>69.22M (2387 bars)</span></span>.<br>"+
@@ -1032,6 +1045,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Stage (0-3): <span class='yellow'>707k (29 bars)</span></span>.<br>"+
                         "<span class='tab'>- Stage 6: <span class='yellow'>69.22M (2387 bars)</span></span>.<br>"+
@@ -1205,8 +1219,6 @@ var enemyData = {
         IsBoss: true
     },
 
-    
-
     "82": {
         name: "Swamp Guardian",
         description: stringIsNotBoss + "Can be found in the Sanctuary of Divine Beasts.",
@@ -1229,9 +1241,10 @@ var enemyData = {
         name: "Chicken of Fire",
         description: stringIsNotBoss + "Can be found in the Sanctuary of Divine Beasts.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
-            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
-            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Normal: <span class='yellow'>2.20M</span></span>.<br>"+
                         "<span class='tab'>- Master: <span class='yellow'>12.62M</span></span>.<br>"+stringScaleHP
@@ -1251,7 +1264,8 @@ var enemyData = {
         status:{
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            defense3: stringDef3 + "<span class='yellow'>0.00%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Normal: <span class='yellow'>2.20M</span></span>.<br>"+
                         "<span class='tab'>- Master: <span class='yellow'>12.62M</span></span>.<br>"+stringScaleHP
@@ -1272,6 +1286,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>50.00%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Normal: <span class='yellow'>4.75M (190 bars)</span></span>.<br>"+
                         "<span class='tab'>- Master: <span class='yellow'>35.45M (1418 bars)</span></span>.<br>"+stringScaleHP
@@ -1307,6 +1322,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Normal: <span class='yellow'>4.75M (190 bars)</span></span>.<br>"+
                         "<span class='tab'>- Master: <span class='yellow'>35.45M (1418 bars)</span></span>.<br>"+stringScaleHP
@@ -1339,9 +1355,10 @@ var enemyData = {
         name: "Ereb",
         description: stringIsBoss + "Can be found in the Path Shrouded in Darkness",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
-            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
-            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Normal: <span class='yellow'>2.22M (89 bars)</span></span><br>"+
                         "<span class='tab'>- Master: <span class='yellow'>9.93M (397 bars)</span></span><br>"+stringScaleHP
@@ -1358,9 +1375,10 @@ var enemyData = {
         name: "The Forgotten One",
         description: stringIsBoss + "Can be found in the Path Shrouded in Darkness.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
-            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
-            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
             health: stringEstHP + "<br>"+
                         "<span class='tab'>- Normal: <span class='yellow'>3.18M (127 bars)</span></span><br>"+
                         "<span class='tab'>- Master: <span class='yellow'>17.35M (694 bars)</span></span><br>"+stringScaleHP
@@ -1373,18 +1391,338 @@ var enemyData = {
         IsBoss: true
     },
 
+    "89": {
+        name: "Horabes",
+        description: stringIsBoss + "Can be found in the Apocalypse Vortex.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
+            health: stringEstHP + "<br>"+
+                        "<span class='tab'>- Normal: <span class='yellow'>1.89M (76 bars)</span></span><br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>8.53M (341 bars)</span></span><br>"+stringScaleHP
+        },
+        extra: `
+                
+               `,
+        path: 'images/monsters/solene/vortex/horabes.png',
+        IsBoss: true
+    },
+
+    "90": {
+        name: "Greedy Horabes",
+        description: stringIsBoss + "ECan be found in the Apocalypse Vortex.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
+            health: stringEstHP + "<br>"+
+                        "<span class='tab'>- Normal: <span class='yellow'>1.89M (76 bars)</span></span><br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>8.53M (341 bars)</span></span><br>"+stringScaleHP
+        },
+        extra: `
+                
+               `,
+        path: 'images/monsters/solene/vortex/greedy_horabes.png',
+        IsBoss: true
+    },
+
+    "91": {
+        name: "Completed Horabes",
+        description: stringIsBoss + "Can be found in the Apocalypse Vortex.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
+            health: stringEstHP + "<br>"+
+                        "<span class='tab'>- Normal: <span class='yellow'>2.21M (89 bars)</span></span><br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>13.16M (530 bars)</span></span><br>"+stringScaleHP
+        },
+        extra: `
+                
+               `,
+        path: 'images/monsters/solene/vortex/completed_horabes.png',
+        IsBoss: true
+    },
+
+    "92": {
+        name: "Transcended Horabes - Increased defense",
+        description: stringIsBoss + "Can be found in the Apocalypse Vortex.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>96.66%</span>",
+            health: stringEstHP + "<br>"+
+                        "<span class='tab'>- Normal: <span class='yellow'>1.41M (57 bars)</span></span><br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>3.88M (156 bars)</span></span><br>"+stringScaleHP
+        },
+        extra: `
+                - Horabes has 3 patterns for damage reduction: <br>
+                <span class='tab'>- 96.66% damage reduction when concentrating energy </span><br>
+                <span class='tab'>- 61.72% damage reduction when releasing energy</span><br>
+                <span class='tab'>- 83.33% damage reduction when preparing for the flying attack</span><br>
+                - When concentrating energy, Horabes will recover 33k HP for each sphere that touches her.<br>
+                - After concentrating energy, Horabes will deal a flying attack 3 consecutive times in the marked regions<br>
+                - Following that, Horabes will stay at the center of the map and will release an energy wave. While executing this pattern, her damage reduction will be reduced.<br>
+                - After this attack pattern, Horabes will partially recover her damage reduction and return to her rotation of attacks.
+               `,
+        path: 'images/monsters/solene/vortex/transcended_horabes.png',
+        IsBoss: true
+    },
+
+    "93": {
+        name: "Transcended Horabes - Weakened",
+        description: stringIsBoss + "Can be found in the Apocalypse Vortex.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>61.72%</span>",
+            health: stringEstHP + "<br>"+
+                        "<span class='tab'>- Normal: <span class='yellow'>1.41M (57 bars)</span></span><br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>3.88M (156 bars)</span></span><br>"+stringScaleHP
+        },
+        extra: `
+                - Horabes has 3 patterns for damage reduction: <br>
+                <span class='tab'>- 96.66% damage reduction when concentrating energy </span><br>
+                <span class='tab'>- 61.72% damage reduction when releasing energy</span><br>
+                <span class='tab'>- 83.33% damage reduction when preparing for the flying attack</span><br>
+                - When concentrating energy, Horabes will recover 33k HP for each sphere that touches her.<br>
+                - After concentrating energy, Horabes will deal a flying attack 3 consecutive times in the marked regions<br>
+                - Following that, Horabes will stay at the center of the map and will release an energy wave. While executing this pattern, her damage reduction will be reduced.<br>
+                - After this attack pattern, Horabes will partially recover her damage reduction and return to her rotation of attacks.
+               `,
+        path: 'images/monsters/solene/vortex/transcended_horabes.png',
+        IsBoss: true
+    },
+
+    "94": {
+        name: "Transcended Horabes",
+        description: stringIsBoss + "Can be found in the Apocalypse Vortex.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>83.33%</span>",
+            health: stringEstHP + "<br>"+
+                        "<span class='tab'>- Normal: <span class='yellow'>1.41M (57 bars)</span></span><br>"+
+                        "<span class='tab'>- Master: <span class='yellow'>3.88M (156 bars)</span></span><br>"+stringScaleHP
+        },
+        extra: `
+                - Horabes has 3 patterns for damage reduction: <br>
+                <span class='tab'>- 96.66% damage reduction when concentrating energy </span><br>
+                <span class='tab'>- 61.72% damage reduction when releasing energy</span><br>
+                <span class='tab'>- 83.33% damage reduction when preparing for the flying attack</span><br>
+                - When concentrating energy, Horabes will recover 33k HP for each sphere that touches her.<br>
+                - After concentrating energy, Horabes will deal a flying attack 3 consecutive times in the marked regions<br>
+                - Following that, Horabes will stay at the center of the map and will release an energy wave. While executing this pattern, her damage reduction will be reduced.<br>
+                - After this attack pattern, Horabes will partially recover her damage reduction and return to her rotation of attacks.
+               `,
+        path: 'images/monsters/solene/vortex/transcended_horabes.png',
+        IsBoss: true
+    },
+
+    "95": {
+        name: "Voidal Destroyer",
+        description: stringIsBoss + "Can be found on the first stage of Void (Apocalypse).",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
+            health: stringEstHP + "<span class='yellow'>40.30M (1612 bars)</span>"
+        },
+        extra: `
+                <p><strong>Danger pattern:</strong></p>
+                <p>When reaching the timestamp of 4:00~4:15, the boss will summon four 'Divine Injector' across the map. They should be activated in order to stop the boss attack and reduce its defense.</p>
+                <p>If not activated, the boss will summon energy spheres which will follow the players and deal damage.</p>
+               `,
+        path: 'images/monsters/destroyer.png',
+        IsBoss: true
+    },
+
+    "96": {
+        name: "Voidal Destroyer (Weakened)",
+        description: stringIsBoss + "Can be found on the first stage of Void (Apocalypse).",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>-100.00%</span>",
+            health: stringEstHP + "<span class='yellow'>40.30M (1612 bars)</span>"
+        },
+        extra: `
+                <p><strong>Danger pattern:</strong></p>
+                <p>When reaching the timestamp of 4:00~4:15, the boss will summon four 'Divine Injector' across the map. They should be activated in order to stop the boss attack and reduce its defense.</p>
+                <p>If not activated, the boss will summon energy spheres which will follow the players and deal damage.</p>
+               `,
+        path: 'images/monsters/destroyer.png',
+        IsBoss: true
+    },
+
+    "97": {
+        name: "Voidal Eradicator (2F)",
+        description: stringIsBoss + "Can be found on the second stage of Void (Apocalypse).",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
+            health: stringEstHP + "<span class='yellow'>53.73M (2149 bars)</span>"
+        },
+        extra: `
+                <p><strong>Danger pattern:</strong></p>
+                The boss will teleport to the center of the map and will place a mark on a random player. After a few seconds, a horizontal region will show up where the player is. It will cause a continuous damage on that region until the end of this pattern.<br>
+                During the danger pattern, the boss will have an increased damage reduction.
+               `,
+        path: 'images/monsters/eradicator.png',
+        IsBoss: true
+    },
+
+    "98": {
+        name: "Voidal Eradicator (2F) (Increased defense)",
+        description: stringIsBoss + "Can be found on the second stage of Void (Apocalypse).",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
+            health: stringEstHP + "<span class='yellow'>53.73M (2149 bars)</span>"
+        },
+        extra: `
+                <p><strong>Danger pattern:</strong></p>
+                The boss will teleport to the center of the map and will place a mark on a random player. After a few seconds, a horizontal region will show up where the player is. It will cause a continuous damage on that region until the end of this pattern.<br>
+                During the danger pattern, the boss will have an increased damage reduction.
+               `,
+        path: 'images/monsters/eradicator.png',
+        IsBoss: true
+    },
+
+    "99": {
+        name: "Voidal Eradicator (3F)",
+        description: stringIsBoss + "Can be found on the third stage of Void (Apocalypse).",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
+            health: stringEstHP + "<span class='yellow'>107.43M (4297 bars)</span>"
+        },
+        extra: `
+                <p><strong>Danger pattern:</strong></p>
+                The boss will teleport to the center of the map and spread several marked regions across the map. After a few seconds, it will cause damage on the assigned regions. After that, the boss will move to one of the corners of the map.<br>
+                The second danger pattern is the same as on 2F.<br>
+                During the danger pattern, the boss will have an increased damage reduction.
+               `,
+        path: 'images/monsters/eradicator.png',
+        IsBoss: true
+    },
+
+    "100": {
+        name: "Voidal Eradicator (3F) (Increased defense)",
+        description: stringIsBoss + "Está presente no Vazio 4: Apocalipse.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
+            health: stringEstHP + "<span class='yellow'>107.43M (4297 barras)</span>"
+        },
+        extra: `
+                <p><strong>Danger pattern:</strong></p>
+                The boss will teleport to the center of the map and spread several marked regions across the map. After a few seconds, it will cause damage on the assigned regions. After that, the boss will move to one of the corners of the map.<br>
+                The second danger pattern is the same as on 2F.<br>
+                During the danger pattern, the boss will have an increased damage reduction.
+               `,
+        path: 'images/monsters/eradicator.png',
+        IsBoss: true
+    },
+
+    "101": {
+        name: "Voidal Eradicator (4F)",
+        description: stringIsBoss + "Can be found on the hidden stage (4F) of Void (Apocalypse). It is only possible to access the hidden stage if stage 3 is cleared before the timestamp of 1:00.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>66.66%</span>",
+            health: stringEstHP + "<span class='yellow'>281.95M (11278 bars)</span>"
+        },
+        extra: `
+                <p>This boss will stay on a rotation of <strong>teleport → casting → stun</strong> until defeated. You'll have <strong>7~8 seconds</strong> to interrupt each casting. The damage necessary to interrupt each casting increases progressively.</p>
+                
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li><strong>1st casting:</strong> it will teleport to the top left corner of the map.</li>
+                    <li><strong>2nd casting:</strong> it will teleport to the center of the map.</li>
+                    <li><strong>3rd casting onwards:</strong> it will randomly teleport to one of the defined spots (see the image). After the 5th casting, it will reset its rotation and return to the fist casting spot.</li>
+                </ul>
+
+                <p><strong>Damage required to interrupt each casting:</strong></p>
+                <p style="color: #FFD700; background: rgba(255,255,255,0.05); padding: 5px; border-radius: 4px; display: inline-block;">
+                    10M → 13.3M → 16.6M → 19.9M → ... [more tests are necessary]
+                </p>
+                <img src='images/common/casting_pattern.jpg' class='mini-icon2' oncontextmenu='return false';>
+                <p>※ When interrupting the casting, the boss will get weakened and it will receive much more damage (-100% damage reduction) during 10 seconds. It's necessary to use this moment to deal as much damage as possible in oder to avoid the following castings.
+                <p>※ If not interrupted, the boss will release a powerful attack and return to the casting pattern. This attack can be avoided if you stay on one of the corners of the map.</p>
+                <p style="font-size: 12pt;"><i><b>Note:</b> It's not possible to deal back attack damage.</i></p>
+               `,
+        path: 'images/monsters/eradicator.png',
+        IsBoss: true
+    },
+
+    "102": {
+        name: "Voidal Eradicator (4F) (Weakened)",
+        description: stringIsBoss + "Can be found on the hidden stage (4F) of Void (Apocalypse). It is only possible to access the hidden stage if stage 3 is cleared before the timestamp of 1:00.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>-100.00%</span>",
+            health: stringEstHP + "<span class='yellow'>281.95M (11278 bars)</span>"
+        },
+        extra: `
+                <p>This boss will stay on a rotation of <strong>teleport → casting → stun</strong> until defeated. You'll have <strong>7~8 seconds</strong> to interrupt each casting. The damage necessary to interrupt each casting increases progressively.</p>
+                
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li><strong>1st casting:</strong> it will teleport to the top left corner of the map.</li>
+                    <li><strong>2nd casting:</strong> it will teleport to the center of the map.</li>
+                    <li><strong>3rd casting onwards:</strong> it will randomly teleport to one of the defined spots (see the image). After the 5th casting, it will reset its rotation and return to the fist casting spot.</li>
+                </ul>
+
+                <p><strong>Damage required to interrupt each casting:</strong></p>
+                <p style="color: #FFD700; background: rgba(255,255,255,0.05); padding: 5px; border-radius: 4px; display: inline-block;">
+                    10M → 13.3M → 16.6M → 19.9M → ... [more tests are necessary]
+                </p>
+                <img src='images/common/casting_pattern.jpg' class='mini-icon2' oncontextmenu='return false';>
+                <p>※ When interrupting the casting, the boss will get weakened and it will receive much more damage (-100% damage reduction) during 10 seconds. It's necessary to use this moment to deal as much damage as possible in oder to avoid the following castings.
+                <p>※ If not interrupted, the boss will release a powerful attack and return to the casting pattern. This attack can be avoided if you stay on one of the corners of the map.</p>
+                <p style="font-size: 12pt;"><i><b>Note:</b> It's not possible to deal back attack damage.</i></p>
+               `,
+        path: 'images/monsters/eradicator.png',
+        IsBoss: true
+    },
+
 };
 
 const categoryMap = {
     "Default": ["0"],
     "Abyssal Path (AP) - Conquest": ["61", "62", "70", "71", "72"],
+
+    "Void 1: Invasion": ["18"],
+    "Void 2: Taint": ["19", "20", "21"],
+    "Void 3: Nightmare": ["44", "45", "46", "47", "48", "49", "50", "51", "52"],
+    "Void 4: Apocalypse": ["95", "96", "97", "98", "99", "100", "101", "102"],
+
     "Solene - Chapel of Eternity": ["73", "74", "75"],
     "Solene - Hall of Harmony": ["76", "77", "78", "79", "80", "81"],
     "Solene - Sanctuary of Divine Beasts": ["82", "83", "84", "85", "86"],
     "Solene - Path Shrouded in Darkness": ["87", "88"],
-    "Void 1: Invasion": ["18"],
-    "Void 2: Taint": ["19", "20", "21"],
-    "Void 3: Nightmare": ["44", "45", "46", "47", "48", "49", "50", "51", "52"],
+    "Solene - Apocalypse Vortex": ["89", "90", "91", "92", "93", "94"],
+    
     "Infinity Cloister 3 (IC3)": ["22", "23", "24", "25", "26", "27", "28", "29"],
     "Infinity Cloister 4 (IC4)": ["53", "54", "55", "56", "57", "58", "59", "60"],
     "Tower of Disappearance (TOD)": ["1", "2", "3", "4", "5", "6", "17", "7", "16", "15", "8", "34", "9", "10"],

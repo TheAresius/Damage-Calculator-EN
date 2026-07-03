@@ -7,6 +7,7 @@ function calculate() {
   // usual defense values
   var DEF = 0;
   var sDEF = 0.21875;
+  var dmg_red = 0;  
 
   // stores the user input values and fixes the decimal separator
   var yourLV = Number(
@@ -22,6 +23,14 @@ function calculate() {
   crit_r = Number(crit_r.replace(/,/g, "."));
   var crit_d = window.document.querySelector("input#crit_d_string").value;
   crit_d = Number(crit_d.replace(/,/g, "."));
+
+  var hs_chance = window.document.querySelector("input#hs_chance_string").value;
+  hs_chance = Number(hs_chance.replace(/,/g, "."));
+  
+  var hs_dmg = window.document.querySelector("input#hs_dmg_string").value;
+  hs_dmg = Number(hs_dmg.replace(/,/g, "."));
+  
+  var is_hs_checked = document.getElementById('hs_checkbox').checked;
   
   var harrier_debuff = window.document.querySelector(
     "input#harrier_d_string"
@@ -76,6 +85,7 @@ function calculate() {
   if (enemy != "0") {
     yourLV = 90;
     monsterLV = 90;
+    dmg_red = 0;
   }
   if (
     enemy === "1" ||
@@ -114,9 +124,10 @@ function calculate() {
     sDEF = 0.21875;
     harrier_debuff = 20;
   } else if (enemy === "21"){
-    DEF = 2/3;
-    sDEF = 71/96;
+    DEF = 0;
+    sDEF = 0.21875;
     harrier_debuff = 20;
+    dmg_red = 2/3;
   } else if(enemy==="22"){
     DEF = 0.23075;
     sDEF = 0.399025
@@ -132,7 +143,7 @@ function calculate() {
   } else if(enemy==="27"){
     DEF = 0.58335;
     sDEF = -0.56255;
-  } else if(enemy==="28"||enemy==="42" ||enemy==="59"){
+  } else if(enemy==="28"||enemy==="42"){
     DEF = 2/3;
     sDEF = 71/96;
   } else if(enemy==="29"||enemy==="43"){
@@ -151,13 +162,15 @@ function calculate() {
     DEF = -1;
     sDEF = -0.5625;
   } else if(enemy==="44" || enemy==="46") {
-    DEF = 0.9;
-    sDEF = 236/256;
+    DEF = 0;
+    sDEF = 0.21875;
     harrier_debuff = 20;
+    dmg_red = 0.9;
   } else if(enemy==="45" || enemy==="47") {
-    DEF = 69/99;
-    sDEF = 0.282596;
+    DEF = 0;
+    sDEF = -655/479;
     harrier_debuff = 20;
+    dmg_red = 69/99;
   } else if(enemy==="48" || enemy==="49") {
     DEF = 2/3;
     sDEF = 71/96;
@@ -183,15 +196,24 @@ function calculate() {
   } else if (enemy==="57") {
     DEF = 0;
     sDEF = 0.21875;
+  } else if (enemy==="59") {
+    DEF = 0;
+    sDEF = 0.21875;
+    dmg_red = 2/3;
   } else if (enemy==="60") {
-    DEF = 0.6;
-    sDEF = 11/16;
-  } else if (enemy==="61" || enemy==="63" || enemy==="64" || enemy==="65" || enemy==="66" || enemy==="67" || enemy==="68" || enemy==="69" || enemy==="70" || enemy==="72") {
+    DEF = 0;
+    sDEF = 0.21875;
+    dmg_red = 149/249;
+  } else if (enemy==="61" || enemy==="63" || enemy==="64" || enemy==="65" || enemy==="66" || enemy==="67" || enemy==="68" || enemy==="69" || enemy==="70") {
     DEF = 0;
     sDEF = 0.21875;
   } else if (enemy==="71") {
-    DEF = 2/3;
-    sDEF = 71/96;
+    DEF = 0;
+    sDEF = 0.21875;
+    dmg_red = 2/3;
+  } else if (enemy==="72") {
+    DEF = 0;
+    sDEF = 0.21875;
   } else if (enemy==="73") {
     DEF = 0.95;
     sDEF = 123/128;
@@ -213,19 +235,86 @@ function calculate() {
     sDEF = 0.21875;
     harrier_debuff = 30;
   } else if(enemy==="83") {
-    DEF = 2/3;
-    sDEF = 71/96;
-    harrier_debuff = 30;
-  } else if (enemy==="84" || enemy==="86") {
     DEF = 0;
     sDEF = 0.21875;
     harrier_debuff = 30;
+    dmg_red = 2/3;
+  } else if (enemy==="86") {
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 30;
+    dmg_red = 0;
   } else if (enemy==="85") {
     DEF = 0.5;
     sDEF = 39/64;
     harrier_debuff = 30;
+    dmg_red = 0.5;
+  } else if (enemy==="87" || enemy==="88") {
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 30;
+    dmg_red = 2/3;
+  } else if (enemy==="89" || enemy==="90" || enemy==="91") {
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 30;
+    dmg_red = 2/3;
+  } else if (enemy==="92") {
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 30;
+    dmg_red = 29/30;
+  } else if (enemy==="93") {
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 30;
+    dmg_red = 50/81;
+  } else if (enemy==="94") {
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 30;
+    dmg_red = 5/6;
+  } else if (enemy === "95"){
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 20;
+    dmg_red = 2/3;
+  } else if (enemy === "96"){
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 20;
+    dmg_red = -1; 
+  } else if (enemy === "97"){
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 20;
+    dmg_red = 0;   
+  } else if (enemy === "98"){
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 20;
+    dmg_red = 2/3;
+  } else if (enemy === "99"){
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 20;
+    dmg_red = 0;   
+  } else if (enemy === "100"){
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 20;
+    dmg_red = 2/3;
+  } else if (enemy === "101"){
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 20;
+    dmg_red = 2/3;
+  } else if (enemy === "102"){
+    DEF = 0;
+    sDEF = 0.21875;
+    harrier_debuff = 20;
+    dmg_red = 0; 
   }
-  
   var selectedOption = document.getElementById('Enemy_list').value;
   var IsBoss = enemyData[selectedOption].IsBoss;
   
@@ -260,7 +349,9 @@ const floatChecks = [
     { val: skill_multi, id: "skill_multi_string" },
     { val: b_atk, id: "back_attack_string" },
     { val: specific_skill, id: "specific_skill_string" },
-    { val: specific_tier, id: "specific_tier_string" }
+    { val: specific_tier, id: "specific_tier_string" },
+    { val: hs_chance, id: "hs_chance_string" },
+    { val: hs_dmg, id: "hs_dmg_string" }
 ];
 
 floatChecks.forEach(item => {
@@ -275,7 +366,7 @@ if (def_pierce < 0 || isNaN(def_pierce) || def_pierce >= 100) {
     hasError = true;
 }
 
-const validHarrierEnemies = ["0","15","18","19","20","21","35","36","37","38","44","45","46","47","48","49","50","51","52","73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86"];
+const validHarrierEnemies = ["0","15","18","19","20","21","35","36","37","38","44","45","46","47","48","49","50","51","52","73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102"];
 
 if (harrier_debuff > 0 && !validHarrierEnemies.includes(String(enemy))) {
     showAlert("Attention", stringsErrorHarrier, "warning", "Ok");
@@ -341,22 +432,19 @@ if (hasError) {
     if (isNormalChecked) {
       calculationType = stringsComboDamage;
 
-      var final_multi = (1 - extraResistAll/100) * (1 - extraResistNormal/100);
+      var final_multi = (1 - dmg_red) * (1 - extraResistAll/100) * (1 - extraResistNormal/100);
       if (final_multi<0) {
         final_multi = 0
       }
 
       var effective_ATK = ATK;
       var final_dmg =
-        ((effective_ATK *
-          (1 - DEF) *
-          ATK_factor *
-          skill_multi *
-          (100 + 2 * valid_lv_dif)) / 100) * buff_multi * final_multi;
+        ((effective_ATK * (1 - DEF) * ATK_factor * skill_multi * (100 + 2 * valid_lv_dif)) / 100) * buff_multi * final_multi;
+
     } else if (isSpecialChecked) {
       calculationType = stringsSkillDamage;
 
-      var final_multi = (1 - extraResistAll/100) * (1 - extraResistSpecial/100);
+      var final_multi = (1 - dmg_red) * (1 - extraResistAll/100) * (1 - extraResistSpecial/100);
       if (final_multi<0) {
         final_multi = 0
       }
@@ -373,29 +461,17 @@ if (hasError) {
       }
 
       var effective_ATK = ATK + sATK;
-      var final_dmg =
-        ((effective_ATK *
-          (1 - sDEF) *
-          sATK_factor *
-          skill_multi *
-          (100 + 2 * valid_lv_dif)) / 100) *
-          special_buff_multi *
-          final_multi;
+      var final_dmg = ((effective_ATK * (1 - sDEF) * sATK_factor * skill_multi * (100 + 2 * valid_lv_dif)) / 100) * special_buff_multi * final_multi;
     } else if (isPetChecked) {
       calculationType = stringsPetDamage;
 
-      var final_multi = (1 - extraResistAll/100) * (1 - extraResistNormal/100) * (1 + pet_buff/100);
+      var final_multi = (1 - dmg_red) * (1 - extraResistAll/100) * (1 - extraResistNormal/100) * (1 + pet_buff/100);
       if (final_multi<0) {
         final_multi = 0
       }
 
       var effective_ATK = ATK;
-      var final_dmg =
-        ((effective_ATK *
-          (1 - DEF) *
-          Pet_factor *
-          skill_multi *
-          (100 + 2 * valid_lv_dif)) / 100) * buff_multi * final_multi;
+      var final_dmg = ((effective_ATK * (1 - DEF) * Pet_factor * skill_multi * (100 + 2 * valid_lv_dif)) / 100) * buff_multi * final_multi;
     }
     
     // harrier world debuff and adjustments
@@ -428,7 +504,7 @@ if (hasError) {
 
 
     // back atk override for specific enemies 
-    if (enemy === "20" || enemy === "21" || enemy === "44" || enemy === "45" || enemy === "46" || enemy === "47" || enemy === "50" || enemy === "51" || enemy === "52") {
+    if (enemy === "20" || enemy === "21" || enemy === "44" || enemy === "45" || enemy === "46" || enemy === "47" || enemy === "50" || enemy === "51" || enemy === "52" || enemy === "95" || enemy === "96" || enemy === "101" || enemy === "102") {
         new_b_atk = 100; 
     } 
     else if (enemy === "73") {
@@ -439,6 +515,12 @@ if (hasError) {
       new_crit_r = 100;
     }
 
+    if (hs_chance > 100) {
+      hs_chance = 100;
+    }
+    if (hs_chance < 0) {
+      hs_chance = 0
+    }
 
     // presentation of results
     var ui_final_dmg, ui_corrected_final_dmg, avgCritDmg;
@@ -461,15 +543,36 @@ if (hasError) {
     } else {
         var def_factor = (1 - final_def_pierce/100); 
 
-        avgCritDmg = Math.round((final_dmg * (new_crit_r / 100) * (1.5 + new_crit_d / 100) + final_dmg * (1 - new_crit_r / 100)) / def_factor);
+        if (isNormalChecked && is_hs_checked && hs_dmg > 0) {
 
-        ui_final_dmg = Math.round(final_dmg / def_factor);
-        ui_corrected_final_dmg = Math.round(final_dmg * (1.5 + new_crit_d / 100) / def_factor);
+          var hs_corrected_dmg = final_dmg / final_multi;
+          var current_hs_chance = hs_chance / 100;
 
-        ui_back_normal = Math.round(ui_final_dmg * new_b_atk/100);
-        ui_back_critical = Math.round(ui_corrected_final_dmg * new_b_atk/100 );
-        ui_back_average = Math.round(avgCritDmg * new_b_atk/100);
+          ui_final_dmg = Math.round(hs_corrected_dmg / def_factor) + hs_dmg;
+          ui_corrected_final_dmg = Math.round((hs_corrected_dmg * (1.5 + new_crit_d / 100)) / def_factor) + hs_dmg;
 
+          var avg_hs_on = ((hs_corrected_dmg * (new_crit_r / 100) * (1.5 + new_crit_d / 100)) + (hs_corrected_dmg * (1 - new_crit_r / 100))) / def_factor + hs_dmg;
+          var avg_hs_off = ((final_dmg * (new_crit_r / 100) * (1.5 + new_crit_d / 100)) + (final_dmg * (1 - new_crit_r / 100))) / def_factor;
+
+          avgCritDmg = Math.round((avg_hs_on * current_hs_chance) + (avg_hs_off * (1 - current_hs_chance)));
+
+          // back damage
+          ui_back_normal = Math.round((hs_corrected_dmg / def_factor) * (new_b_atk / 100)) + hs_dmg;
+          ui_back_critical = Math.round(((hs_corrected_dmg * (1.5 + new_crit_d / 100)) / def_factor) * (new_b_atk / 100)) + hs_dmg;
+
+          var avg_isolated_hs = ((avg_hs_off * (1 - current_hs_chance)) + ((avg_hs_on - hs_dmg) * current_hs_chance));
+
+          ui_back_average = Math.round((avg_isolated_hs * (new_b_atk / 100)) + (hs_dmg * current_hs_chance));
+        } else {
+          avgCritDmg = Math.round((final_dmg * (new_crit_r / 100) * (1.5 + new_crit_d / 100) + final_dmg * (1 - new_crit_r / 100)) / def_factor);
+
+          ui_final_dmg = Math.round(final_dmg / def_factor);
+          ui_corrected_final_dmg = Math.round(final_dmg * (1.5 + new_crit_d / 100) / def_factor);
+
+          ui_back_normal = Math.round(ui_final_dmg * new_b_atk/100);
+          ui_back_critical = Math.round(ui_corrected_final_dmg * new_b_atk/100 );
+          ui_back_average = Math.round(avgCritDmg * new_b_atk/100);
+        } 
     }
 
      showResultOnUi(ui_final_dmg, ui_corrected_final_dmg, avgCritDmg, ui_back_normal, ui_back_critical, ui_back_average);
@@ -504,6 +607,7 @@ if (hasError) {
               chk_def: document.getElementById('def_multi_checkbox').checked,
               chk_skill: document.getElementById('specific_skill_checkbox').checked,
               chk_tier: document.getElementById('specific_tier_checkbox').checked,
+              chk_hs: document.getElementById('hs_checkbox').checked,
 
               // converts buffs/debuffs map into arrays for result loading if needed
               activeBuffsList: window.activeBuffs && window.activeBuffs.size > 0 
@@ -532,6 +636,8 @@ if (hasError) {
             sATK: sATK,
             crit_r: crit_r,
             crit_d: crit_d,
+            hs_chance: hs_chance,
+            hs_dmg: hs_dmg,
             harrier_debuff: harrier_debuff,
             harrier_resist: harrier_resist,
             asd_buffs: asd_buffs,

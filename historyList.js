@@ -1,5 +1,20 @@
 // gets history from local storage
 var historyData = JSON.parse(localStorage.getItem('gc_damage_history')) || [];
+
+// workaround for new inputs
+historyData = historyData.map(item => {
+    if (item.hs_chance === undefined) item.hs_chance = 0;
+    if (item.hs_dmg === undefined) item.hs_dmg = 0;
+    if (!item.meta) {
+        item.meta = {};
+    }
+    if (item.meta && item.meta.chk_hs === undefined) {
+        item.meta.chk_hs = false;
+    }
+    
+    return item;
+});
+
 var selectedHistoryIds = new Set(); // tracks which items are set
 
 function saveHistory() {
@@ -120,6 +135,10 @@ function renderHistory() {
                                 <div class="response-list-item-value">${stringsHistoryListSpecialAttack}: <span class='history-stat-value'>${item.sATK}</span></div>
                                 <div class="response-list-item-value">${stringHistoryListCriticalRate}: <span class='history-stat-value'>${item.crit_r}% (${(item.meta.savedCritExtra  >= 0 ? '+' : '')}${item.meta.savedCritExtra || 0}%)</span></div>
                                 <div class="response-list-item-value">${stringHistoryListCriticalDamage}<span class='history-stat-value'>${item.crit_d}% (${(item.meta.savedCdmg >= 0 ? '+' : '')}${item.meta.savedCdmg || 0}%)</span></div>
+                            </div>
+                            <div class="stat-group">
+                                <div class="response-list-item-value">${stringsHistoryListHSChance}: <span class='history-stat-value'>${item.hs_chance ?? 0}%</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListHSDamage}: <span class='history-stat-value'>${item.hs_dmg ?? 0}</span></div>
                             </div>
                             <div class="stat-group">
                             <div class="response-list-item-value">${stringsHistoryListHarrierDebuff}: <span class='history-stat-value'>${item.harrier_debuff}%</span></div>
@@ -312,6 +331,8 @@ function compareSelected() {
         ${getStatRow('Special attack', 'sATK')}
         ${getStatRow('Critical rate', 'crit_r', '%', 'savedCritExtra')}
         ${getStatRow('Critical damage', 'crit_d', '%', 'savedCdmg')}
+        ${getStatRow('Hell Spear Chance', 'hs_chance', '%')}
+        ${getStatRow('Hell Spear Damage', 'hs_dmg')}
         
         ${getStatRow('Taint debuff', 'harrier_debuff', '%')}
         ${getStatRow('Taint resist', 'harrier_resist', '%')}
@@ -576,17 +597,21 @@ function loadHistoryItem(id) {
             document.getElementById('def_multi_checkbox').checked = item.meta.chk_def;
             document.getElementById('specific_skill_checkbox').checked = item.meta.chk_skill;
             document.getElementById('specific_tier_checkbox').checked = item.meta.chk_tier;
+            document.getElementById('hs_checkbox').checked = item.meta.chk_hs ?? false;
 
             document.getElementById("Normal").checked = item.meta.isNormal;
             document.getElementById("Special").checked = item.meta.isSpecial;
             document.getElementById("Pet").checked = item.meta.isPet;
-            
+
             document.getElementById("yourLV_string").value = item.yourLV;
             document.getElementById("monsterLV_string").value = item.monsterLV;
             document.getElementById("ATK_string").value = item.ATK;
             document.getElementById("sATK_string").value = item.sATK;
             document.getElementById("crit_r_string").value = item.crit_r;
             document.getElementById("crit_d_string").value = item.crit_d;
+            document.getElementById("hs_chance_string").value = item.hs_chance ?? 0;
+            document.getElementById("hs_dmg_string").value = item.hs_dmg ?? 0;
+
             document.getElementById("harrier_d_string").value = item.harrier_debuff;
             document.getElementById("harrier_r_string").value = item.harrier_resist;
             
