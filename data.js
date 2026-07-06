@@ -244,31 +244,18 @@ var enemyData = {
     },
 
     "13": {
-        name: "Harkion (body)",
+        name: "Harkion",
         description: stringIsBoss + "Can be found in the Judgment Land hero dungeon.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>30.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>30.00%</span>",
+            defense1: stringDef1 + "<span class='yellow'>10.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>10.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>690.00M</span>."
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
+            health: stringEstHP + "<span class='yellow'>100.00B (?)</span>."
         },
-        extra: "- Harkion has two sets of hitbox, its body and its legs.<br>"+
-               "- The damage dealt to its legs is reduced by 80%.",
-        path: 'images/monsters/harkyon.png',
-        IsBoss: true
-    },
-
-    "14": {
-        name: "Harkion (legs)",
-        description: stringIsBoss + "Can be found in the Judgment Land hero dungeon.",
-        status:{
-            defense1: stringDef1 + "<span class='yellow'>86.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>86.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>88.00%</span>",
-            health: stringEstHP + "<span class='yellow'>690.00M</span>."
-        },
-        extra: "- Harkion has two sets of hitbox, its body and its legs.<br>"+
-               "- The damage dealt to its legs is reduced by 80%.",
+        extra: `
+                You will get 1 point for every 100 damage dealt.
+               `,
         path: 'images/monsters/harkyon.png',
         IsBoss: true
     },
@@ -1711,6 +1698,7 @@ var enemyData = {
 const categoryMap = {
     "Default": ["0"],
     "Abyssal Path (AP) - Conquest": ["61", "62", "70", "71", "72"],
+    "Land of Judgment": ["13"],
 
     "Void 1: Invasion": ["18"],
     "Void 2: Taint": ["19", "20", "21"],
@@ -1727,7 +1715,6 @@ const categoryMap = {
     "Infinity Cloister 4 (IC4)": ["53", "54", "55", "56", "57", "58", "59", "60"],
     "Tower of Disappearance (TOD)": ["1", "2", "3", "4", "5", "6", "17", "7", "16", "15", "8", "34", "9", "10"],
     "Berkas' Lair": ["11", "12"],
-    "Land of Judgment": ["13", "14"],
     "Wizard's Labyrinth (WL)": ["30", "31", "32", "33"]    
 };
 

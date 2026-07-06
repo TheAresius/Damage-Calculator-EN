@@ -71,7 +71,7 @@ function calculate() {
   // extra status for modifiers
   var final_crit_r = crit_r;
   var final_crit_d = crit_d;
-  var final_def_pierce = def_pierce
+  var final_def_pierce = 0;
 
   // setup for possible user input errors
   resetAllInputErrors();
@@ -108,7 +108,7 @@ function calculate() {
     DEF = 0.5;
     sDEF = 0.4;
   } else if (enemy === "13") {
-    DEF = 0.3;
+    DEF = 0.1;
     sDEF = 0.4;
   } else if (enemy === "11") {
     DEF = 0;
@@ -401,7 +401,6 @@ if (hasError) {
         buff_multi += sBuffs.buff / 100;
         final_crit_r += sBuffs.crit;
         final_crit_d += sBuffs.crit_dmg;
-        final_def_pierce += sBuffs.ignore_def; 
         extraResistAll = Math.abs(sBuffs.resist_all);
         extraResistNormal = Math.abs(sBuffs.resist_normal);
         extraResistSpecial = Math.abs(sBuffs.resist_special);
