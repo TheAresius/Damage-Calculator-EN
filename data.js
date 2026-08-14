@@ -1649,8 +1649,9 @@ var enemyData = {
                 </ul>
 
                 <p><strong>Damage required to interrupt each casting:</strong></p>
-                <p style="color: #FFD700; background: rgba(255,255,255,0.05); padding: 5px; border-radius: 4px; display: inline-block;">
-                    10M → 13.3M → 16.6M → 19.9M → ... [more tests are necessary]
+                <p style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 4px; display: inline-block;">
+                    <span style='display:inline-block;'>In order to break the first casting, it will be necessary to cause <b>3.5% of his total HP [9.87M]</b>. For the second casting onwards, the value will remain constant at <b>5% [14.10M]</b>.</span>
+                    <span style='display:inline-block;'>When playing with up to 3 players, the value for the first casting will change to <b>2% of his total HP [5.64M]</b>. For the second and third casting, the value will be the same as when playing with a full party — 3.5% and 5%.</span>
                 </p>
                 <img src='images/common/casting_pattern.jpg' class='mini-icon2' oncontextmenu='return false';>
                 <p>※ When interrupting the casting, the boss will get weakened and it will receive much more damage (-100% damage reduction) during 10 seconds. It's necessary to use this moment to deal as much damage as possible in oder to avoid the following castings.
@@ -1681,8 +1682,9 @@ var enemyData = {
                 </ul>
 
                 <p><strong>Damage required to interrupt each casting:</strong></p>
-                <p style="color: #FFD700; background: rgba(255,255,255,0.05); padding: 5px; border-radius: 4px; display: inline-block;">
-                    10M → 13.3M → 16.6M → 19.9M → ... [more tests are necessary]
+                <p style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 4px; display: inline-block;">
+                    <span style='display:inline-block;'>In order to break the first casting, it will be necessary to cause <b>3.5% of his total HP [9.87M]</b>. For the second casting onwards, the value will remain constant at <b>5% [14.10M]</b>.</span>
+                    <span style='display:inline-block;'>When playing with up to 3 players, the value for the first casting will change to <b>2% of his total HP [5.64M]</b>. For the second and third casting, the value will be the same as when playing with a full party — 3.5% and 5%.</span>
                 </p>
                 <img src='images/common/casting_pattern.jpg' class='mini-icon2' oncontextmenu='return false';>
                 <p>※ When interrupting the casting, the boss will get weakened and it will receive much more damage (-100% damage reduction) during 10 seconds. It's necessary to use this moment to deal as much damage as possible in oder to avoid the following castings.
@@ -2253,6 +2255,28 @@ window.buffsData = [
         icon: "images/icons/character/go_luffy.png", 
         stats: {buff: 5, crit: 0}  
     },
+    { 
+        id: "ruin_blade1", 
+        name: "Ruin Blade",
+        category: "character",
+        icon: "images/icons/character/ruin_blade1.png", 
+        stats: {buff: 40}  
+    },
+    { 
+        id: "ruin_blade2", 
+        name: "Enhanced Ruin Blade Type 1",
+        category: "character",
+        icon: "images/icons/character/ruin_blade2.png", 
+        stats: {buff: 50}  
+    },
+    { 
+        id: "ruin_blade3", 
+        name: "Enhanced Ruin Blade Type 2",
+        category: "character",
+        icon: "images/icons/character/ruin_blade3.png", 
+        stats: {buff: 60}  
+    },
+
 
     // pet
 
