@@ -809,9 +809,10 @@ var enemyData = {
         name: "Ashtaroth, the Creator (corners)",
         description: stringIsNotBoss + "Can be found on the first stage of Infinity Cloister on difficulty 4.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>60.93%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>50.00%</span>",
             health: stringEstHP + "<span class='yellow'>8.95M</span>"
         },
         extra: "-",
@@ -823,9 +824,10 @@ var enemyData = {
         name: "Ashtaroth, the Creator (middle)",
         description: stringIsNotBoss + "Can be found on the first stage of Infinity Cloister on difficulty 4.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>60.93%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>50.00%</span>",
             health: stringEstHP + "<span class='yellow'>22.31M</span>"
         },
         extra: "-",
@@ -837,16 +839,17 @@ var enemyData = {
         name: "Dragon Knight",
         description: stringIsNotBoss + "Can be found on the second stage of Infinity Cloister on difficulty 4.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>90.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>90.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>92.19%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>90.00%</span>",
             health: stringEstHP + "<span class='yellow'>46.24M</span>"
         },
-        extra: "- The Dragon Knight has an extremely high defense, if not stricken by the catapult (you only deal 10% of your usual damage). When hit by the catapult, its defense will be reduced for 10 seconds (it can be extended with pet freeze).<br><br>"+
-               "- When weakened, its defense will start switching from time to time as such:<br>"+
-               "<span class='tab'>- 3 seconds with reduced defense (the Dragon takes 10x the usual damage)</span></span>.<br>"+
-               "<span class='tab'>- 1 second with extremely reduced defense (the Dragon takes 20x the usual damage)</span></span>.<br><br>"+
-               "- In order to optimize damage, it is necessary to freeze the Dragon with a pet during the 'super weakened' state. By doing this you can extend the duration of its extremely reduced defense.",
+        extra: "- The Dragon Knight has an extremely high defense, if not stricken by the catapult (you only deal 10% of your usual damage). When hit by the catapult, its damage reduction will be reduced for 10 seconds (it can be extended with pet freeze).<br><br>"+
+               "- When weakened, its damage reduction will start switching from time to time as such:<br>"+
+               "<span class='tab'>- 3 seconds with reduced damage reduction (the Dragon takes 10x the usual damage)</span></span>.<br>"+
+               "<span class='tab'>- 1 second with extremely reduced damage reduction (the Dragon takes 20x the usual damage)</span></span>.<br><br>"+
+               "- In order to optimize damage, it is necessary to freeze the Dragon with a pet during the 'super weakened' state. By doing this you can extend the duration of its extremely reduced damage reduction.",
         path: 'images/monsters/dragon cloister.png',
         IsBoss: false
     },
@@ -855,16 +858,17 @@ var enemyData = {
         name: "Dragon Knight (weakened)",
         description: stringIsNotBoss + "Can be found on the second stage of Infinity Cloister on difficulty 4.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>60.93%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>50.00%</span>",
             health: stringEstHP + "<span class='yellow'>46.24M</span>"
         },
-        extra: "- The Dragon Knight has an extremely high defense, if not stricken by the catapult (you only deal 10% of your usual damage). When hit by the catapult, its defense will be reduced for 10 seconds (it can be extended with pet freeze).<br><br>"+
-               "- When weakened, its defense will start switching from time to time as such:<br>"+
-               "<span class='tab'>- 3 seconds with reduced defense (the Dragon takes 10x the usual damage)</span></span>.<br>"+
-               "<span class='tab'>- 1 second with extremely reduced defense (the Dragon takes 20x the usual damage)</span></span>.<br><br>"+
-               "- In order to optimize damage, it is necessary to freeze the Dragon with a pet during the 'super weakened' state. By doing this you can extend the duration of its extremely reduced defense.",
+        extra: "- The Dragon Knight has an extremely high defense, if not stricken by the catapult (you only deal 10% of your usual damage). When hit by the catapult, its damage reduction will be reduced for 10 seconds (it can be extended with pet freeze).<br><br>"+
+               "- When weakened, its damage reduction will start switching from time to time as such:<br>"+
+               "<span class='tab'>- 3 seconds with reduced damage reduction (the Dragon takes 10x the usual damage)</span></span>.<br>"+
+               "<span class='tab'>- 1 second with extremely reduced damage reduction (the Dragon takes 20x the usual damage)</span></span>.<br><br>"+
+               "- In order to optimize damage, it is necessary to freeze the Dragon with a pet during the 'super weakened' state. By doing this you can extend the duration of its extremely reduced damage reduction.",
         path: 'images/monsters/dragon cloister.png',
         IsBoss: false
     },
@@ -876,13 +880,14 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
             health: stringEstHP + "<span class='yellow'>46.24M</span>"
         },
-        extra: "- The Dragon Knight has an extremely high defense, if not stricken by the catapult (you only deal 10% of your usual damage). When hit by the catapult, its defense will be reduced for 10 seconds (it can be extended with pet freeze).<br><br>"+
-               "- When weakened, its defense will start switching from time to time as such:<br>"+
-               "<span class='tab'>- 3 seconds with reduced defense (the Dragon takes 10x the usual damage)</span></span>.<br>"+
-               "<span class='tab'>- 1 second with extremely reduced defense (the Dragon takes 20x the usual damage)</span></span>.<br><br>"+
-               "- In order to optimize damage, it is necessary to freeze the Dragon with a pet during the 'super weakened' state. By doing this you can extend the duration of its extremely reduced defense.",
+        extra: "- The Dragon Knight has an extremely high defense, if not stricken by the catapult (you only deal 10% of your usual damage). When hit by the catapult, its damage reduction will be reduced for 10 seconds (it can be extended with pet freeze).<br><br>"+
+               "- When weakened, its damage reduction will start switching from time to time as such:<br>"+
+               "<span class='tab'>- 3 seconds with reduced damage reduction (the Dragon takes 10x the usual damage)</span></span>.<br>"+
+               "<span class='tab'>- 1 second with extremely reduced damage reduction (the Dragon takes 20x the usual damage)</span></span>.<br><br>"+
+               "- In order to optimize damage, it is necessary to freeze the Dragon with a pet during the 'super weakened' state. By doing this you can extend the duration of its extremely reduced damage reduction.",
         path: 'images/monsters/dragon cloister.png',
         IsBoss: false
     },
@@ -891,9 +896,10 @@ var enemyData = {
         name: "Harbinger",
         description: stringIsNotBoss + "Can be found on the third stage of Infinity Cloister on difficulty 4.",
         status:{
-            defense1: stringDef1 + "<span class='yellow'>50.00%</span>",
-            defense2: stringDef2 + "<span class='yellow'>50.00%</span>",
-            defense3: stringDef3 + "<span class='yellow'>60.93%</span>",
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>50.00%</span>",
             health: stringEstHP + "<span class='yellow'>23.82M</span>"
         },
         extra: "- On every ~27 seconds she will summon a new 'On Target' skill (up to 3).<br>"+

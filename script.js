@@ -187,19 +187,28 @@ function calculate() {
     DEF = -2/3;
     sDEF = 167/192;
     harrier_debuff = 20;
-  } else if (enemy==="53" || enemy==="54" || enemy==="56" || enemy==="58") {
+} else if (enemy==="53" || enemy==="54") {
     DEF = 0.5;
     sDEF = 78/128;
   } else if (enemy==="55") {
-    DEF = 0.9;
-    sDEF = 59/64;
+    DEF = 0;
+    sDEF = 0.21875;
+    dmg_red = 9/10;
+  } else if (enemy==="56") {
+    DEF = 0;
+    sDEF = 0.21875;
+    dmg_red = 1/2;
   } else if (enemy==="57") {
     DEF = 0;
     sDEF = 0.21875;
+    dmg_red = 0;
+  } else if (enemy==="58") {
+    DEF = 0;
+    sDEF = 0.21875;
+    dmg_red = 1/2;  
   } else if (enemy==="59") {
     DEF = 0;
     sDEF = 0.21875;
-    dmg_red = 2/3;
   } else if (enemy==="60") {
     DEF = 0;
     sDEF = 0.21875;

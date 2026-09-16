@@ -75,7 +75,7 @@ function askInput(title, currentValue, onConfirm, placeholderText) {
         cancelButtonText: 'Cancel',
         inputValidator: (value) => {
             if (!value) {
-                return 'You need to input a name!!';
+                return 'You need to enter a name!';
             }
         }
     }).then((result) => {

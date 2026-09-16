@@ -221,6 +221,13 @@ table tr:last-child td img:hover {
 .conclusion-list .MathJax_Display {
     margin: 0.5em 0 !important;
 }
+.separator {
+ margin: 4rem 0 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+}
 
 @media (max-width: 768px) {
     .dmg-description {

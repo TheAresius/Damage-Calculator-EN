@@ -52,13 +52,17 @@
                     <ion-icon name="calculator-outline"></ion-icon>
                     Damage Calculator
                 </a>
+
+                <a href="https://thearesius.github.io/Total-Attack-EN/" class="menu-link">
+                    <ion-icon name="calculator-outline"></ion-icon>
+                    Total Attack Calculator
+                </a>
                 
                 <a href="#" class="menu-link">
                     <ion-icon name="book-outline"></ion-icon>
                     How does damage work?
                 </a>
                 
-
                 <a href="../roadmap/" class="menu-link">
                     <ion-icon name="map-outline"></ion-icon>
                     Roadmap
@@ -134,18 +138,14 @@
 
     <div id="menuOverlay" class="menu-overlay"></div>
 
-    <div class="navigation-header">
-    
-    </div>
+    <div class="navigation-header"></div>
 
     <main>
         <div class="dmg-description">
             <h1>How does damage work?</h1>
 
             <p class="justified"><span class="tab">First, I will demonstrate the mathematical formalism and data analysis method for the game's damage formula, and then I will explain in detail how it works.</span></p>
-            
-            <div class="separator"></div>
-            
+
             <h3>Mathematical formalism of the damage formula</h3>
 
             <p class="justified"><span class="tab">Several mathematical models were proposed for the in-game damage formula: linear, polynomial, exponential, and combinations of non-linear models.</span></p>
@@ -175,8 +175,7 @@
                 <span class="tab">
                     Initially, the base damage and defense values were fixed, varying only the attack and special attack values; that is, the stats were changed for each test, but the monster and skill used were the same, making the analysis form much simpler and allowing the use of a data fitting method 
                     like least squares.
-                </span>
-                
+                </span> 
             </p>
 
             <p class="justified">
@@ -260,7 +259,6 @@
                 \]
             </div>
             
-            <div class="separator"></div>
 
             <h3>Additional factors</h3>
             <p class="justified">
@@ -399,7 +397,6 @@
                 \]
             </div>
 
-            <div class="separator"></div>
 
             <div class="ending">
                 <h3><span class="yellow">Final Considerations</span></h3>
@@ -452,7 +449,31 @@
                         <strong>Buff Dilution:</strong>
                         <p>
                             Buffs in the game add up with each other before multiplying damage. Because of this, a 10% buff does not increase your final damage by 10% if you already have other active buffs. If you already have 50% accumulated bonus and receive another 10%, the actual perceived gain will be only 
-                            \( \frac{10}{100 + 50} \approx 6.66 \) in final damage.
+                            \( \frac{100 + 50 + 10}{100 + 50} \approx 1.066\text{ or } 6.66\text{%}\) in final damage.
+                        </p>
+                        <div class="separator"></div>
+                        <p>
+                            <a style = 'font-weight: bold; color: #2effa8'>Example:</a> Ronan using Renak (<b>10%</b>) + GC Club (<b>10%)</b> + chase point buffs (<b>40%</b>) + skill runes (<b>7.51%</b> + <b>12%</b>) + 3x 4.5% boss damage from awakening tree (<b>13.5%</b>). Let's add 5 stacks of Holy Bless (<b>25%</b>):
+                        </p>
+                        <div class="latex">
+                            \[
+                                \frac{100 + 10 + 10 + 40 + 7.51 + 12 + 13.5 + 25} {100 + 10 + 10 + 40 + 7.51 + 12 + 13.5} = 1.129 \text{ or } 12.9\text{% extra damage.}
+                            \]
+                        </div> 
+                        <p>
+                            It is evident that, in this scenario with just a few buffs, those <b>25%</b> from Holy Bless translate to a mere <b>12.9%</b> increase in final damage.
+                            As we add more buffs, the individual contribution of each one diminishes, and new buffs become less efficient at boosting our damage.
+                        </p>
+                        <div class="separator"></div>
+                        <p>
+                            <a style = 'font-weight: bold; color: #2effa8;'>Example:</a> A heavily buffed party with Renak (<b>10%</b>) + Searetone (<b>5%</b>) + 2x GC Club (<b>20%</b>) + 2x fury set (<b>10%</b>) + 2x fight set (<b>5%</b>) + chase point buffs (<b>40%</b>) + skill runes (<b>7.51%</b> + <b>12%</b>) + 3x 4.5% boss damage from awakening tree (<b>13.5%</b>) + Lime's attack aura (<b>7%</b>) + Amy's Fever Time (<b>15%</b>). Let's add the same 5 stacks of Holy Bless (<b>25%</b>):
+                        </p>
+                        <div class="latex">
+                            \[
+                                \frac{100 + 10 + 5 + 20 + 10 + 5 + 40 + 7.51 + 12 + 13.5 + 7 + 15 + 25} {100 + 10 + 5 + 20 + 10 + 5 + 40 + 7.51 + 12 + 13.5 + 7 + 15} = 1.102 \text{ or } 10.2\text{% extra damage.}
+                            \]
+                        </div>
+                            That is the main reason why offensive support characters have such a low contribution. It would be necessary to have buffs in separated multiplicative categories, rather than summing them all into a single multiplier. Alternatively we would need characters providing buffs in the 50~100% range for the support's impact to be truly relevant.
                         </p>
                     </li>
 
