@@ -1870,6 +1870,20 @@ window.buffsData = [
         icon: "images/icons/general/awakening.png", 
         stats: {buff: 15, crit: 0}  
     },
+        { 
+        id: "unleashed1", 
+        name: "Unleashed (first core)", 
+        category: "general",
+        icon: "images/icons/general/unleashed.png", 
+        stats: {buff: 2.5}  
+    },
+    { 
+        id: "unleashed2", 
+        name: "Unleashed (last core)", 
+        category: "general",
+        icon: "images/icons/general/unleashed.png", 
+        stats: {buff: 5}  
+    },
     { 
         id: "taint_buff", 
         name: "Void 2: Taint's Buff", 
@@ -1964,26 +1978,33 @@ window.buffsData = [
         icon: "images/icons/character/erudon.png", 
         stats: {buff: 10, crit: 0}  
     },
+        { 
+        id: "powerful_idol", 
+        name: "Powerful Idol",
+        category: "character",
+        icon: "images/icons/character/powerful_idol.png", 
+        stats: {buff: 2},
+    },
     { 
         id: "fever", 
         name: "Dance Fever",
         category: "character",
         icon: "images/icons/character/fever.png", 
-        stats: {buff: 15, crit: 0},
+        stats: {buff: 15, crit: 3},
     },
     { 
         id: "fan_service1", 
-        name: "Fan Service Lv1",
+        name: "Fan Service Type 1",
         category: "character",
         icon: "images/icons/character/fan_service1.png", 
-        stats: {buff: 15, crit: 0},
+        stats: {buff: 30},
     },
     { 
-        id: "fan_service2", 
-        name: "Fan Service Lv2",
+        id: "encore_dance", 
+        name: "Encore Dance",
         category: "character",
-        icon: "images/icons/character/fan_service2.png", 
-        stats: {buff: 30, crit: 0},
+        icon: "images/icons/character/encore_dance.png", 
+        stats: {buff: 20},
     },
     { 
         id: "yin1", 
@@ -2203,6 +2224,13 @@ window.buffsData = [
         icon: "images/icons/character/module.png", 
         stats: {buff: 5, crit: 0}  
     },
+        { 
+        id: "brilliant_dash_buff", 
+        name: "Brilliant Dash Type 1",
+        category: "character",
+        icon: "images/icons/character/brilliant_dash.png", 
+        stats: {buff: 10}  
+    },
     { 
         id: "overheat1", 
         name: "Overheat",
@@ -2283,7 +2311,6 @@ window.buffsData = [
         stats: {buff: 60}  
     },
 
-
     // pet
 
     { 
@@ -2344,6 +2371,13 @@ window.buffsData = [
         icon: "images/icons/defense/block.png", 
         stats: {ignore_def: 5}  
     },
+        { 
+        id: "stigma", 
+        name: "Stigma Type 1",
+        category: "defense",
+        icon: "images/icons/defense/stigma.png", 
+        stats: {ignore_def: 10}  
+    },
     { 
         id: "pretty_virus", 
         name: "Pretty Virus",
@@ -2357,6 +2391,13 @@ window.buffsData = [
         category: "defense",
         icon: "images/icons/defense/mystic_flow.png", 
         stats: {ignore_def: 10}  
+    },
+        { 
+        id: "ligra_overflow", 
+        name: "Ligra Overflow",
+        category: "defense",
+        icon: "images/icons/defense/ligra_overflow.png", 
+        stats: {ignore_def: 15}  
     },
     { 
         id: "haunt_curse", 
@@ -2413,6 +2454,13 @@ window.buffsData = [
         category: "defense",
         icon: "images/icons/defense/void_weaken.png", 
         stats: {ignore_def: 5}  
+    },
+        { 
+        id: "brilliant_dash_def", 
+        name: "Brilliant Dash Type 1",
+        category: "defense",
+        icon: "images/icons/defense/brilliant_dash.png", 
+        stats: {ignore_def: 10}  
     },
     { 
         id: "chain_blast", 
