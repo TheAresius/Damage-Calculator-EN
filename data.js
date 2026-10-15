@@ -1701,6 +1701,103 @@ var enemyData = {
         IsBoss: true
     },
 
+    "103": {
+        name: "Berkas (body)",
+        description: stringIsBoss + "Can be found in the Berkas's Lair raid dungeon.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>0.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>0.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>21.88%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
+            health: stringEstHP + "<span class='yellow'>7.65M (307 bars)</span>" + stringScaleHP
+        },
+        extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body, legs and tail. <br>"+
+               "- Your damage is reduced by 66.66% without the suppressor",
+        path: 'images/monsters/berkas.png',
+        IsBoss: true
+    },
+
+    "104": {
+        name: "Berkas (legs)",
+        description: stringIsBoss + "Can be found in the Berkas's Lair raid dungeon.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>40.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>40.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>53.12%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
+            health: stringEstHP + "<span class='yellow'>7.65M (307 bars)</span>" + stringScaleHP
+        },
+        extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body, legs and tail. <br>"+
+               "- Your damage is reduced by 66.66% without the suppressor",
+        path: 'images/monsters/berkas.png',
+        IsBoss: true
+    },
+
+    "105": {
+        name: "Berkas (tail)",
+        description: stringIsBoss + "Can be found in the Berkas's Lair raid dungeon.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>53.33%</span>",
+            defense2: stringDef2 + "<span class='yellow'>53.33%</span>",
+            defense3: stringDef3 + "<span class='yellow'>63.51%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
+            health: stringEstHP + "<span class='yellow'>7.65M (307 bars)</span>" + stringScaleHP
+        },
+        extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body, legs and tail. <br>"+
+               "- Your damage is reduced by 66.66% without the suppressor",
+        path: 'images/monsters/berkas.png',
+        IsBoss: true
+    },
+
+    "106": {
+        name: "Berkas (body) - No Suppressor",
+        description: stringIsBoss + "Can be found in the Berkas's Lair raid dungeon.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>66.66%</span>",
+            defense2: stringDef2 + "<span class='yellow'>66.66%</span>",
+            defense3: stringDef3 + "<span class='yellow'>73.96%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
+            health: stringEstHP + "<span class='yellow'>7.65M (307 bars)</span>" + stringScaleHP
+        },
+        extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body, legs and tail. <br>"+
+               "- Your damage is reduced by 66.66% without the suppressor",
+        path: 'images/monsters/berkas.png',
+        IsBoss: true
+    },
+
+    "107": {
+        name: "Berkas (legs) - No Suppressor",
+        description: stringIsBoss + "Can be found in the Berkas's Lair raid dungeon.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>80.00%</span>",
+            defense2: stringDef2 + "<span class='yellow'>80.00%</span>",
+            defense3: stringDef3 + "<span class='yellow'>84.35%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
+            health: stringEstHP + "<span class='yellow'>7.65M (307 bars)</span>" + stringScaleHP
+        },
+        extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body, legs and tail. <br>"+
+               "- Your damage is reduced by 66.66% without the suppressor",
+        path: 'images/monsters/berkas.png',
+        IsBoss: true
+    },
+
+    "108": {
+        name: "Berkas (tail) - No Suppressor",
+        description: stringIsBoss + "Can be found in the Berkas's Lair raid dungeon.",
+        status:{
+            defense1: stringDef1 + "<span class='yellow'>84.43%</span>",
+            defense2: stringDef2 + "<span class='yellow'>84.43%</span>",
+            defense3: stringDef3 + "<span class='yellow'>87.83%</span>",
+            monster_DmgRed: stringDmgRed + "<span class='yellow'>0.00%</span>",
+            health: stringEstHP + "<span class='yellow'>7.65M (307 bars)</span>" + stringScaleHP
+        },
+        extra: "- Due to its size, Berkas has many hitbox regions and the damage dealt to it is spread along its body, legs and tail. <br>"+
+               "- Your damage is reduced by 66.66% without the suppressor",
+        path: 'images/monsters/berkas.png',
+        IsBoss: true
+    },
+
+
 };
 
 const categoryMap = {
@@ -1722,7 +1819,7 @@ const categoryMap = {
     "Infinity Cloister 3 (IC3)": ["22", "23", "24", "25", "26", "27", "28", "29"],
     "Infinity Cloister 4 (IC4)": ["53", "54", "55", "56", "57", "58", "59", "60"],
     "Tower of Disappearance (TOD)": ["1", "2", "3", "4", "5", "6", "17", "7", "16", "15", "8", "34", "9", "10"],
-    "Berkas' Lair": ["11", "12"],
+    "Berkas' Lair": ["103", "104", "105", "106", "107", "108"],
     "Wizard's Labyrinth (WL)": ["30", "31", "32", "33"]    
 };
 

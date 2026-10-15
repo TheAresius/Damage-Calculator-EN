@@ -323,6 +323,30 @@ function calculate() {
     sDEF = 0.21875;
     harrier_debuff = 20;
     dmg_red = 0; 
+  } else if (enemy === "103") {
+    DEF = 0;
+    sDEF = 0.21875;
+    dmg_red = 0; 
+  } else if (enemy === "104") {
+    DEF = 0.4;
+    sDEF = 0.53125;
+    dmg_red = 0; 
+  } else if (enemy === "105") {
+    DEF = 0.533;
+    sDEF = 47/74;
+    dmg_red = 0; 
+  } else if (enemy === "106") {
+    DEF = 2/3;
+    sDEF = 71/96;
+    dmg_red = 0; 
+  } else if (enemy === "107") {
+    DEF = 0.8;
+    sDEF = 27/32;
+    dmg_red = 0; 
+  } else if (enemy === "108") {
+    DEF = 678/803;
+    sDEF = 65/74;
+    dmg_red = 0; 
   }
   var selectedOption = document.getElementById('Enemy_list').value;
   var IsBoss = enemyData[selectedOption].IsBoss;
