@@ -189,7 +189,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>60.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>60.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>8.44M (353 bars)</span>."
+            health: stringEstHP + "<span class='yellow'>8.82M (353 bars)</span>."
         },
         extra: "- Gardosen will use his 'soul absorption' attack every 40 seconds. If you stay in the red area, it will kill you no matter what.",
         path: 'images/monsters/gadosen 1.png',
@@ -203,7 +203,7 @@ var enemyData = {
             defense1: stringDef1 + "<span class='yellow'>60.00%</span>",
             defense2: stringDef2 + "<span class='yellow'>60.00%</span>",
             defense3: stringDef3 + "<span class='yellow'>40.00%</span>",
-            health: stringEstHP + "<span class='yellow'>55.18M (2401 bars)</span>."
+            health: stringEstHP + "<span class='yellow'>57.59M (2401 bars)</span>."
         },
         extra: "- From time to time Kaze'aze will teleport herself to the center of the map and start concentrating energy. A set of marks will appear in the floor showing the sequence of her attack.<br>"+
                "- If you use skills next to her during this action, you can delay her attack and end up killing your party members.",
@@ -2516,6 +2516,13 @@ window.buffsData = [
         category: "defense",
         icon: "images/icons/defense/charge.png", 
         stats: {ignore_def: 5}  
+    },
+        { 
+        id: "shard_of_spirit", 
+        name: "Shard of Spirit",
+        category: "defense",
+        icon: "images/icons/defense/shard_of_spirit.png", 
+        stats: {ignore_def: 10}  
     },
     { 
         id: "pressure_point", 
