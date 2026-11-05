@@ -38,14 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
 
             <div class="info-section">
-                <h3 class="info-title" style="color:#F2F4F4;">[Levels]</h3>
-                <ul class="info-list">
-                    <li>In <b class="highlight-yellow">Character level</b> you will input your character's level. It is not the Chase Level!</li>
-                    <li>In <b class="highlight-yellow">Monster level</b> you will input the monster's level. Monsters from the enemy list are automatically considered level 90.</li>
-                </ul>
-            </div>
-
-            <div class="info-section">
                 <h3 class="info-title" style="color: #FFB347;">[Stats]</h3>
                 <ul class="info-list">
                     <li>Here you will input your character's stat values.</li>
@@ -71,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><b class="highlight-yellow">Back attack damage:</b> If unchecked, only the game's base value (30%) will be used.</li>
                     <li><b class="highlight-yellow">Other buffs:</b> Sum of extra buffs not present in the buffs window (+ Button).</li>
                     <li><b class="highlight-yellow">Defense ignore debuffs:</b> Sum of debuffs not present in the debuffs window (+ Button).</li>
+                    <li><b class="highlight-yellow">Additive Buffs:</b> All additive buffs are added together before the final damage is factored in.</li>
+                    <li><b class="highlight-yellow">Multiplicative Buffs:</b> All multiplicative buffs are multiplied together and directly affect the final damage.</li>
                 </ul>
             </div>
 

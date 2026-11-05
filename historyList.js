@@ -127,10 +127,6 @@ function renderHistory() {
                     <div class="response-list-item-content">
                         <div class="column-left">
                             <div class="stat-group">
-                                <div class="response-list-item-value">${stringsHistoryListCharacterLevel}: <span class='history-stat-value'>${item.yourLV}</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListMonsterLevel}: <span class='history-stat-value'>${item.monsterLV}</span></div>
-                            </div>
-                            <div class="stat-group">
                                 <div class="response-list-item-value">${stringsHistoryListAttack}: <span class='history-stat-value'>${item.ATK}</span></div>
                                 <div class="response-list-item-value">${stringsHistoryListSpecialAttack}: <span class='history-stat-value'>${item.sATK}</span></div>
                                 <div class="response-list-item-value">${stringHistoryListCriticalRate}: <span class='history-stat-value'>${item.crit_r}% (${(item.meta.savedCritExtra  >= 0 ? '+' : '')}${item.meta.savedCritExtra || 0}%)</span></div>
@@ -157,10 +153,11 @@ function renderHistory() {
                                 <div class="response-list-item-value">${stringsHistoryListPola}: <span class='history-stat-value'>${item.pola_buffs}%</span></div>
                                 <div class="response-list-item-value">${stringsHistoryListBossDmg}: <span class='history-stat-value'>${item.boss_dmg_buffs}%</span></div>
                                 <div class="response-list-item-value">${stringsHistoryListBAtk}: <span class='history-stat-value'>${item.b_atk}%</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListBuffs}: <span class='history-stat-value'>${item.buffs}% (${(item.meta.savedBuffExtra>= 0 ? '+' : '')}${item.meta.savedBuffExtra || 0}%)</span></div>
-                                <div class="response-list-item-value">${stringsHistoryListDef}: <span class='history-stat-value'>${item.def_pierce}% (${(item.meta.savedDefPierce>= 0 ? '+' : '')}${item.meta.savedDefPierce || 0}%)</span></div>
                             </div>
                             <div class="stat-group">
+                                <div class="response-list-item-value">${stringsHistoryListBuffs}: <span class='history-stat-value'>${item.buffs}% (${(item.meta.savedBuffExtra>= 0 ? '+' : '')}${item.meta.savedBuffExtra || 0}%)</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListBuffsMult}: <span class='history-stat-value'>(+${item.meta.savedMultBuff ? ((item.meta.savedMultBuff - 1) * 100).toFixed(2) : 0 || 0}%)</span></div>
+                                <div class="response-list-item-value">${stringsHistoryListDef}: <span class='history-stat-value'>${item.def_pierce}% (${(item.meta.savedDefPierce>= 0 ? '+' : '')}${item.meta.savedDefPierce || 0}%)</span></div>
                                 <div class="response-list-item-value">${stringsHistoryListSpecificTier}: <span class='history-stat-value'>${item.specific_tier}%</span></div>
                                 <div class="response-list-item-value">${stringsHistoryListSpecificSkill}: <span class='history-stat-value'>${item.specific_skill}%</span></div>
                                 <div class="response-list-item-value">${stringsHistoryListDamageValue}: <span class='history-stat-value'>${item.skill_multi}</span></div>
@@ -236,6 +233,9 @@ function compareSelected() {
 
     itemA.calculated_total_buffs = calcTotalBuffs(itemA);
     itemB.calculated_total_buffs = calcTotalBuffs(itemB);
+
+    itemA.calc_mult_buff = itemA.meta && itemA.meta.savedMultBuff ? ((itemA.meta.savedMultBuff - 1) * 100).toFixed(2) : 0;
+    itemB.calc_mult_buff = itemB.meta && itemB.meta.savedMultBuff ? ((itemB.meta.savedMultBuff - 1) * 100).toFixed(2) : 0;
 
     const getVal = (item, key) => {
         const v = parseFloat(item[key]);
@@ -339,7 +339,8 @@ function compareSelected() {
         
         ${getStatRow('Back attack damage', 'b_atk', '%')}
         ${getStatRow('Defense ignore', 'def_pierce', '%', 'savedDefPierce')}
-        ${getStatRow('Sum of buffs', 'calculated_total_buffs', '%')}
+        ${getStatRow('Sum of buffs (Aditive)', 'calculated_total_buffs', '%')}
+        ${getStatRow('Buffs (Multiplicative)', 'calc_mult_buff', '%')}
         ${getStatRow('Base damage', 'skill_multi')}
     `;
 
@@ -603,8 +604,6 @@ function loadHistoryItem(id) {
             document.getElementById("Special").checked = item.meta.isSpecial;
             document.getElementById("Pet").checked = item.meta.isPet;
 
-            document.getElementById("yourLV_string").value = item.yourLV;
-            document.getElementById("monsterLV_string").value = item.monsterLV;
             document.getElementById("ATK_string").value = item.ATK;
             document.getElementById("sATK_string").value = item.sATK;
             document.getElementById("crit_r_string").value = item.crit_r;

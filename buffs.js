@@ -16,6 +16,7 @@ window.storedDebuffStats = null;
 function calculateStatsFromMap(map) {
     let stats = { 
         buff: 0,
+        mult_buff: 1,
         crit: 0,
         resist_all: 0,
         resist_normal: 0,
@@ -32,6 +33,9 @@ function calculateStatsFromMap(map) {
         if (buffData) {
             const add = (s) => {
                 stats.buff += s.buff || 0;
+                if (s.mult_buff) {
+                    stats.mult_buff *= (1 + s.mult_buff / 100);
+                }
                 stats.crit += s.crit || 0;
                 stats.resist_all += s.resist_all || 0;
                 stats.resist_normal += s.resist_normal || 0;
@@ -45,7 +49,14 @@ function calculateStatsFromMap(map) {
                 if (buffData.stats[count - 1]) add(buffData.stats[count - 1]);
             } else if (buffData.stats) {
                 let stacked = {};
-                for (let k in buffData.stats) stacked[k] = buffData.stats[k] * count;
+                for (let k in buffData.stats) {
+                    if (k === 'mult_buff') {
+                        // multiplicative stacking logic: ( (1 + val/100)^count - 1 ) * 100
+                        stacked[k] = (Math.pow(1 + buffData.stats[k]/100, count) - 1) * 100;
+                    } else {
+                        stacked[k] = buffData.stats[k] * count;
+                    }
+                }
                 add(stacked);
             }
         }
@@ -71,6 +82,10 @@ function processBuffsLogic() {
     };
 
     setText('sum_general', `+${Math.abs(results.buff).toFixed(2)}%`);
+        
+    const multDisplay = (results.mult_buff - 1) * 100;
+    setText('sum_mult', `+${Math.abs(multDisplay).toFixed(2)}%`);
+    
     setText('sum_crit_r', `+${Math.abs(results.crit).toFixed(2)}%`);
     setText('sum_pet', `+${Math.abs(results.pet_buff).toFixed(2)}%`);
     
@@ -101,10 +116,11 @@ function processDebuffsLogic() {
 }
 
 function syncGlobalVariables() {
-    const b = window.storedBuffStats || { buff:0, crit:0, ignore_def:0, pet_buff:0, resist_all:0, resist_normal:0, resist_special:0, crit_dmg:0 };
-    const d = window.storedDebuffStats || { buff:0, crit:0, ignore_def:0, pet_buff:0, resist_all:0, resist_normal:0, resist_special:0, crit_dmg:0 };
+    const b = window.storedBuffStats || { buff:0, mult_buff:1, crit:0, ignore_def:0, pet_buff:0, resist_all:0, resist_normal:0, resist_special:0, crit_dmg:0 };
+    const d = window.storedDebuffStats || { buff:0, mult_buff:1, crit:0, ignore_def:0, pet_buff:0, resist_all:0, resist_normal:0, resist_special:0, crit_dmg:0 };
 
     window.buff_extra = b.buff + d.buff;
+    window.mult_buff = (b.mult_buff || 1) * (d.mult_buff || 1);
     window.crit_extra = b.crit + d.crit;
     window.ignore_def = b.ignore_def + d.ignore_def;
     window.pet_buff = b.pet_buff + d.pet_buff;
@@ -208,6 +224,24 @@ function renderGrid(containerId, activeMap, allowedCategories) {
                 img.draggable = false;
                 div.appendChild(img);
 
+                let isMult = false;
+                let isAdd = false;
+                
+                if (Array.isArray(buff.stats)) {
+                    isMult = buff.stats.some(s => s.mult_buff !== undefined);
+                    isAdd = buff.stats.some(s => s.buff !== undefined);
+                } else if (buff.stats) {
+                    isMult = buff.stats.mult_buff !== undefined;
+                    isAdd = buff.stats.buff !== undefined;
+                }
+
+                if (isMult || isAdd) {
+                    const typeBadge = document.createElement('div');
+                    typeBadge.className = `type-badge ${isMult ? 'type-m' : 'type-a'}`;
+                    typeBadge.innerText = isMult ? 'M' : 'A';
+                    div.appendChild(typeBadge);
+                }
+
                 div.addEventListener('click', () => { 
                     toggleBuffEffect(buff, div, activeMap); 
                 });
@@ -270,8 +304,12 @@ function drawSummaryTable() {
         <table class="buff-summary-table">
             <tbody>
                 <tr>
-                    <td style="color: #7ffa4eff;">Damage Buffs</td>
+                    <td style="color: #7ffa4eff;">Damage Buffs (Additive)</td>
                     <td id="sum_general" class="buff-value" style="color: #7ffa4eff;">0.00%</td>
+                </tr>
+                <tr>
+                    <td style="color: #7ffa4eff;">Damage Buffs (Multiplicative)</td>
+                    <td id="sum_mult" class="buff-value" style="color: #7ffa4eff;">0.00%</td>
                 </tr>
                 <tr>
                     <td style="color: #7ffa4eff;">Critical Rate buffs</td>

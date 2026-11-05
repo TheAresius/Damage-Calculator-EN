@@ -1063,6 +1063,14 @@ div#update {
   background: linear-gradient(90deg, #007BFF20, transparent);
 }
 
+.modal-buffs-info {
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: none;
+}
+
 .monster-stat-icon {
   width: 32px;
   height: 32px;
@@ -1255,6 +1263,40 @@ option.separator {
   opacity: 1;
   visibility: visible;
   bottom: -40px;
+}
+
+.type-badge {
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  background-color: #000;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.8);
+  pointer-events: none;
+  user-select: none;
+  cursor: default;
+}
+
+.buff-item.active .type-badge {
+  display: flex;
+}
+
+.type-a {
+  color: #7ffa4e;
+  border: 1px solid #7ffa4e;
+}
+
+.type-m {
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
 }
 
 .buff-summary-table {

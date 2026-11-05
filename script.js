@@ -10,12 +10,6 @@ function calculate() {
   var dmg_red = 0;  
 
   // stores the user input values and fixes the decimal separator
-  var yourLV = Number(
-    window.document.querySelector("input#yourLV_string").value
-  );
-  var monsterLV = Number(
-    window.document.querySelector("input#monsterLV_string").value
-  );
   var ATK = Number(window.document.querySelector("input#ATK_string").value);
   var sATK = Number(window.document.querySelector("input#sATK_string").value);
   var crit_r = document.querySelector("input#crit_r_string").value;
@@ -82,9 +76,9 @@ function calculate() {
 
   
   var enemy = enemyElement.value;
+  var yourLV = 90;
+  var monsterLV = 90;
   if (enemy != "0") {
-    yourLV = 90;
-    monsterLV = 90;
     dmg_red = 0;
   }
   if (
@@ -348,27 +342,19 @@ function calculate() {
     sDEF = 65/74;
     dmg_red = 0; 
   }
+
   var selectedOption = document.getElementById('Enemy_list').value;
   var IsBoss = enemyData[selectedOption].IsBoss;
   
   // check for user input errors
-  if (yourLV < 1 || yourLV > 90 || !Number.isInteger(yourLV) || isNaN(yourLV)) {
-    setErrorOnInputById("yourLV_string");
-    hasError = true;
-}
-if (monsterLV < 1 || monsterLV > 150 || !Number.isInteger(monsterLV) || isNaN(monsterLV)) {
-    setErrorOnInputById("monsterLV_string");
-    hasError = true;
-}
-
-if (ATK < 0 || !Number.isInteger(ATK) || isNaN(Number(ATK))) {
-    setErrorOnInputById("ATK_string");
-    hasError = true;
-}
-if (sATK < 0 || !Number.isInteger(sATK) || isNaN(Number(sATK))) {
-    setErrorOnInputById("sATK_string");
-    hasError = true;
-}
+  if (ATK < 0 || !Number.isInteger(ATK) || isNaN(Number(ATK))) {
+      setErrorOnInputById("ATK_string");
+      hasError = true;
+  }
+  if (sATK < 0 || !Number.isInteger(sATK) || isNaN(Number(sATK))) {
+      setErrorOnInputById("sATK_string");
+      hasError = true;
+  }
 
 const floatChecks = [
     { val: crit_r, id: "crit_r_string" },
@@ -415,7 +401,7 @@ if (hasError) {
     
     var buff_multi = 1;
 
-    const sBuffs = window.storedBuffStats || { buff:0, crit:0, ignore_def:0, pet_buff:0, resist_all:0, resist_normal:0, resist_special:0, crit_dmg:0 };
+    const sBuffs = window.storedBuffStats || { buff:0, mult_buff:1, crit:0, ignore_def:0, pet_buff:0, resist_all:0, resist_normal:0, resist_special:0, crit_dmg:0 };
     const sDebuffs = window.storedDebuffStats || { ignore_def:0 };
 
     if (document.getElementById('pola_buffs_checkbox').checked) {
@@ -428,10 +414,12 @@ if (hasError) {
     var extraResistAll = 0;
     var extraResistNormal = 0;
     var extraResistSpecial = 0;
+    var mult_buff_factor = 1;
 
     if (document.getElementById('other_buffs_checkbox').checked) {
         buff_multi += buffs / 100;
         buff_multi += sBuffs.buff / 100;
+        mult_buff_factor = sBuffs.mult_buff || 1;
         final_crit_r += sBuffs.crit;
         final_crit_d += sBuffs.crit_dmg;
         extraResistAll = Math.abs(sBuffs.resist_all);
@@ -448,11 +436,14 @@ if (hasError) {
     }
 
     // logic for level difference
+    /*
     if (yourLV - monsterLV <= 5) {
       var valid_lv_dif = 0;
     } else {
       var valid_lv_dif = yourLV - monsterLV - 5;
     }
+    */
+   var valid_lv_dif = 0
 
     var isNormalChecked = document.getElementById("Normal").checked;
     var isSpecialChecked = document.getElementById("Special").checked;
@@ -471,7 +462,7 @@ if (hasError) {
 
       var effective_ATK = ATK;
       var final_dmg =
-        ((effective_ATK * (1 - DEF) * ATK_factor * skill_multi * (100 + 2 * valid_lv_dif)) / 100) * buff_multi * final_multi;
+        ((effective_ATK * (1 - DEF) * ATK_factor * skill_multi * (100 + 2 * valid_lv_dif)) / 100) * buff_multi * mult_buff_factor * final_multi;
 
     } else if (isSpecialChecked) {
       calculationType = stringsSkillDamage;
@@ -493,7 +484,7 @@ if (hasError) {
       }
 
       var effective_ATK = ATK + sATK;
-      var final_dmg = ((effective_ATK * (1 - sDEF) * sATK_factor * skill_multi * (100 + 2 * valid_lv_dif)) / 100) * special_buff_multi * final_multi;
+      var final_dmg = ((effective_ATK * (1 - sDEF) * sATK_factor * skill_multi * (100 + 2 * valid_lv_dif)) / 100) * special_buff_multi * mult_buff_factor * final_multi;
     } else if (isPetChecked) {
       calculationType = stringsPetDamage;
 
@@ -650,6 +641,7 @@ if (hasError) {
                   : [],
 
               savedBuffExtra: window.buff_extra || 0,
+              savedMultBuff: window.mult_buff || 1,
               savedCritExtra: window.crit_extra || 0,
               savedDefPierce: window.ignore_def || 0,
               savedResistAll: window.resist_all || 0,
@@ -662,8 +654,6 @@ if (hasError) {
               isPet: document.getElementById("Pet").checked
             },
 
-            yourLV: yourLV,
-            monsterLV: monsterLV,
             ATK: ATK,
             sATK: sATK,
             crit_r: crit_r,
@@ -676,6 +666,7 @@ if (hasError) {
             pola_buffs: pola_buffs,
             boss_dmg_buffs: boss_dmg_buffs,
             buffs: buffs,
+            multbuffs: mult_buff,
             b_atk: b_atk,
             def_pierce: def_pierce,
             skill_multi: skill_multi,

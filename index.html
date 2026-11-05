@@ -153,21 +153,6 @@
   <section>
     <div id="calc-title">Grand Chase<br>Damage Calculator</div>
     <div id="data_enter">
-      
-      <div id="level">
-        <div class="input-group">
-          <label for="yourLV_string">Character level (1~90)</label>
-          <div class="input-container">
-            <input type="number" name="yourLV_string" id="yourLV_string"/>
-          </div>
-        </div>
-        <div class="input-group">
-          <label for="monsterLV_string">Monster level (1~149)</label>
-          <div class="input-container">
-            <input type="number" name="monsterLV_string" id="monsterLV_string"/>
-          </div>
-        </div>
-      </div>
     
       <div id="main_stats">
         <div class="input-group">
@@ -302,6 +287,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="modal-subtitle-buffs">Click on the icons to toggle on/off</div>
+                    <div class="modal-buffs-info">
+                      Buffs are diveded between <span style="color: #7ffa4e; font-weight: bold;"> (A) Additive</span> and <span style="color: #ffcc00; font-weight: bold;">(M) Multiplicative</span>.
+                    </div>
                     <div id="buffsGrid" class="buffs-grid-container"></div>
                     <div class="modal-subtitle-buffs">Effects summary</div>
                     <div class="buffs-summary-container"></div>

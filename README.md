@@ -5,7 +5,14 @@ The mathematical model for the damage formula was obtained using the Least Squar
 # Changelog
 
 All notable changes to this project will be documented in this file (from Jan 14th, 2024 on).
+
+## [v2.0.2] - November 5th, 2026
+
+- Added new Unleashed buffs;
+- Added new multiplicative buffs
+
 ## [v2.0.1] - July 3rd, 2026
+
 - Added Void: Apocalypse bosses;
 - Added Hell Spear stats;
 - Added Damage Reduction info (may take a while to update everything);

@@ -27,8 +27,6 @@ const stringNoFreeze = "<div class='paralyze'><img src='/assets/icons/calculator
 
 // historyListStrings
 const stringsHistoryListTitle = "Calculation History";
-const stringsHistoryListCharacterLevel = "Character level";
-const stringsHistoryListMonsterLevel = "Monster level";
 const stringsHistoryListAttack = "Attack";
 const stringsHistoryListSpecialAttack = "Special attack";
 const stringHistoryListCriticalRate = "Critical rate";
@@ -38,7 +36,8 @@ const stringsHistoryListHarrierResistance = "Taint resistance";
 const stringsHistoryListASD = "All skill damage";
 const stringsHistoryListPola = "Attack / attacked damage";
 const stringsHistoryListBossDmg = "Damage to bosses";
-const stringsHistoryListBuffs = "Other buffs";
+const stringsHistoryListBuffs = "Other Buffs (A)";
+const stringsHistoryListBuffsMult = "Other Buffs (M)";
 const stringsHistoryListBAtk = "Back attack";
 const stringsHistoryListDamageValue = "Base damage";
 const stringsHistoryListDef = "Defense ignore debuffs";
