@@ -242,3 +242,46 @@ function showResultOnUi(ui_final_dmg, ui_corrected_final_dmg, avgCritDmg, ui_bac
     frontColumn.innerHTML = frontContent;
     backColumn.innerHTML = backContent;
 }
+
+let tooltip = document.getElementById('global-tooltip');
+    if (!tooltip) {
+        tooltip = document.createElement('div');
+        tooltip.id = 'global-tooltip';
+        document.body.appendChild(tooltip);
+    }
+
+    document.addEventListener('mouseover', (e) => {
+        const target = e.target.closest('[data-tooltip]');
+        if (target) {
+            tooltip.innerHTML = target.getAttribute('data-tooltip');
+            const rect = target.getBoundingClientRect();
+            
+            if (rect.top < 40) {
+                tooltip.classList.add('tooltip-bottom');
+                tooltip.style.top = (rect.bottom + 10) + 'px';
+            } else {
+                tooltip.classList.remove('tooltip-bottom');
+                tooltip.style.top = (rect.top - 10) + 'px';
+            }
+            
+            tooltip.classList.remove('tooltip-left', 'tooltip-right');
+            if (rect.left < 60) {
+                tooltip.classList.add('tooltip-left');
+                tooltip.style.left = rect.left + 'px';
+            } else if (rect.right > window.innerWidth - 60) {
+                tooltip.classList.add('tooltip-right');
+                tooltip.style.left = rect.right + 'px';
+            } else {
+                tooltip.style.left = (rect.left + rect.width / 2) + 'px';
+            }
+            
+            tooltip.classList.add('show');
+        }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+        const target = e.target.closest('[data-tooltip]');
+        if (target) {
+            tooltip.classList.remove('show');
+        }
+    });

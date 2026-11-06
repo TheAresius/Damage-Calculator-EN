@@ -42,7 +42,7 @@ function renderHistory() {
         const isReady = count === 2;
         const compareDisabled = count !== 2 ? 'disabled style="opacity: 0.5; cursor: not-allowed;"' : '';
         const compareText = count === 2 ? "Compare Selected" : `Compare (${count}/2)`;
-        const tooltipAttr = !isReady ? 'title="Check two results to compare them"' : '';
+        const tooltipAttr = !isReady ? 'data-tooltip="Check two results to compare them"' : '';
 
         resultList.innerHTML += `
             <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
@@ -72,7 +72,7 @@ function renderHistory() {
         const isFav = item.isFavorite === true;
         const favColor = isFav ? "#FFD700" : "currentColor";
         const favFill = isFav ? "#FFD700" : "none";
-        const favTitle = isFav ? "Check favorite" : "Uncheck favorite";
+        const favTitle = isFav ? "Uncheck favorite" : "Check favorite";
         const wrapperId = `history-wrapper-${item.id}`;
         const iconId = `collapse-icon-${item.id}`;
         const wrapperClass = item.isCollapsed ? 'history-anim-wrapper collapsed' : 'history-anim-wrapper';
@@ -91,13 +91,13 @@ function renderHistory() {
                 </div>
 
                 <div class="action-buttons">
-                    <button class="icon-btn fav-btn" onclick="toggleFavorite(${item.id})" title="${favTitle}">
+                    <button class="icon-btn fav-btn" onclick="toggleFavorite(${item.id})" data-tooltip="${favTitle}">
                         <svg viewBox="0 0 24 24" width="18" height="18" stroke="${favColor}" stroke-width="2" fill="${favFill}" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                         </svg>
                     </button>
 
-                    <button class="icon-btn load-btn" onclick="loadHistoryItem(${item.id})" title="Load these values">
+                    <button class="icon-btn load-btn" onclick="loadHistoryItem(${item.id})" data-tooltip="Load these values">
                         <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
                             <path d="M12 12v9"></path>
@@ -105,15 +105,15 @@ function renderHistory() {
                         </svg>
                     </button>
 
-                    <button class="icon-btn edit-btn" onclick="editHistoryItem(${item.id})" title="Rename result">
+                    <button class="icon-btn edit-btn" onclick="editHistoryItem(${item.id})" data-tooltip="Rename result">
                         <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
                     </button>
 
-                    <button class="icon-btn delete-btn" onclick="deleteHistoryItem(${item.id})" title="Delete result">
+                    <button class="icon-btn delete-btn" onclick="deleteHistoryItem(${item.id})" data-tooltip="Delete result">
                         <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
                     </button>
 
-                    <button class="icon-btn collapse-btn" onclick="toggleItemCollapse(${item.id})" title="Expand/Collapse">
+                    <button class="icon-btn collapse-btn" onclick="toggleItemCollapse(${item.id})" data-tooltip="Expand/Collapse">
                         <svg id="${iconId}" class="${iconClass}" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="18 15 12 9 6 15"></polyline>
                         </svg>
@@ -530,7 +530,7 @@ function loadHistoryItem(id) {
     const item = historyData.find(entry => entry.id === id);
 
     if (!item) {
-        showAlert('Error', 'Result nof found.', 'error');
+        showAlert('Error', 'Result not found.', 'error');
         return;
     }
 

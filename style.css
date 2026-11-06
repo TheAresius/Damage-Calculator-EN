@@ -1299,6 +1299,24 @@ option.separator {
   border: 1px solid #ffcc00;
 }
 
+.additive-marker {
+  color: #7ffa4e;
+  font-weight: bold;
+  position: relative;
+  left: 2px;
+  right: 2px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.multiplicative-marker {
+  color: #ffcc00;
+  font-weight: bold;
+  position: relative;
+  left: 2px;
+  right: 2px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .buff-summary-table {
   width: 100%;
   border-collapse: collapse;
@@ -1376,12 +1394,12 @@ option.separator {
 
 #global-tooltip {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(31, 41, 58, 0.95);
   color: #ffcc00;
-  padding: 6px 10px;
-  border: 1px solid #b9d5e7;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  font-size: 0.8rem;
   font-weight: bold;
   pointer-events: none;
   z-index: 10000;
@@ -1389,8 +1407,28 @@ option.separator {
   transition: opacity 0.1s ease;
   white-space: nowrap;
   transform: translate(-50%, -120%);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
   visibility: hidden;
+}
+
+#global-tooltip.tooltip-bottom {
+  transform: translate(-50%, 0);
+}
+
+#global-tooltip.tooltip-left {
+  transform: translate(0, -120%);
+}
+
+#global-tooltip.tooltip-right {
+  transform: translate(-100%, -120%);
+}
+
+#global-tooltip.tooltip-left.tooltip-bottom {
+  transform: translate(0, 0);
+}
+
+#global-tooltip.tooltip-right.tooltip-bottom {
+  transform: translate(-100%, 0);
 }
 
 #global-tooltip.show {
@@ -1804,46 +1842,6 @@ font-family: "Montserrat", sans-serif;
 
 .reverse-btn:hover {
   border-color: #5DADE2;
-}
-
-.reverse-btn .tooltip-text, .plus-btn .tooltip-text, .calc-info .tooltip-text, .showInfoButton .tooltip-text {
-  visibility: hidden;
-  width: 140px;
-  background-color: rgba(0, 0, 0, 0.95);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 6px 0;
-  position: absolute;
-  z-index: 20;
-  bottom: 135%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  pointer-events: none;
-}
-
-.reverse-btn .tooltip-text::after, .plus-btn .tooltip-text::after, .calc-info .tooltip-text::after, .showInfoButton .tooltip-text::after{
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgba(0,0,0,0.95) transparent transparent transparent;
-}
-
-.reverse-btn:hover .tooltip-text, .plus-btn:hover .tooltip-text, .calc-info:hover .tooltip-text, .showInfoButton:hover .tooltip-text{
-  visibility: visible;
-  opacity: 1;
-  bottom: 125%;
 }
 
 .reverse-modal-content {

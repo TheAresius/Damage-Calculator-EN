@@ -1829,56 +1829,56 @@ window.buffsData = [
         name: "GC Club", 
         category: "general",
         icon: "images/icons/general/gc_club.png", 
-        stats: {buff: 10, crit: 0} 
+        stats: {buff: 10} 
     },
     { 
         id: "pgc", 
         name: "Premium GC Club", 
         category: "general",
         icon: "images/icons/general/pgc.png", 
-        stats: {buff: 10, crit: 0} 
+        stats: {buff: 10} 
     },
     { 
         id: "second_gear", 
         name: "Second Gear Ring",
         category: "general",
         icon: "images/icons/general/second_gear.png", 
-        stats: {buff: 15, crit: 0}  
+        stats: {buff: 15}  
     },
     { 
         id: "persephone", 
         name: "Pearl of Persephone Earrings", 
         category: "general",
         icon: "images/icons/general/persephone.png", 
-        stats: {buff: 50, crit: 0}  
+        stats: {buff: 50}  
     },
     { 
         id: "guild", 
         name: "[Guild] Attack Potion", 
         category: "general",
         icon: "images/icons/general/guild.png", 
-        stats: {buff: 15, crit: 0}  
+        stats: {buff: 15}  
     },
     { 
         id: "lisnar", 
         name: "Lisnar's Blessing", 
         category: "general",
         icon: "images/icons/general/lisnar.png", 
-        stats: {buff: 20, crit: 0}  
+        stats: {buff: 20}  
     },
     { 
         id: "yore_attack", 
         name: "Demons of Yore Attack Potion", 
         category: "general",
         icon: "images/icons/general/yore_attack.png", 
-        stats: {buff: 100, crit: 0}  
+        stats: {buff: 100}  
     },
     { 
         id: "yore_crit", 
         name: "Demons of Yore Critical Potion", 
         category: "general",
         icon: "images/icons/general/yore_crit.png", 
-        stats: {buff: 0, crit: 100}  
+        stats: {crit: 100}  
     },
     { 
         id: "yore_berserker", 
@@ -1906,7 +1906,7 @@ window.buffsData = [
         name: "Set: Fury", 
         category: "general",
         icon: "images/icons/general/fury.png", 
-        stats: {buff: 5, crit: 0},
+        stats: {buff: 5},
         maxStacks: 2 
     },
     { 
@@ -1914,12 +1914,12 @@ window.buffsData = [
         name: "Set: Fight", 
         category: "general",
         icon: "images/icons/general/fight.png", 
-        stats: {buff: 2.5, crit: 0},
+        stats: {buff: 2.5},
         maxStacks: 2
     },
     { 
         id: "hunt", 
-        name: "Conjunto de Caçada", 
+        name: "Set: Hunt", 
         category: "general",
         icon: "images/icons/general/hunt.png", 
         stats: {buff: 10}
@@ -1929,28 +1929,28 @@ window.buffsData = [
         name: "Set: Rage", 
         category: "general",
         icon: "images/icons/general/rage.png", 
-        stats: {buff: 10, crit: 0}
+        stats: {buff: 10}
     },
     { 
         id: "punish", 
         name: "Set: Punish", 
         category: "general",
         icon: "images/icons/general/punish.png", 
-        stats: {buff: 10, crit: 0}
+        stats: {buff: 10}
     },
     { 
         id: "limit", 
         name: "Set: Limit", 
         category: "general",
         icon: "images/icons/general/limit.png", 
-        stats: {buff: 15, crit: 0}
+        stats: {buff: 15}
     },
     { 
         id: "fatal1", 
         name: "Increase to attack while in Fatal (Epic Stone)", 
         category: "general",
         icon: "images/icons/general/fatal.png", 
-        stats: {buff: 20, crit: 0}
+        stats: {buff: 20}
     },
     { 
         id: "fatal2", 
@@ -1964,7 +1964,7 @@ window.buffsData = [
         name: "Awakening Skill", 
         category: "general",
         icon: "images/icons/general/awakening.png", 
-        stats: {buff: 15, crit: 0}  
+        stats: {buff: 15}  
     },
         { 
         id: "unleashed1", 
@@ -1985,14 +1985,14 @@ window.buffsData = [
         name: "Void 2: Taint's Buff", 
         category: "general",
         icon: "images/icons/general/void_buff.png", 
-        stats: {buff: 200, crit: 0}  
+        stats: {buff: 200}  
     },
     { 
         id: "nightmare_buff", 
         name: "Void 3: Nightmare's Buff", 
         category: "general",
         icon: "images/icons/general/void_buff.png", 
-        stats: {buff: 150, crit: 0}  
+        stats: {buff: 150}  
     },
 
     // character buffs
@@ -2008,56 +2008,56 @@ window.buffsData = [
         name: "Invisibility", 
         category: "character",
         icon: "images/icons/character/invisibility.png", 
-        stats: {buff: 50, crit: 0}  
+        stats: {buff: 50}  
     },
     { 
         id: "nature_ryan", 
         name: "Nature Commander", 
         category: "character",
         icon: "images/icons/character/nature.png", 
-        stats: {buff: 7, crit: 0}  
+        stats: {buff: 7}  
     },
     { 
         id: "wolf_own", 
         name: "Wolf Transformation (self buff)", 
         category: "character",
         icon: "images/icons/character/wolf.png", 
-        stats: {buff: 20, crit: 0}  
+        stats: {buff: 20}  
     },
     { 
         id: "wolf_party", 
         name: "Wolf Transformation (party buff)", 
         category: "character",
         icon: "images/icons/character/wolf.png", 
-        stats: {buff: 7, crit: 0}  
+        stats: {buff: 7}  
     },
     { 
         id: "magnus_own", 
         name: "Magnus Dan Transformation (self buff)", 
         category: "character",
         icon: "images/icons/character/magnus.png", 
-        stats: {buff: 0, crit: 5}  
+        stats: {crit: 5}  
     },
     { 
         id: "magnus_party", 
         name: "Magnus Dan Transformation (party buff)", 
         category: "character",
         icon: "images/icons/character/magnus.png", 
-        stats: {buff: 0, crit: 1.5}  
+        stats: {crit: 1.5}  
     },
     { 
         id: "dark_myst", 
         name: "Dark Myst",
         category: "character",
         icon: "images/icons/character/dark_myst.png", 
-        stats: {buff: 5, crit: 0}  
+        stats: {buff: 5}  
     },
     { 
         id: "holy_bless", 
         name: "Holy Bless",
         category: "character",
         icon: "images/icons/character/holy_bless.png", 
-        stats: {buff: 5, crit: 0},
+        stats: {buff: 5},
         maxStacks: 5
     },
     { 
@@ -2065,14 +2065,14 @@ window.buffsData = [
         name: "Tempest Blade",
         category: "character",
         icon: "images/icons/character/tempest_blade.png", 
-        stats: {buff: 10, crit: 0}
+        stats: {buff: 10}
     },
     { 
         id: "erudon", 
         name: "Erudon Weapon",
         category: "character",
         icon: "images/icons/character/erudon.png", 
-        stats: {buff: 10, crit: 0}  
+        stats: {buff: 10}  
     },
         { 
         id: "powerful_idol", 
@@ -2107,14 +2107,14 @@ window.buffsData = [
         name: "End of Days Type 1",
         category: "character",
         icon: "images/icons/character/yin1.png", 
-        stats: {buff: 100, crit: 0},
+        stats: {buff: 100},
     },
     { 
         id: "yin2", 
         name: "End of Days Type 2",
         category: "character",
         icon: "images/icons/character/yin2.png", 
-        stats: {buff: 10, crit: 0},
+        stats: {buff: 10},
     },
     { 
         id: "jin_gow", 
@@ -2128,14 +2128,14 @@ window.buffsData = [
         name: "Rage 1st ~ 3rd job", 
         category: "character",
         icon: "images/icons/character/rage_sieghart1.png", 
-        stats: {buff: 10, crit: 0}  
+        stats: {buff: 10}  
     },
     { 
         id: "rage_sieghart2", 
         name: "Rage 4th job",
         category: "character",
         icon: "images/icons/character/rage_sieghart1.png", 
-        stats: {buff: 15, crit: 0}  
+        stats: {buff: 15}  
     },
     { 
         id: "orb", 
@@ -2143,9 +2143,9 @@ window.buffsData = [
         category: "character",
         icon: "images/icons/character/orb.png", 
         stats: [
-            { buff: 10, crit: 0 },
-            { buff: 15, crit: 0 },
-            { buff: 20, crit: 0 }
+            { buff: 10 },
+            { buff: 15 },
+            { buff: 20 }
         ],
         maxStacks: 3
     },
@@ -2154,42 +2154,42 @@ window.buffsData = [
         name: "Sword Stance Enhancement <span class='command'>C+↑</span>",
         category: "character",
         icon: "images/icons/character/SS.png", 
-        stats: {buff: 5, crit: 0}  
+        stats: {buff: 5}  
     },
     { 
         id: "offensive", 
         name: "Offensive Stance <span class='command'>C+→</span>",
         category: "character",
         icon: "images/icons/character/offensive.png", 
-        stats: {buff: 0, crit: 5}  
+        stats: {crit: 5}  
     },
     { 
         id: "grandark", 
         name: "Grandark's Domination",
         category: "character",
         icon: "images/icons/character/grandark.png", 
-        stats: {buff: 10, crit: 0}  
+        stats: {buff: 10}  
     },
     { 
         id: "bastion", 
         name: "Bastion",
         category: "character",
         icon: "images/icons/character/bastion.png", 
-        stats: {buff: 10, crit: 0}  
+        stats: {buff: 10}  
     },
     { 
         id: "haunt", 
         name: "Haunt",
         category: "character",
         icon: "images/icons/character/haunt.png", 
-        stats: {buff: 0, crit: 3}  
+        stats: { crit: 3}  
     },
     { 
         id: "rage_mode", 
         name: "Rage Mode",
         category: "character",
         icon: "images/icons/character/rage_mode.png", 
-        stats: {buff: 10, crit: 0}  
+        stats: {buff: 10}  
     },
         { 
         id: "charging", 
@@ -2197,9 +2197,9 @@ window.buffsData = [
         category: "character",
         icon: "images/icons/character/charging.png", 
         stats: [
-            { buff: 3, crit: 0 },
-            { buff: 6, crit: 0 },
-            { buff: 10, crit: 0 }
+            { buff: 3 },
+            { buff: 6 },
+            { buff: 10 }
         ],
         maxStacks: 3
     },
@@ -2208,32 +2208,28 @@ window.buffsData = [
         name: "Transformation Passive Type 2",
         category: "character",
         icon: "images/icons/character/transformation.png", 
-        stats: {buff: 5, crit: 0}  
+        stats: {buff: 5}  
     },
     { 
         id: "enhancement", 
         name: "Increased Enhancement Effect",
         category: "character",
         icon: "images/icons/character/enhancement.png", 
-        stats: {buff: 0, crit: 5}  
+        stats: {crit: 5}  
     },
     { 
         id: "increased_attack", 
         name: "Increased Attack",
         category: "character",
         icon: "images/icons/character/increased_attack.png", 
-        stats: {buff: 10, crit: 0}  
+        stats: {buff: 10}  
     },
     { 
         id: "bless2", 
         name: "Bless 2",
         category: "character",
         icon: "images/icons/character/bless2.png", 
-        stats: [
-            { buff: 1, crit: 0 },
-            { buff: 2, crit: 0 },
-            { buff: 3, crit: 0 }
-        ],
+        stats: { buff: 1 },
         maxStacks: 3
     },
     { 
@@ -2241,21 +2237,21 @@ window.buffsData = [
         name: "Aura: Attack",
         category: "character",
         icon: "images/icons/character/aura_attack1.png", 
-        stats: {buff: 5, crit: 0}  
+        stats: {buff: 5}  
     },
     { 
         id: "aura_attack2", 
         name: "Aura: Attack (Increased Attack)",
         category: "character",
         icon: "images/icons/character/aura_attack2.png", 
-        stats: {buff: 7, crit: 0}  
+        stats: {buff: 7}  
     },
     { 
         id: "divine_punishment", 
         name: "Divine Punishment",
         category: "character",
         icon: "images/icons/character/divine_punishment.png", 
-        stats: {buff: 15, crit: 0}  
+        stats: {buff: 15}  
     },
     { 
         id: "berserker1", 
@@ -2304,7 +2300,7 @@ window.buffsData = [
         name: "Taint",
         category: "character",
         icon: "images/icons/character/taint.png", 
-        stats: {buff: 15, crit: 0}  
+        stats: {buff: 15}  
     },
     { 
         id: "overpower", 
@@ -2318,7 +2314,7 @@ window.buffsData = [
         name: "Standby",
         category: "character",
         icon: "images/icons/character/standby.png", 
-        stats: {buff: 5, crit: 0}  
+        stats: {buff: 5}  
     },
     { 
         id: "module", 
@@ -2339,28 +2335,27 @@ window.buffsData = [
         name: "Overheat",
         category: "character",
         icon: "images/icons/character/overheat1.png", 
-        stats: {buff: 5, crit: 0},
         stats: [
-            { buff: 1, crit: 0 },
-            { buff: 2, crit: 0 },
-            { buff: 3, crit: 0 },
-            { buff: 4, crit: 0 },
-            { buff: 5, crit: 0 },
-            { buff: 6, crit: 0 },
-            { buff: 7, crit: 0 },
-            { buff: 8, crit: 0 },
-            { buff: 9, crit: 0 },
-            { buff: 10, crit: 0 },
-            { buff: 11, crit: 0 },
-            { buff: 12, crit: 0 },
-            { buff: 13, crit: 0 },
-            { buff: 14, crit: 0 },
-            { buff: 15, crit: 0 },
-            { buff: 16, crit: 0 },
-            { buff: 17, crit: 0 },
-            { buff: 18, crit: 0 },
-            { buff: 19, crit: 0 },
-            { buff: 20, crit: 0 },
+            { buff: 1 },
+            { buff: 2 },
+            { buff: 3 },
+            { buff: 4 },
+            { buff: 5 },
+            { buff: 6 },
+            { buff: 7 },
+            { buff: 8 },
+            { buff: 9 },
+            { buff: 10 },
+            { buff: 11 },
+            { buff: 12 },
+            { buff: 13 },
+            { buff: 14 },
+            { buff: 15 },
+            { buff: 16 },
+            { buff: 17 },
+            { buff: 18 },
+            { buff: 19 },
+            { buff: 20 },
         ],
         maxStacks: 20 
     },
@@ -2369,21 +2364,21 @@ window.buffsData = [
         name: "Overheat Explosion",
         category: "character",
         icon: "images/icons/character/overheat2.png", 
-        stats: {buff: 30, crit: 0}  
+        stats: {buff: 30}  
     },
     { 
         id: "wrathful_demon", 
         name: "Wrathful Demon",
         category: "character",
         icon: "images/icons/character/wrathful_demon.png", 
-        stats: {buff: 15, crit: 0}  
+        stats: {buff: 15}  
     },
     { 
         id: "paint", 
         name: "Too Much Paint!",
         category: "character",
         icon: "images/icons/character/paint.png", 
-        stats: {buff: 5, crit: 0}  
+        stats: {buff: 5}  
     },
     { 
         id: "go_luffy", 
@@ -2421,21 +2416,21 @@ window.buffsData = [
         name: "Basic Red Glyph",
         category: "pet",
         icon: "images/icons/pet/pet1.png", 
-        stats: {pet_buff: 4, crit: 0}  
+        stats: {pet_buff: 4}  
     },
     { 
         id: "pet2", 
         name: "Epic Red Glyph",
         category: "pet",
         icon: "images/icons/pet/pet2.png", 
-        stats: {pet_buff: 8, crit: 0}  
+        stats: {pet_buff: 8}  
     },
     { 
         id: "pet3", 
         name: "Relic Red Glyph",
         category: "pet",
         icon: "images/icons/pet/pet3.png", 
-        stats: {pet_buff: 10, crit: 0}  
+        stats: {pet_buff: 10}  
     },
 
     // ignore def debuffs
@@ -2622,56 +2617,49 @@ window.buffsData = [
         name: "Increased Defense",
         category: "resist",
         icon: "images/icons/resist/increased_defense.png", 
-        stats: {resist_all: -20, crit: 0}  
+        stats: {resist_all: -20}  
     },
     { 
         id: "damage_reduction", 
         name: "Damage Reduction",
         category: "resist",
         icon: "images/icons/resist/damage_reduction.png", 
-        stats: {resist_normal: -30, crit: 0}  
+        stats: {resist_normal: -30}  
     },
     { 
         id: "special_damage_reduction", 
         name: "Special Damage Reduction",
         category: "resist",
         icon: "images/icons/resist/special_damage_reduction.png", 
-        stats: {resist_special: -30, crit: 0}  
+        stats: {resist_special: -30}  
     },
     { 
         id: "cdmg_reduction", 
         name: "Critical Strike Damage Reduction",
         category: "resist",
         icon: "images/icons/resist/cdmg_reduction.png", 
-        stats: {crit_dmg: -150, crit: 0}  
+        stats: {crit_dmg: -150}  
     },
     { 
         id: "blue_aura", 
         name: "General defense increase (Abyssal Path)",
         category: "resist",
         icon: "images/monsters/blue_aura.png", 
-        stats: {resist_all: -200/3, crit: 0}  
+        stats: {resist_all: -200/3}  
     },
     { 
         id: "purple_aura", 
         name: "Defense Increase - skills (Abyssal Path)",
         category: "resist",
         icon: "images/monsters/purple_aura.png", 
-        stats: {resist_special: -90, crit: 0}  
+        stats: {resist_special: -90}  
     },
     { 
         id: "red_aura", 
         name: "Defense increase - command/pet (Abyssal Path)",
         category: "resist",
         icon: "images/monsters/red_aura.png", 
-        stats: {resist_normal: -90, crit: 0}  
-    },
-    { 
-        id: "ereb_resist", 
-        name: "Energy Gathering - Ereb",
-        category: "resist",
-        icon: "images/icons/resist/ereb_resist.jpg", 
-        stats: {resist_all: -50}  
+        stats: {resist_normal: -90}  
     },
     
 ];

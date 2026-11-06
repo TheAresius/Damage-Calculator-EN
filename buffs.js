@@ -247,10 +247,56 @@ function renderGrid(containerId, activeMap, allowedCategories) {
                 });
 
                 div.addEventListener('mouseenter', () => {
-                    tooltip.innerHTML = buff.name;
+                    let statHtml = "";
+                    let statObj = Array.isArray(buff.stats) ? buff.stats[buff.stats.length - 1] : buff.stats;
+                    
+                    if (statObj) {
+                        const fmt = (val, addPlus = true) => {
+                            let n = Number(val);
+                            let str = Number.isInteger(n) ? n.toString() : n.toFixed(2);
+                            return (addPlus && n > 0 ? '+' : '') + str;
+                        };
+
+                        let parts = [];
+                        if (statObj.buff !== undefined) parts.push(`${fmt(statObj.buff)}% Damage <span class="additive-marker">A</span>`);
+                        if (statObj.mult_buff !== undefined) parts.push(`${fmt(statObj.mult_buff)}% Damage <span class="multiplicative-marker">M</span>`);
+                        if (statObj.crit !== undefined) parts.push(`${fmt(statObj.crit)}% Critical Chance <span class="additive-marker">A</span>`);
+                        if (statObj.crit_dmg !== undefined) parts.push(`${fmt(statObj.crit_dmg)}% Critical Damage <span class="additive-marker">A</span>`);
+                        if (statObj.pet_buff !== undefined) parts.push(`${fmt(statObj.pet_buff)}% Pet Damage <span class="additive-marker">A</span>`);
+                        if (statObj.ignore_def !== undefined) parts.push(`${fmt(statObj.ignore_def)}% Defense Ignore <span class="additive-marker">A</span>`);
+                        if (statObj.resist_all !== undefined) parts.push(`${fmt(statObj.resist_all, false)}% General Damage <span class="additive-marker">A</span>`);
+                        if (statObj.resist_normal !== undefined) parts.push(`${fmt(statObj.resist_normal, false)}% Basic Command/Pet Damage <span class="additive-marker">A</span>`);
+                        if (statObj.resist_special !== undefined) parts.push(`${fmt(statObj.resist_special, false)}% Skill Damage <span class="additive-marker">A</span>`);
+                        
+                        if (parts.length > 0) {
+                            let maxText = Array.isArray(buff.stats) ? " [Max]" : "";
+                            statHtml = `<br><span style="color: #ccc; font-weight: normal; font-size: 1rem;">${parts.join('<br>')}${maxText}</span>`;
+                        }
+                    }
+
+                    tooltip.innerHTML = buff.name + statHtml;
+                    
                     const rect = div.getBoundingClientRect();
-                    tooltip.style.left = (rect.left + rect.width / 2) + 'px';
-                    tooltip.style.top = (rect.top - 10) + 'px';
+
+                    if (rect.top < 40) {
+                        tooltip.classList.add('tooltip-bottom');
+                        tooltip.style.top = (rect.bottom + 10) + 'px';
+                    } else {
+                        tooltip.classList.remove('tooltip-bottom');
+                        tooltip.style.top = (rect.top - 10) + 'px';
+                    }
+
+                    tooltip.classList.remove('tooltip-left', 'tooltip-right');
+                    if (rect.left < 60) {
+                        tooltip.classList.add('tooltip-left');
+                        tooltip.style.left = rect.left + 'px';
+                    } else if (rect.right > window.innerWidth - 60) {
+                        tooltip.classList.add('tooltip-right');
+                        tooltip.style.left = rect.right + 'px';
+                    } else {
+                        tooltip.style.left = (rect.left + rect.width / 2) + 'px';
+                    }
+                    
                     tooltip.classList.add('show');
                 });
 

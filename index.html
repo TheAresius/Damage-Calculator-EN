@@ -35,11 +35,11 @@
 </head>
 
 <body>
-  <a href="https://thearesius.github.io/Damage-Calculator-BR/" class="floating-lang-btn" title="Trocar para Português">
+  <a href="https://thearesius.github.io/Damage-Calculator-BR/" class="floating-lang-btn" data-tooltip="Trocar para Português">
     <img src="images/brazil.png" alt="Brazil Flag">
   </a>
 
-  <button id="menuTrigger" class="floating-menu-btn" title="Menu Principal">
+  <button id="menuTrigger" class="floating-menu-btn" data-tooltip="Menu Principal">
         <ion-icon name="menu-outline"></ion-icon>
     </button>
 
@@ -273,8 +273,8 @@
                     <input type="text" name="buffs" id="buffs_string" />
                     <span class="input-symbol">%</span>
                 </div>
-                <button id="openBuffsBtn" class="plus-btn" onclick="return false;"><ion-icon name="add-outline"></ion-icon>
-                  <span class="tooltip-text">Add buffs</span>
+                <button id="openBuffsBtn" class="plus-btn" onclick="return false;" data-tooltip="Add buffs">
+                  <ion-icon name="add-outline"></ion-icon>
                 </button>
             </div>
         </div>
@@ -310,8 +310,8 @@
                 <input type="text" name="buffs" id="def_multi_string" />
                 <span class="input-symbol">%</span>
             </div>
-                <button id="openDebuffsBtn" class="plus-btn" onclick="return false;"><ion-icon name="add-outline"></ion-icon>
-                  <span class="tooltip-text">Add debuffs</span>
+                <button id="openDebuffsBtn" class="plus-btn" onclick="return false;" data-tooltip="Add debuffs">
+                  <ion-icon name="add-outline"></ion-icon>
                 </button>
 
           </div>
@@ -349,9 +349,8 @@
               <input type="text" name="skill_multi_string" class="base_dmg_input" id="skill_multi_string" />
             </div>
             
-            <button id="reverse-calc" class="plus-btn reverse-btn">
+            <button id="reverse-calc" class="plus-btn reverse-btn" data-tooltip="Find base damage">
               <ion-icon name="swap-horizontal-outline"></ion-icon>
-              <span class="tooltip-text">Find base damage</span>
             </button>
           </div>
         </div>
@@ -402,8 +401,8 @@
             <div class="select-wrapper" style="width: 100%;">
                 <select id="Enemy_list"></select>
             </div>
-            <button id="showInfoButton" class="showInfoButton">
-              +Info <span class="tooltip-text">Show info<br>for this monster</span>
+            <button id="showInfoButton" class="showInfoButton" data-toltip="Show info<br>for this monster">
+              +Info
             </button>
         </div>
     </div>
